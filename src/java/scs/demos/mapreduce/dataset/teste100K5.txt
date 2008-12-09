@@ -1,0 +1,34 @@
+-> GSI 11 (level, low) -> IRQ 11
+[   18.152278] PCI: Setting latency timer of device 0000:00:03.0 to 64
+[   18.152383] pcnet32: PCnet/FAST III 79C973 at 0xc020, 08 00 27 d3 7f 4e assigned IRQ 11.
+[   18.152564] pcnet32: Found PHY 0022:561b at address 0.
+[   18.159049] eth0: registered as PCnet/FAST III 79C973
+[   18.159346] pcnet32: 1 cards_found.
+[   18.223556] sd 0:0:0:0: [sda] 21229568 512-byte hardware sectors (10870 MB)
+[   18.227498] sd 0:0:0:0: [sda] Write Protect is off
+[   18.227514] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[   18.234951] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[   18.235460] sd 0:0:0:0: [sda] 21229568 512-byte hardware sectors (10870 MB)
+[   18.235563] sd 0:0:0:0: [sda] Write Protect is off
+[   18.235578] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[   18.235752] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[   18.235779]  sda: sda1 sda2 < sda5 >
+[   18.281464] sd 0:0:0:0: [sda] Attached SCSI disk
+[   18.291488] sr0: scsi3-mmc drive: 32x/32x xa/form2 tray
+[   18.291523] Uniform CD-ROM driver Revision: 3.20
+[   18.292699] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[   18.308720] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[   18.309078] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[   18.702825] Attempting manual resume
+[   18.702840] swsusp: Resume From Partition 8:5
+[   18.702849] PM: Checking swsusp image.
+[   18.703592] PM: Resume from disk failed.
+[   18.770949] kjournald starting.  Commit interval 5 seconds
+[   18.771048] EXT3-fs: mounted filesystem with ordered data mode.
+[   30.411039] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 10
+[   30.411057] PCI: setting IRQ 10 as level-triggered
+[   30.411070] ACPI: PCI Interrupt 0000:00:04.0[A] -> Link [LNKD] -> GSI 10 (level, low) -> IRQ 10
+[   30.432275] vboxadd: Successfully loaded version 2.0.6 (interface 0x00010004)
+[   30.462435] parport_pc 00:05: reported by Plug and Play ACPI
+[   30.551788] input: ImExPS/2 Generic Explorer Mouse as /class/input/input2
+[ 

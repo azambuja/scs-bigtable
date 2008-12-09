@@ -1,0 +1,35 @@
+ACPI for IRQ routing
+[   11.997105] PCI: If a device doesn't work, try "pci=routeirq".  If it helps, post a report
+[   11.999409] NET: Registered protocol family 8
+[   11.999422] NET: Registered protocol family 20
+[   12.002607] Time: tsc clocksource has been installed.
+[   12.035522] NET: Registered protocol family 2
+[   12.074780] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+[   12.080343] TCP established hash table entries: 131072 (order: 8, 1572864 bytes)
+[   12.083946] TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
+[   12.084465] TCP: Hash tables configured (established 131072 bind 65536)
+[   12.084481] TCP reno registered
+[   12.095873] checking if image is initramfs... it is
+[   12.537262] Switched to high resolution mode on CPU 0
+[   12.760300] Freeing initrd memory: 7035k freed
+[   12.763428] audit: initializing netlink socket (disabled)
+[   12.768249] audit(1228563240.172:1): initialized
+[   12.778815] VFS: Disk quotas dquot_6.5.1
+[   12.778980] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[   12.779693] io scheduler noop registered
+[   12.779705] io scheduler anticipatory registered
+[   12.779714] io scheduler deadline registered
+[   12.779739] io scheduler cfq registered (default)
+[   12.782207] Limiting direct PCI/PCI transfers.
+[   12.782285] Activating ISA DMA hang workarounds.
+[   12.782338] Boot video device is 0000:00:02.0
+[   12.783287] isapnp: Scanning for PnP cards...
+[   13.150356] isapnp: No Plug & Play device found
+[   13.224230] Real Time Clock Driver v1.12ac
+[   13.224845] Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+[   13.235385] RAMDISK driver initialized: 16 RAM disks of 65536K size 1024 blocksize
+[   13.239999] input: Macintosh mouse button emulation as /class/input/input0
+[   13.240772] PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[   13.247483] serio: i8042 KBD port at 0x60,0x64 irq 1
+[   13.247483] serio: i8042 AUX port at 0x60,0x64 irq 12
+[   13.248607] mice: PS/2 mouse device common 

@@ -1,0 +1,14 @@
+$Revision:|1 &|1 (order:|1 (order:|1 (order:|1 0
+[|1 0,|1 0000:00:02.0
+[|1 1,12
+[|1 1.90|1 11.997105]|1 11.999409]|1 12
+[|1 12.035522]|1 12.074780]|1 12.095873]|1 12.760300]|1 12.782338]|1 13.150356]|1 13.235385]|1 13.239999]|1 131072|1 131072|1 131072|1 1572864|1 32768|1 524288|1 65536)
+[|1 7035k|1 Activating|1 Boot|1 Disk|1 Driver|1 Freeing|1 IRQ|1 IRQ|1 ISA|1 KBD|1 Limiting|1 PCI:|1 PNP:|1 PS/2|1 PS/2|1 RAM|1 RAMDISK|1 anticipatory|1 as|1 audit:|1 been|1 bind|1 bind|1 button|1 cache|1 cfq|1 direct|1 disks|1 doesn't|1 dquot_6.5.1
+[|1 established|1 found
+[|1 helps,|1 high|1 i8042|1 i8042|1 image|1 initializing|1 initrd|1 installed.
+[|1 irq|1 irq|1 irq|1 it|1 it|1 netlink|1 on|1 registered|1 registered
+[|1 registered
+[|1 registered
+[|1 registered
+[|1 size|1 tables|1 to|1 transfers.
+[|1 

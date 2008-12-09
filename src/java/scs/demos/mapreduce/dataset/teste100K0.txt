@@ -1,0 +1,34 @@
+[    0.000000] Linux version 2.6.22-16-generic (buildd@rothera) (gcc version 4.1.3 20070929 (prerelease) (Ubuntu 4.1.2-16ubuntu2)) #1 SMP Mon Nov 24 18:28:27 GMT 2008 (Ubuntu 2.6.22-16.60-generic)
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000]  BIOS-e820: 0000000000000000 - 000000000009fc00 (usable)
+[    0.000000]  BIOS-e820: 000000000009fc00 - 00000000000a0000 (reserved)
+[    0.000000]  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+[    0.000000]  BIOS-e820: 0000000000100000 - 00000000322f0000 (usable)
+[    0.000000]  BIOS-e820: 00000000322f0000 - 0000000032300000 (ACPI data)
+[    0.000000]  BIOS-e820: 00000000fffc0000 - 0000000100000000 (reserved)
+[    0.000000] 0MB HIGHMEM available.
+[    0.000000] 802MB LOWMEM available.
+[    0.000000] Entering add_active_range(0, 0, 205552) 0 entries of 256 used
+[    0.000000] Zone PFN ranges:
+[    0.000000]   DMA             0 ->     4096
+[    0.000000]   Normal       4096 ->   205552
+[    0.000000]   HighMem    205552 ->   205552
+[    0.000000] early_node_map[1] active PFN ranges
+[    0.000000]     0:        0 ->   205552
+[    0.000000] On node 0 totalpages: 205552
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 4064 pages, LIFO batch:0
+[    0.000000]   Normal zone: 1573 pages used for memmap
+[    0.000000]   Normal zone: 199883 pages, LIFO batch:31
+[    0.000000]   HighMem zone: 0 pages used for memmap
+[    0.000000] DMI 2.5 present.
+[    0.000000] ACPI: RSDP signature @ 0xC00E0000 checksum 0
+[    0.000000] ACPI: RSDP 000E0000, 0024 (r2 VBOX  )
+[    0.000000] ACPI: XSDT 322F0030, 002C (r1 VBOX   VBOXXSDT        1 ASL        61)
+[    0.000000] ACPI: FACP 322F0060, 00F4 (r4 VBOX   VBOXFACP        1 ASL        61)
+[    0.000000] ACPI: DSDT 322F01A0, 1064 (r1 VBOX   VBOXBIOS        2 INTL 20050309)
+[    0.000000] ACPI: FACS 322F0160, 0040
+[    0.000000] ACPI: PM-Timer IO Port: 0x4008
+[    0.000000] Allocating PCI resources starting at 40000000 (gap: 32300000:cdcc0000)
+[    0.000000] 

@@ -1,0 +1,13 @@
+$|1 (default)
+[|1 (disabled)
+[|1 1
+[|1 12.084481]|1 12.779693]|1 12.779705]|1 12.779714]|1 12.782207]|1 12.782285]|1 12.783287]|1 13.224230]|1 13.224845]|1 13.240772]|1 13.247483]|1 13.247483]|1 7,|1 8250/16550|1 ACPI|1 Clock|1 DMA|1 Dquot-cache|1 IP|1 No|1 Plug|1 PnP|1 Scanning|1 Serial:|1 Switched|1 TCP|1 TCP|1 TCP|1 Time|1 VFS:|1 at|1 at|1 at|1 audit(1228563240.172:1):|1 bytes)
+[|1 bytes)
+[|1 bytes)
+[|1 bytes)
+[|1 cards...
+[|1 common|1 configured|1 driver|1 driver|1 emulation|1 for|1 for|1 freed
+[|1 hang|1 hash|1 hash|1 hash|1 hash|1 if|1 initialized
+[|1 initramfs...|1 io|1 io|1 io|1 io|1 is
+[|1 isapnp:|1 isapnp:|1 noop|1 of|1 port|1 port|1 resolution|1 routing
+[|1 serio:|1 serio:|1 socket|1 try|1 tsc|1 work,|1 

@@ -1,0 +1,58 @@
+MasterServant::start - Lendo configuracoes de ../../scripts/execute/mapReduce.properties
+MasterServant::start - Arquivo de configuracao lido
+MasterServant::start - WorkerInitializer instanciado
+MasterServant::start - BigTableInitializer instanciado
+MasterServant::start - Conectando aos outros execution nodes
+WorkerInitializer::getNode - Conectando ao execution node corbaname::hubert-ubuntu:1050#ExecutionNode-127.0.1.1
+MasterServant::start - Conectado ao execution node dos workers
+MasterServant::start - Conectando aos outros execution nodes
+MasterServant::start - Conectado ao execution node dos sorters
+MasterServant::start - Criando canal de evento entre master e workers
+WorkerInitializer::getNode - Conectando ao execution node corbaname::hubert-ubuntu:1050#ExecutionNode-127.0.1.1
+MasterServant::start - Instanciando Workers
+WorkerInitializer::buildWorkerQueue - Comecando balanceamento de carga
+WorkerInitializer::buildWorkerQueue - mappers_p_nodes[i]= 10
+MasterServant::start - Instanciando Sorters
+MasterServant::start - Instanciando Tarefas
+IOFormatServant::getSplits - Iniciando o particionamento do arquivo
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K0.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K1.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K2.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K3.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K4.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K5.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K6.txt
+MasterServant::start - Iniciando escalonamento
+EventSinkMaster::handleEvent - Erro ao executar handleEvent.
+java.lang.ClassCastException: scs.demos.mapreduce._WorkerStub cannot be cast to scs.core.IComponent
+	at scs.demos.mapreduce.schedule.EventSinkMaster.handleEvent(EventSinkMaster.java:144)
+	at scs.event_service.servant.EventSinkConsumerServant.push(EventSinkConsumerServant.java:23)
+	at scs.event_service.EventSinkPOA._invoke(EventSinkPOA.java:38)
+	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatchToServant(CorbaServerRequestDispatcherImpl.java:653)
+	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatch(CorbaServerRequestDispatcherImpl.java:205)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequestRequest(CorbaMessageMediatorImpl.java:1698)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:1558)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleInput(CorbaMessageMediatorImpl.java:940)
+	at com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage_1_2.callback(RequestMessage_1_2.java:199)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:712)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.dispatch(SocketOrChannelConnectionImpl.java:469)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.doWork(SocketOrChannelConnectionImpl.java:1205)
+	at com.sun.corba.se.impl.orbutil.threadpool.ThreadPoolImpl$WorkerThread.run(ThreadPoolImpl.java:418)
+
+EventSinkMaster::handleEvent - Erro ao executar handleEvent.
+java.lang.ClassCastException: scs.demos.mapreduce._WorkerStub cannot be cast to scs.core.IComponent
+	at scs.demos.mapreduce.schedule.EventSinkMaster.handleEvent(EventSinkMaster.java:144)
+	at scs.event_service.servant.EventSinkConsumerServant.push(EventSinkConsumerServant.java:23)
+	at scs.event_service.EventSinkPOA._invoke(EventSinkPOA.java:38)
+	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatchToServant(CorbaServerRequestDispatcherImpl.java:653)
+	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatch(CorbaServerRequestDispatcherImpl.java:205)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequestRequest(CorbaMessageMediatorImpl.java:1698)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:1558)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleInput(CorbaMessageMediatorImpl.java:940)
+	at com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage_1_2.callback(RequestMessage_1_2.java:199)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:712)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.dispatch(SocketOrChannelConnectionImpl.java:469)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.doWork(SocketOrChannelConnectionImpl.java:1205)
+	at com.sun.corba.se.impl.orbutil.threadpool.ThreadPoolImpl$WorkerThread.run(ThreadPoolImpl.java:418)
+
+WorkerInitializer::finish - Finalizando containers MAPREDUCE

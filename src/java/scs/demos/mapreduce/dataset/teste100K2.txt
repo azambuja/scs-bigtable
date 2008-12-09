@@ -1,0 +1,38 @@
+  11.274250] CPU: After all inits, caps: 078bf3bf 00000000 00000000 00000140 00000008 00000000 00000000
+[   11.274770] Compat vDSO mapped to ffffe000.
+[   11.275060] Checking 'hlt' instruction... OK.
+[   11.292544] SMP alternatives: switching to UP code
+[   11.294337] Freeing SMP alternatives: 11k freed
+[   11.354389] Early unpacking initramfs... done
+[   11.738746] ACPI: Core revision 20070126
+[   11.741276] ACPI: Looking for DSDT in initramfs... error, file /DSDT.aml not found.
+[   11.742341] ACPI: setting ELCR to 0200 (from 0c00)
+[   11.763128] CPU0: Intel(R) Core(TM)2 Duo CPU     T5550  @ 1.83GHz stepping 0d
+[   11.768547] SMP motherboard not detected.
+[   11.891299] Brought up 1 CPUs
+[   11.899510] Booting paravirtualized kernel on bare hardware
+[   11.904557] Time: 11:34:00  Date: 11/06/108
+[   11.905007] NET: Registered protocol family 16
+[   11.939005] EISA bus registered
+[   11.939719] ACPI: bus type pci registered
+[   11.944445] PCI: PCI BIOS revision 2.10 entry at 0xfadf0, last bus=0
+[   11.944467] PCI: Using configuration type 1
+[   11.944488] Setting up standard PCI resources
+[   11.956714] ACPI: EC: Look up EC in DSDT
+[   11.966987] ACPI: Interpreter enabled
+[   11.967023] ACPI: (supports S0 S5)
+[   11.967058] ACPI: Using PIC for interrupt routing
+[   11.972423] ACPI: PCI Root Bridge [PCI0] (0000:00)
+[   11.975481] PCI: Probing PCI hardware (bus 00)
+[   11.987743] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+[   11.991908] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 11) *0, disabled.
+[   11.992339] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 11) *0, disabled.
+[   11.992527] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 10 *11)
+[   11.992708] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 *10 11)
+[   11.992997] Linux Plug and Play Support v0.97 (c) Adam Belay
+[   11.993117] pnp: PnP ACPI init
+[   11.993218] ACPI: bus type pnp registered
+[   11.995816] pnp: PnP ACPI: found 6 devices
+[   11.995829] ACPI: ACPI bus type pnp unregistered
+[   11.996881] PnPBIOS: Disabled by ACPI PNP
+[   11.997093] PCI: Using 

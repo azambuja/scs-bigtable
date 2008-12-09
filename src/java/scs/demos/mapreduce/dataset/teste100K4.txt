@@ -1,0 +1,36 @@
+for all mice
+[   13.264438] input: AT Translated Set 2 keyboard as /class/input/input1
+[   13.266112] EISA: Probing bus 0 at eisa.0
+[   13.266159] Cannot allocate resource for EISA slot 4
+[   13.266185] EISA: Detected 0 cards.
+[   13.266607] TCP cubic registered
+[   13.266635] NET: Registered protocol family 1
+[   13.267171] Using IPI No-Shortcut mode
+[   13.272532]   Magic number: 4:681:579
+[   13.272838]   hash matches device kmem
+[   13.275575] Freeing unused kernel memory: 364k freed
+[   13.276529] Write protecting the kernel read-only data: 726k
+[   15.253671] AppArmor: AppArmor initialized<5>audit(1228563242.672:2):  type=1505 info="AppArmor initialized" pid=1131
+[   15.273880] fuse init (API version 7.8)
+[   15.291880] Failure registering capabilities with primary security module.
+[   17.241862] SCSI subsystem initialized
+[   17.247947] libata version 2.21 loaded.
+[   17.281308] ata_piix 0000:00:01.1: version 2.11
+[   17.292622] PCI: Setting latency timer of device 0000:00:01.1 to 64
+[   17.308255] scsi0 : ata_piix
+[   17.308610] scsi1 : ata_piix
+[   17.309220] ata1: PATA max UDMA/33 cmd 0x000101f0 ctl 0x000103f6 bmdma 0x0001c000 irq 14
+[   17.309240] ata2: PATA max UDMA/33 cmd 0x00010170 ctl 0x00010376 bmdma 0x0001c008 irq 15
+[   17.344784] pcnet32.c:v1.33 27.Jun.2006 tsbogend@alpha.franken.de
+[   17.545298] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[   17.545318] ata1.00: 21229568 sectors, multi 128: LBA 
+[   17.546131] ata1.00: configured for UDMA/33
+[   17.582101] Floppy drive(s): fd0 is 1.44M
+[   17.643223] FDC 0 is a S82078B
+[   17.870317] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[   18.027858] ata2.00: configured for UDMA/33
+[   18.131769] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[   18.144534] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[   18.152117] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
+[   18.152142] PCI: setting IRQ 11 as level-triggered
+[   18.152167] ACPI: PCI Interrupt 0000:00:03.0[A] -> Link [LNKC] 

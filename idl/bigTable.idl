@@ -1,0 +1,30 @@
+module scs {
+	module demos {
+		module bigtable {
+			typedef sequence<any> Iterator;
+
+			interface Sorter {
+				// nao e pra ser string, string. Isso e so pra testar.
+				void sort(in string key, in string values);
+				void start();
+			};
+
+			interface Config {
+				void setName(in string name);
+				void addReducer(in any reducer);	
+			};
+
+			module test {
+				typedef sequence<any> Iterator;
+
+				// Simula a conexao a um reducer
+				// Alteracoes na interface em relacao ao mapreduce sao de fato necessarias?
+				// nao e pra ser string, string. Isso e so pra testar.
+				interface Reducer {
+				    	void reduce (in string key, in string values);
+				};
+			};
+		};
+	};
+};
+
