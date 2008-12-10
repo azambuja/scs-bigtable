@@ -2,14 +2,14 @@
 [|1 00|1 00|1 00|1 00|1 00|1 0022:561b|1 0x00010004)
 [|1 10
 [|1 10
-[|1 18.152278]|1 18.152383]|1 18.159049]|1 18.159346]|1 18.223556]|1 18.227498]|1 18.235460]|1 18.291488]|1 18.308720]|1 18.702825]|1 18.702840]|1 18.702849]|1 18.770949]|1 18.771048]|1 1:0:0:0:|1 1:0:0:0:|1 27|1 30.411039]|1 30.411057]|1 30.462435]|1 4e|1 64
+[|1 18.301883]|1 18.305393]|1 18.361463]|1 18.361664]|1 18.401339]|1 18.965292]|1 19.015574]|1 19.015610]|1 1:0:0:0:|1 1:0:0:0:|1 27|1 30.072956]|1 30.072986]|1 30.270504]|1 4e|1 64
 [|1 79C973|1 79C973
 [|1 <|1 Attached|1 Attached|1 Attached|1 Attached|1 Checking|1 Explorer|1 FUA
 [|1 FUA
 [|1 III|1 III|1 Interrupt|1 Interrupt|1 MB)
 [|1 MB)
 [|1 Plug|1 Protect|1 Protect|1 Resume|1 Resume|1 SCSI|1 Sense:|1 Sense:|1 [LNKD]|1 [LNKD]|1 at|1 at|1 at|1 by|1 cards_found.
-[|1 driver|1 enabled|1 failed.
+[|1 driver|1 driver|1 enabled|1 failed.
 [|1 generic|1 generic|1 hardware|1 hardware|1 latency|1 level-triggered
 [|1 mounted|1 of|1 or|1 or|1 ordered|1 pcnet32:|1 pcnet32:|1 pcnet32:|1 reported|1 resume
 [|1 seconds

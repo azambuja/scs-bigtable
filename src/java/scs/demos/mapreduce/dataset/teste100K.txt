@@ -39,199 +39,198 @@
 [    0.000000] Enabling unmasked SIMD FPU exception support... done.
 [    0.000000] Initializing CPU#0
 [    0.000000] PID hash table entries: 4096 (order: 12, 16384 bytes)
-[    0.000000] Detected 1827.852 MHz processor.
-[   10.992027] Console: colour VGA+ 80x25
-[   10.992761] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
-[   10.993424] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
-[   11.158828] Memory: 803468k/822208k available (2016k kernel code, 18140k reserved, 919k data, 364k init, 0k highmem)
-[   11.159149] virtual kernel memory layout:
-[   11.159198]     fixmap  : 0xfff4d000 - 0xfffff000   ( 712 kB)
-[   11.159257]     pkmap   : 0xff800000 - 0xffc00000   (4096 kB)
-[   11.159315]     vmalloc : 0xf3000000 - 0xff7fe000   ( 199 MB)
-[   11.159374]     lowmem  : 0xc0000000 - 0xf22f0000   ( 802 MB)
-[   11.159432]       .init : 0xc03e3000 - 0xc043e000   ( 364 kB)
-[   11.159490]       .data : 0xc02f8186 - 0xc03dde84   ( 919 kB)
-[   11.159550]       .text : 0xc0100000 - 0xc02f8186   (2016 kB)
-[   11.159676] Checking if this processor honours the WP bit even in supervisor mode... Ok.
-[   11.177149] SLUB: Genslabs=22, HWalign=64, Order=0-1, MinObjects=4, CPUs=1, Nodes=1
-[   11.266500] Calibrating delay using timer specific routine.. 3705.25 BogoMIPS (lpj=7410500)
-[   11.267354] Security Framework v1.0.0 initialized
-[   11.267463] SELinux:  Disabled at boot.
-[   11.267772] Mount-cache hash table entries: 512
-[   11.273107] CPU: After generic identify, caps: 078bf3bf 00000000 00000000 00000000 00000008 00000000 00000000
-[   11.273512] monitor/mwait feature present.
-[   11.273620] using mwait in idle threads.
-[   11.274031] CPU: L1 I cache: 32K, L1 D cache: 32K
-[   11.274162] CPU: L2 cache: 2048K
-[   11.274250] CPU: After all inits, caps: 078bf3bf 00000000 00000000 00000140 00000008 00000000 00000000
-[   11.274770] Compat vDSO mapped to ffffe000.
-[   11.275060] Checking 'hlt' instruction... OK.
-[   11.292544] SMP alternatives: switching to UP code
-[   11.294337] Freeing SMP alternatives: 11k freed
-[   11.354389] Early unpacking initramfs... done
-[   11.738746] ACPI: Core revision 20070126
-[   11.741276] ACPI: Looking for DSDT in initramfs... error, file /DSDT.aml not found.
-[   11.742341] ACPI: setting ELCR to 0200 (from 0c00)
-[   11.763128] CPU0: Intel(R) Core(TM)2 Duo CPU     T5550  @ 1.83GHz stepping 0d
-[   11.768547] SMP motherboard not detected.
-[   11.891299] Brought up 1 CPUs
-[   11.899510] Booting paravirtualized kernel on bare hardware
-[   11.904557] Time: 11:34:00  Date: 11/06/108
-[   11.905007] NET: Registered protocol family 16
-[   11.939005] EISA bus registered
-[   11.939719] ACPI: bus type pci registered
-[   11.944445] PCI: PCI BIOS revision 2.10 entry at 0xfadf0, last bus=0
-[   11.944467] PCI: Using configuration type 1
-[   11.944488] Setting up standard PCI resources
-[   11.956714] ACPI: EC: Look up EC in DSDT
-[   11.966987] ACPI: Interpreter enabled
-[   11.967023] ACPI: (supports S0 S5)
-[   11.967058] ACPI: Using PIC for interrupt routing
-[   11.972423] ACPI: PCI Root Bridge [PCI0] (0000:00)
-[   11.975481] PCI: Probing PCI hardware (bus 00)
-[   11.987743] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
-[   11.991908] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 11) *0, disabled.
-[   11.992339] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 11) *0, disabled.
-[   11.992527] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 10 *11)
-[   11.992708] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 *10 11)
-[   11.992997] Linux Plug and Play Support v0.97 (c) Adam Belay
-[   11.993117] pnp: PnP ACPI init
-[   11.993218] ACPI: bus type pnp registered
-[   11.995816] pnp: PnP ACPI: found 6 devices
-[   11.995829] ACPI: ACPI bus type pnp unregistered
-[   11.996881] PnPBIOS: Disabled by ACPI PNP
-[   11.997093] PCI: Using ACPI for IRQ routing
-[   11.997105] PCI: If a device doesn't work, try "pci=routeirq".  If it helps, post a report
-[   11.999409] NET: Registered protocol family 8
-[   11.999422] NET: Registered protocol family 20
-[   12.002607] Time: tsc clocksource has been installed.
-[   12.035522] NET: Registered protocol family 2
-[   12.074780] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
-[   12.080343] TCP established hash table entries: 131072 (order: 8, 1572864 bytes)
-[   12.083946] TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
-[   12.084465] TCP: Hash tables configured (established 131072 bind 65536)
-[   12.084481] TCP reno registered
-[   12.095873] checking if image is initramfs... it is
-[   12.537262] Switched to high resolution mode on CPU 0
-[   12.760300] Freeing initrd memory: 7035k freed
-[   12.763428] audit: initializing netlink socket (disabled)
-[   12.768249] audit(1228563240.172:1): initialized
-[   12.778815] VFS: Disk quotas dquot_6.5.1
-[   12.778980] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
-[   12.779693] io scheduler noop registered
-[   12.779705] io scheduler anticipatory registered
-[   12.779714] io scheduler deadline registered
-[   12.779739] io scheduler cfq registered (default)
-[   12.782207] Limiting direct PCI/PCI transfers.
-[   12.782285] Activating ISA DMA hang workarounds.
-[   12.782338] Boot video device is 0000:00:02.0
-[   12.783287] isapnp: Scanning for PnP cards...
-[   13.150356] isapnp: No Plug & Play device found
-[   13.224230] Real Time Clock Driver v1.12ac
-[   13.224845] Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
-[   13.235385] RAMDISK driver initialized: 16 RAM disks of 65536K size 1024 blocksize
-[   13.239999] input: Macintosh mouse button emulation as /class/input/input0
-[   13.240772] PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
-[   13.247483] serio: i8042 KBD port at 0x60,0x64 irq 1
-[   13.247483] serio: i8042 AUX port at 0x60,0x64 irq 12
-[   13.248607] mice: PS/2 mouse device common for all mice
-[   13.264438] input: AT Translated Set 2 keyboard as /class/input/input1
-[   13.266112] EISA: Probing bus 0 at eisa.0
-[   13.266159] Cannot allocate resource for EISA slot 4
-[   13.266185] EISA: Detected 0 cards.
-[   13.266607] TCP cubic registered
-[   13.266635] NET: Registered protocol family 1
-[   13.267171] Using IPI No-Shortcut mode
-[   13.272532]   Magic number: 4:681:579
-[   13.272838]   hash matches device kmem
-[   13.275575] Freeing unused kernel memory: 364k freed
-[   13.276529] Write protecting the kernel read-only data: 726k
-[   15.253671] AppArmor: AppArmor initialized<5>audit(1228563242.672:2):  type=1505 info="AppArmor initialized" pid=1131
-[   15.273880] fuse init (API version 7.8)
-[   15.291880] Failure registering capabilities with primary security module.
-[   17.241862] SCSI subsystem initialized
-[   17.247947] libata version 2.21 loaded.
-[   17.281308] ata_piix 0000:00:01.1: version 2.11
-[   17.292622] PCI: Setting latency timer of device 0000:00:01.1 to 64
-[   17.308255] scsi0 : ata_piix
-[   17.308610] scsi1 : ata_piix
-[   17.309220] ata1: PATA max UDMA/33 cmd 0x000101f0 ctl 0x000103f6 bmdma 0x0001c000 irq 14
-[   17.309240] ata2: PATA max UDMA/33 cmd 0x00010170 ctl 0x00010376 bmdma 0x0001c008 irq 15
-[   17.344784] pcnet32.c:v1.33 27.Jun.2006 tsbogend@alpha.franken.de
-[   17.545298] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
-[   17.545318] ata1.00: 21229568 sectors, multi 128: LBA 
-[   17.546131] ata1.00: configured for UDMA/33
-[   17.582101] Floppy drive(s): fd0 is 1.44M
-[   17.643223] FDC 0 is a S82078B
-[   17.870317] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
-[   18.027858] ata2.00: configured for UDMA/33
-[   18.131769] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
-[   18.144534] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
-[   18.152117] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
-[   18.152142] PCI: setting IRQ 11 as level-triggered
-[   18.152167] ACPI: PCI Interrupt 0000:00:03.0[A] -> Link [LNKC] -> GSI 11 (level, low) -> IRQ 11
-[   18.152278] PCI: Setting latency timer of device 0000:00:03.0 to 64
-[   18.152383] pcnet32: PCnet/FAST III 79C973 at 0xc020, 08 00 27 d3 7f 4e assigned IRQ 11.
-[   18.152564] pcnet32: Found PHY 0022:561b at address 0.
-[   18.159049] eth0: registered as PCnet/FAST III 79C973
-[   18.159346] pcnet32: 1 cards_found.
-[   18.223556] sd 0:0:0:0: [sda] 21229568 512-byte hardware sectors (10870 MB)
-[   18.227498] sd 0:0:0:0: [sda] Write Protect is off
-[   18.227514] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
-[   18.234951] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
-[   18.235460] sd 0:0:0:0: [sda] 21229568 512-byte hardware sectors (10870 MB)
-[   18.235563] sd 0:0:0:0: [sda] Write Protect is off
-[   18.235578] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
-[   18.235752] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
-[   18.235779]  sda: sda1 sda2 < sda5 >
-[   18.281464] sd 0:0:0:0: [sda] Attached SCSI disk
-[   18.291488] sr0: scsi3-mmc drive: 32x/32x xa/form2 tray
-[   18.291523] Uniform CD-ROM driver Revision: 3.20
-[   18.292699] sr 1:0:0:0: Attached scsi CD-ROM sr0
-[   18.308720] sd 0:0:0:0: Attached scsi generic sg0 type 0
-[   18.309078] sr 1:0:0:0: Attached scsi generic sg1 type 5
-[   18.702825] Attempting manual resume
-[   18.702840] swsusp: Resume From Partition 8:5
-[   18.702849] PM: Checking swsusp image.
-[   18.703592] PM: Resume from disk failed.
-[   18.770949] kjournald starting.  Commit interval 5 seconds
-[   18.771048] EXT3-fs: mounted filesystem with ordered data mode.
-[   30.411039] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 10
-[   30.411057] PCI: setting IRQ 10 as level-triggered
-[   30.411070] ACPI: PCI Interrupt 0000:00:04.0[A] -> Link [LNKD] -> GSI 10 (level, low) -> IRQ 10
-[   30.432275] vboxadd: Successfully loaded version 2.0.6 (interface 0x00010004)
-[   30.462435] parport_pc 00:05: reported by Plug and Play ACPI
-[   30.551788] input: ImExPS/2 Generic Explorer Mouse as /class/input/input2
-[   31.395632] lp: driver loaded but no devices found
-[   31.523721] Adding 497972k swap on /dev/sda5.  Priority:-1 extents:1 across:497972k
-[   31.816130] EXT3 FS on sda1, internal journal
-[   34.073596] vboxvfs: Successfully loaded version 2.0.6 (interface 0x00010004)
-[   34.146621] ACPI: Battery Slot [BAT0] (battery present)
-[   34.671341] ACPI: AC Adapter [AC] (off-line)
-[   34.802645] No dock devices found.
-[   34.935363] input: Power Button (FF) as /class/input/input3
-[   34.946951] ACPI: Power Button (FF) [PWRF]
-[   34.984354] input: Sleep Button (FF) as /class/input/input4
-[   34.997427] ACPI: Sleep Button (FF) [SLPF]
-[   37.075883] Failure registering capabilities with primary security module.
-[   37.259449] eth0: link up, 100Mbps, full-duplex
-[   37.689281] ppdev: user-space parallel port driver
-[   37.837093] audit(1228570467.523:3):  type=1503 operation="inode_permission" requested_mask="a" denied_mask="a" name="/dev/tty" pid=4227 profile="/usr/sbin/cupsd"
-[   37.906030] apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
-[   37.906056] apm: overridden by ACPI.
-[   38.809797] Bluetooth: Core ver 2.11
-[   38.810251] NET: Registered protocol family 31
-[   38.810264] Bluetooth: HCI device and connection manager initialized
-[   38.810294] Bluetooth: HCI socket layer initialized
-[   38.844774] Bluetooth: L2CAP ver 2.8
-[   38.844791] Bluetooth: L2CAP socket layer initialized
-[   38.854401] Bluetooth: RFCOMM socket layer initialized
-[   38.854688] Bluetooth: RFCOMM TTY layer initialized
-[   38.854701] Bluetooth: RFCOMM ver 1.8
-[   39.910531] mtrr: your processor doesn't support write-combining
-[   43.872049] NET: Registered protocol family 17
-[   48.882504] NET: Registered protocol family 10
-[   48.883229] lo: Disabled Privacy Extensions
-[   59.041009] eth0: no IPv6 routers present
-[ 3478.269123] atkbd.c: Spurious NAK on isa0060/serio0. Some program might be trying access hardware directly.
-[11573.512164] atkbd.c: Spurious NAK on isa0060/serio0. Some program might be trying access hardware directly.
+[    0.000000] Detected 1755.856 MHz processor.
+[   10.954195] Console: colour VGA+ 80x25
+[   10.955070] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[   10.955594] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[   11.116802] Memory: 803468k/822208k available (2016k kernel code, 18140k reserved, 919k data, 364k init, 0k highmem)
+[   11.117121] virtual kernel memory layout:
+[   11.117169]     fixmap  : 0xfff4d000 - 0xfffff000   ( 712 kB)
+[   11.117228]     pkmap   : 0xff800000 - 0xffc00000   (4096 kB)
+[   11.117286]     vmalloc : 0xf3000000 - 0xff7fe000   ( 199 MB)
+[   11.117344]     lowmem  : 0xc0000000 - 0xf22f0000   ( 802 MB)
+[   11.117402]       .init : 0xc03e3000 - 0xc043e000   ( 364 kB)
+[   11.117460]       .data : 0xc02f8186 - 0xc03dde84   ( 919 kB)
+[   11.117519]       .text : 0xc0100000 - 0xc02f8186   (2016 kB)
+[   11.117686] Checking if this processor honours the WP bit even in supervisor mode... Ok.
+[   11.136483] SLUB: Genslabs=22, HWalign=64, Order=0-1, MinObjects=4, CPUs=1, Nodes=1
+[   11.225429] Calibrating delay using timer specific routine.. 3576.58 BogoMIPS (lpj=7153176)
+[   11.226285] Security Framework v1.0.0 initialized
+[   11.226390] SELinux:  Disabled at boot.
+[   11.226531] Mount-cache hash table entries: 512
+[   11.232873] CPU: After generic identify, caps: 078bf3bf 00000000 00000000 00000000 00000008 00000000 00000000
+[   11.233493] monitor/mwait feature present.
+[   11.233595] using mwait in idle threads.
+[   11.233697] CPU: L1 I cache: 32K, L1 D cache: 32K
+[   11.233830] CPU: L2 cache: 2048K
+[   11.233912] CPU: After all inits, caps: 078bf3bf 00000000 00000000 00000140 00000008 00000000 00000000
+[   11.234487] Compat vDSO mapped to ffffe000.
+[   11.234763] Checking 'hlt' instruction... OK.
+[   11.251642] SMP alternatives: switching to UP code
+[   11.253277] Freeing SMP alternatives: 11k freed
+[   11.325291] Early unpacking initramfs... done
+[   11.770555] ACPI: Core revision 20070126
+[   11.774600] ACPI: Looking for DSDT in initramfs... error, file /DSDT.aml not found.
+[   11.775719] ACPI: setting ELCR to 0200 (from 0c00)
+[   11.806347] CPU0: Intel(R) Core(TM)2 Duo CPU     T5550  @ 1.83GHz stepping 0d
+[   11.811764] SMP motherboard not detected.
+[   11.939695] Brought up 1 CPUs
+[   11.948548] Booting paravirtualized kernel on bare hardware
+[   11.956714] Time:  9:09:09  Date: 11/10/108
+[   11.957230] NET: Registered protocol family 16
+[   11.995508] EISA bus registered
+[   11.996107] ACPI: bus type pci registered
+[   12.000776] PCI: PCI BIOS revision 2.10 entry at 0xfadf0, last bus=0
+[   12.000800] PCI: Using configuration type 1
+[   12.000819] Setting up standard PCI resources
+[   12.012497] ACPI: EC: Look up EC in DSDT
+[   12.022907] ACPI: Interpreter enabled
+[   12.022942] ACPI: (supports S0 S5)
+[   12.022978] ACPI: Using PIC for interrupt routing
+[   12.028759] ACPI: PCI Root Bridge [PCI0] (0000:00)
+[   12.031041] PCI: Probing PCI hardware (bus 00)
+[   12.044336] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+[   12.048707] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 11) *0, disabled.
+[   12.049199] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 11) *0, disabled.
+[   12.049472] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 10 *11)
+[   12.049661] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 *10 11)
+[   12.050005] Linux Plug and Play Support v0.97 (c) Adam Belay
+[   12.050044] pnp: PnP ACPI init
+[   12.050154] ACPI: bus type pnp registered
+[   12.052617] pnp: PnP ACPI: found 6 devices
+[   12.052630] ACPI: ACPI bus type pnp unregistered
+[   12.054437] PnPBIOS: Disabled by ACPI PNP
+[   12.054804] PCI: Using ACPI for IRQ routing
+[   12.054817] PCI: If a device doesn't work, try "pci=routeirq".  If it helps, post a report
+[   12.057263] NET: Registered protocol family 8
+[   12.057275] NET: Registered protocol family 20
+[   12.059690] Time: tsc clocksource has been installed.
+[   12.095163] NET: Registered protocol family 2
+[   12.136549] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+[   12.143606] TCP established hash table entries: 131072 (order: 8, 1572864 bytes)
+[   12.145411] TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
+[   12.145937] TCP: Hash tables configured (established 131072 bind 65536)
+[   12.145953] TCP reno registered
+[   12.155171] checking if image is initramfs... it is
+[   12.597012] Switched to high resolution mode on CPU 0
+[   12.859684] Freeing initrd memory: 7035k freed
+[   12.863922] audit: initializing netlink socket (disabled)
+[   12.869882] audit(1228900149.256:1): initialized
+[   12.879565] VFS: Disk quotas dquot_6.5.1
+[   12.879724] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[   12.880363] io scheduler noop registered
+[   12.880373] io scheduler anticipatory registered
+[   12.880383] io scheduler deadline registered
+[   12.880406] io scheduler cfq registered (default)
+[   12.882930] Limiting direct PCI/PCI transfers.
+[   12.883185] Activating ISA DMA hang workarounds.
+[   12.883228] Boot video device is 0000:00:02.0
+[   12.884841] isapnp: Scanning for PnP cards...
+[   13.253682] isapnp: No Plug & Play device found
+[   13.329504] Real Time Clock Driver v1.12ac
+[   13.330071] Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+[   13.339585] RAMDISK driver initialized: 16 RAM disks of 65536K size 1024 blocksize
+[   13.344898] input: Macintosh mouse button emulation as /class/input/input0
+[   13.345649] PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[   13.352786] serio: i8042 KBD port at 0x60,0x64 irq 1
+[   13.353014] serio: i8042 AUX port at 0x60,0x64 irq 12
+[   13.354442] mice: PS/2 mouse device common for all mice
+[   13.370423] input: AT Translated Set 2 keyboard as /class/input/input1
+[   13.373900] EISA: Probing bus 0 at eisa.0
+[   13.373955] Cannot allocate resource for EISA slot 4
+[   13.374175] EISA: Detected 0 cards.
+[   13.374757] TCP cubic registered
+[   13.374786] NET: Registered protocol family 1
+[   13.375408] Using IPI No-Shortcut mode
+[   13.381936]   Magic number: 4:357:171
+[   13.384624] Freeing unused kernel memory: 364k freed
+[   13.385502] Write protecting the kernel read-only data: 726k
+[   15.362758] AppArmor: AppArmor initialized<5>audit(1228900151.756:2):  type=1505 info="AppArmor initialized" pid=1131
+[   15.383782] fuse init (API version 7.8)
+[   15.403450] Failure registering capabilities with primary security module.
+[   17.465485] SCSI subsystem initialized
+[   17.472222] libata version 2.21 loaded.
+[   17.476728] ata_piix 0000:00:01.1: version 2.11
+[   17.482122] PCI: Setting latency timer of device 0000:00:01.1 to 64
+[   17.497737] scsi0 : ata_piix
+[   17.498087] scsi1 : ata_piix
+[   17.498143] ata1: PATA max UDMA/33 cmd 0x000101f0 ctl 0x000103f6 bmdma 0x0001c000 irq 14
+[   17.498160] ata2: PATA max UDMA/33 cmd 0x00010170 ctl 0x00010376 bmdma 0x0001c008 irq 15
+[   17.545604] pcnet32.c:v1.33 27.Jun.2006 tsbogend@alpha.franken.de
+[   17.731556] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[   17.731576] ata1.00: 21229568 sectors, multi 128: LBA 
+[   17.732585] ata1.00: configured for UDMA/33
+[   17.796259] Floppy drive(s): fd0 is 1.44M
+[   17.834683] FDC 0 is a S82078B
+[   18.045682] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[   18.201352] ata2.00: configured for UDMA/33
+[   18.281710] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[   18.297994] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[   18.301637] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
+[   18.301654] PCI: setting IRQ 11 as level-triggered
+[   18.301672] ACPI: PCI Interrupt 0000:00:03.0[A] -> Link [LNKC] -> GSI 11 (level, low) -> IRQ 11
+[   18.301777] PCI: Setting latency timer of device 0000:00:03.0 to 64
+[   18.301883] pcnet32: PCnet/FAST III 79C973 at 0xc020, 08 00 27 d3 7f 4e assigned IRQ 11.
+[   18.302040] pcnet32: Found PHY 0022:561b at address 0.
+[   18.305260] eth0: registered as PCnet/FAST III 79C973
+[   18.305393] pcnet32: 1 cards_found.
+[   18.359061] sd 0:0:0:0: [sda] 21229568 512-byte hardware sectors (10870 MB)
+[   18.360799] sd 0:0:0:0: [sda] Write Protect is off
+[   18.360814] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[   18.361084] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[   18.361351] sd 0:0:0:0: [sda] 21229568 512-byte hardware sectors (10870 MB)
+[   18.361449] sd 0:0:0:0: [sda] Write Protect is off
+[   18.361463] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[   18.361638] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[   18.361664]  sda: sda1 sda2 < sda5 >
+[   18.401339] sd 0:0:0:0: [sda] Attached SCSI disk
+[   18.414786] sr0: scsi3-mmc drive: 32x/32x xa/form2 tray
+[   18.414819] Uniform CD-ROM driver Revision: 3.20
+[   18.415836] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[   18.434437] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[   18.435004] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[   18.965267] Attempting manual resume
+[   18.965284] swsusp: Resume From Partition 8:5
+[   18.965292] PM: Checking swsusp image.
+[   18.965686] PM: Resume from disk failed.
+[   19.015574] kjournald starting.  Commit interval 5 seconds
+[   19.015610] EXT3-fs: mounted filesystem with ordered data mode.
+[   30.072956] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 10
+[   30.072973] PCI: setting IRQ 10 as level-triggered
+[   30.072986] ACPI: PCI Interrupt 0000:00:04.0[A] -> Link [LNKD] -> GSI 10 (level, low) -> IRQ 10
+[   30.080050] vboxadd: Successfully loaded version 2.0.6 (interface 0x00010004)
+[   30.123521] input: ImExPS/2 Generic Explorer Mouse as /class/input/input2
+[   30.270504] parport_pc 00:05: reported by Plug and Play ACPI
+[   31.251176] lp: driver loaded but no devices found
+[   31.381378] Adding 497972k swap on /dev/sda5.  Priority:-1 extents:1 across:497972k
+[   31.780242] EXT3 FS on sda1, internal journal
+[   33.863025] vboxvfs: Successfully loaded version 2.0.6 (interface 0x00010004)
+[   33.930895] ACPI: Battery Slot [BAT0] (battery present)
+[   34.349040] ACPI: AC Adapter [AC] (on-line)
+[   34.479736] No dock devices found.
+[   34.599933] input: Power Button (FF) as /class/input/input3
+[   34.612029] ACPI: Power Button (FF) [PWRF]
+[   34.650462] input: Sleep Button (FF) as /class/input/input4
+[   34.663124] ACPI: Sleep Button (FF) [SLPF]
+[   36.947352] Failure registering capabilities with primary security module.
+[   37.097202] eth0: link up, 100Mbps, full-duplex
+[   37.617308] ppdev: user-space parallel port driver
+[   37.746739] audit(1228907376.819:3):  type=1503 operation="inode_permission" requested_mask="a" denied_mask="a" name="/dev/tty" pid=4223 profile="/usr/sbin/cupsd"
+[   37.905264] apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+[   37.905288] apm: overridden by ACPI.
+[   38.748241] Bluetooth: Core ver 2.11
+[   38.748559] NET: Registered protocol family 31
+[   38.748572] Bluetooth: HCI device and connection manager initialized
+[   38.748586] Bluetooth: HCI socket layer initialized
+[   38.772756] Bluetooth: L2CAP ver 2.8
+[   38.772772] Bluetooth: L2CAP socket layer initialized
+[   38.782474] Bluetooth: RFCOMM socket layer initialized
+[   38.782783] Bluetooth: RFCOMM TTY layer initialized
+[   38.782797] Bluetooth: RFCOMM ver 1.8
+[   39.757912] mtrr: your processor doesn't support write-combining
+[   43.327059] NET: Registered protocol family 17
+[   47.501465] NET: Registered protocol family 10
+[   47.502139] lo: Disabled Privacy Extensions
+[   58.393526] eth0: no IPv6 routers present
+[  161.533783] Clocksource tsc unstable (delta = -866282205 ns)
+[  161.537755] Time: acpi_pm clocksource has been installed.

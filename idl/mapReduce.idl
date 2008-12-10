@@ -86,11 +86,11 @@ module scs{
                 interface Task {
                         long getId();
                         void setStatus(in TaskStatus status);
+                        void setOutput(in FileSplits output);
 			TaskStatus getStatus();
                         FileSplits getInput();
                         FileSplits getOutput();
-                        Reporter getReporter();          
-                        void run() raises (IOMapReduceException); 
+                        long getReduceIndex();
     		};
                         
                 interface Master {
@@ -100,12 +100,12 @@ module scs{
                          	StartFailureException);
                 };
 
-                interface Worker{
-                	boolean ping();
-                    	void execute (in core::IComponent channel, in Task task);
+ 		interface Worker{
+                        boolean start(in string configFileName, in string nodeName, in core::IComponent channel, in Reporter reporter); 
+                	void execute (in Task task);
  			string getNode();
-                    	void setNode(in string name); 
-                };                     
+			boolean ping();
+                };               
 	    };
 	};
 };

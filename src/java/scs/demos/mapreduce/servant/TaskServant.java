@@ -8,7 +8,6 @@ import scs.demos.mapreduce.TaskPOA;
 import scs.demos.mapreduce.TaskStatus;
 import scs.demos.mapreduce.Reporter;
 import scs.demos.mapreduce.FileSplit;
-import scs.demos.mapreduce.IOMapReduceException;
 
 /**
  * Servant generico que implementa a interface scs::demos::mapreduce::Task
@@ -16,33 +15,21 @@ import scs.demos.mapreduce.IOMapReduceException;
  * @author Sand Luz Correa
 */
 
-public abstract class TaskServant extends TaskPOA {
+public class TaskServant extends TaskPOA {
 
 	private static int taskId = 0;
-        protected FileSplit[] inputSplit = null;
-        protected FileSplit[] outputSplit = null; 
-        protected TaskStatus status = null;
-        protected int id = 0;
-        protected Properties conf = null;	
-        protected Reporter reporter = null;
-        protected String configFileName;	
+        private FileSplit[] inputSplit = null;
+        private FileSplit[] outputSplit = null; 
+        private TaskStatus status = null;
+        private int id = 0;
+        private int reduceIndex;
         
-        public TaskServant(String configFileName, Reporter reporter) throws IOException {
-		try {
-                        conf = new Properties(); 
-        		conf.load(new FileInputStream(configFileName));
-                        this.reporter = reporter;
-                        this.configFileName = configFileName;
-                        id = taskId++;
-     		} catch (IOException e) {
-                        throw e;
-		}
-	}
-
-	protected abstract void doRun() throws IOMapReduceException;
-       
-        public void run() throws IOMapReduceException {
-		doRun();
+        
+        public TaskServant(TaskStatus status, FileSplit[] inputSplit, int reduceIndex) {
+        	this.id = taskId++;
+                this.status = status;
+		this.inputSplit = inputSplit;
+		this.reduceIndex = reduceIndex;
 	}
 
         public int getId() {
@@ -51,6 +38,10 @@ public abstract class TaskServant extends TaskPOA {
 	
 	public void setStatus(TaskStatus status) {
 		this.status = status;
+	}
+
+        public void setOutput(FileSplit[] output) {
+		this.outputSplit = output;
 	}
 	
 	public TaskStatus getStatus() {
@@ -64,9 +55,10 @@ public abstract class TaskServant extends TaskPOA {
         public FileSplit[] getOutput() {
 		return outputSplit;
 	}
-        
-        public Reporter getReporter() {
-		return reporter;
+   
+        public int getReduceIndex() {
+		return reduceIndex;
 	}
+        
 }         
 

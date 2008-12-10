@@ -1,14 +1,13 @@
-|1 (Driver|1 (off-line)
-[|1 /class/input/input4
+(Driver|1 /class/input/input4
 [|1 0x00010004)
 [|1 0x03|1 1.8
 [|1 10
 [|1 100Mbps,|1 31
-[|1 31.816130]|1 34.984354]|1 37.259449]|1 37.689281]|1 38.809797]|1 38.844774]|1 38.854401]|1 38.854701]|1 48.882504]|1 AC|1 Battery|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Button|1 Button|1 Button|1 Button|1 Core|1 FS|1 No|1 Power|1 Power|1 Privacy|1 Spurious|1 Spurious|1 atkbd.c:|1 atkbd.c:|1 by|1 dock|1 driver|1 hardware|1 hardware|1 initialized
+[|1 31.381378]|1 33.863025]|1 34.599933]|1 34.612029]|1 34.650462]|1 37.097202]|1 37.617308]|1 38.748572]|1 38.772756]|1 38.782797]|1 47.502139]|1 58.393526]|1 AC|1 Battery|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Bluetooth:|1 Button|1 Button|1 Button|1 Button|1 Clocksource|1 Core|1 FS|1 No|1 Power|1 Power|1 Privacy|1 acpi_pm|1 audit(1228907376.819:3):|1 by|1 dock|1 initialized
 [|1 initialized
 [|1 initialized
 [|1 initialized
 [|1 initialized
-[|1 internal|1 manager|1 might|1 might|1 module.
-[|1 overridden|1 port|1 ppdev:|1 sda1,|1 socket|1 socket|1 socket|1 up,|1 vboxvfs:|1 ver|1 ver|1 ver|1 with|1 write-combining
+[|1 internal|1 manager|1 module.
+[|1 overridden|1 pid=4223|1 port|1 ppdev:|1 sda1,|1 socket|1 socket|1 socket|1 tsc|1 up,|1 vboxvfs:|1 ver|1 ver|1 ver|1 with|1 write-combining
 [|1 

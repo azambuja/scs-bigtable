@@ -1,53 +1,35 @@
 package scs.demos.mapreduce.schedule;
 
-import org.omg.CORBA.ORB;
-import org.omg.CORBA.Object;
-import org.omg.CORBA.SystemException;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.concurrent.LinkedBlockingQueue;
 
-import scs.container.ComponentHandle;
-import scs.container.ComponentLoader;
-import scs.container.ComponentLoaderHelper;
+import org.omg.CORBA.ORB;
+
 import scs.core.AlreadyConnected;
-import scs.core.ComponentId;
 import scs.core.ExceededConnectionLimit;
 import scs.core.IComponent;
 import scs.core.IReceptacles;
 import scs.core.IReceptaclesHelper;
 import scs.core.InvalidConnection;
 import scs.core.InvalidName;
-import scs.core.StartupFailed;
-
-import scs.demos.bigtable.Sorter;
 import scs.demos.bigtable.SorterHelper;
-import scs.demos.bigtable.servant.BigTableComponent;
 import scs.demos.bigtable.servant.BigTableInitializer;
-import scs.demos.mapreduce.Master;
-import scs.demos.mapreduce.MasterHelper;
-import scs.demos.mapreduce.MasterPOA;
-import scs.demos.mapreduce.Task;
-import scs.demos.mapreduce.TaskStatus;
-import scs.demos.mapreduce.PropertiesException;
-import scs.demos.mapreduce.ConectionToExecNodesException;
-import scs.demos.mapreduce.WorkerHelper;
-import scs.demos.mapreduce.WorkerInstantiationException;
-import scs.demos.mapreduce.TaskInstantiationException;
 import scs.demos.mapreduce.ChannelException;
-import scs.demos.mapreduce.StartFailureException;
-import scs.demos.mapreduce.Worker;
-import scs.demos.mapreduce.Reporter;
+import scs.demos.mapreduce.ConectionToExecNodesException;
 import scs.demos.mapreduce.IOFormat;
-import scs.demos.mapreduce.FileSplit;
-import scs.execution_node.ExecutionNode;
-
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Properties;
-import java.lang.Integer;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Formatter;
+import scs.demos.mapreduce.MasterPOA;
+import scs.demos.mapreduce.PropertiesException;
+import scs.demos.mapreduce.Reporter;
+import scs.demos.mapreduce.StartFailureException;
+import scs.demos.mapreduce.Task;
+import scs.demos.mapreduce.TaskInstantiationException;
+import scs.demos.mapreduce.TaskStatus;
+import scs.demos.mapreduce.Worker;
+import scs.demos.mapreduce.WorkerInstantiationException;
 
 /**
  * Servant que implementa a interface scs::demos::mapreduce::Master
@@ -97,22 +79,23 @@ public class MasterServant extends MasterPOA {
 	/* nome do arquivo resultado da juncao dos reduces*/
 	private String joinFileName;
 
-	/* Lista de objetos Execution Node dos workers*/
+	/* Lista de objetos Execution Node */
 	private Hashtable hashNodes = null;
 	/* Lista de objetos Execution Node dos Sorters*/
 	private Hashtable hashSorterNodes = null;
 	/* Objeto que instancia workers */
-	private WorkerInitializer workersInitializer = null;
+	private WorkerInitializer initializer = null;
 	/* Objeto que instancia bigtables */
 	private BigTableInitializer bigTableInitializer = null;
-	
+
 	/* referencia para o componente Master*/
 	private MasterComponent myComp = null;
 
 	private Properties config;
 	private ORB orb;
 
-	private LinkedBlockingQueue<IComponent> workerQueue;
+	private LinkedBlockingQueue workerQueue;
+	private LinkedBlockingQueue<IComponent> workerComponentQueue;
 	private LinkedBlockingQueue taskQueue;
 	private LinkedBlockingQueue<IComponent> sorterQueue;
 	private IComponent channel;
@@ -201,7 +184,7 @@ public class MasterServant extends MasterPOA {
 				String.valueOf(execNodeList.length)));
 		num_reducers = Integer.parseInt(this.config.getProperty("mapred.Reducers.number","0"));
 		num_sorters = Integer.parseInt(this.config.getProperty("mapred.Sorters.number", "0"));
-		
+
 		if (num_mappers < execNodeList.length){
 			reporter.report(0,"MasterServant::getProperties - Numero de mappers nao pode ser menor que " +
 			"numero de execution nodes");     
@@ -244,7 +227,9 @@ public class MasterServant extends MasterPOA {
 			currentStatus = Phase.MAP;
 			while(!currentStatus.equals(Phase.ERROR)) {
 
-				IComponent workerComponent = (IComponent) workerQueue.take();
+				Worker worker = (Worker) workerQueue.take();
+				//IComponent workerComponent = (IComponent) workerQueue.take();
+
 				Task task = (Task) taskQueue.take();
 				TaskStatus op = task.getStatus();
 
@@ -252,10 +237,10 @@ public class MasterServant extends MasterPOA {
 				if (op.value()==TaskStatus._END) {
 					break;
 				}
-				
-				Worker worker = WorkerHelper.narrow(workerComponent.getFacetByName("Worker"));
+				//Worker worker = WorkerHelper.narrow(workerComponent.getFacetByName("Worker"));
+
 				workingOn.put(task, worker);
-				worker.execute(channel, task);
+				worker.execute(task);
 			}
 
 			if (currentStatus.equals(Phase.ERROR)) { 
@@ -285,7 +270,7 @@ public class MasterServant extends MasterPOA {
 
 		/* cria objeto que inicializa workers e fila de tarefas */
 		try {
-			workersInitializer = new WorkerInitializer(this);
+			initializer = new WorkerInitializer(this);
 		} catch (Exception e) {
 			throw new WorkerInstantiationException();
 		}
@@ -295,19 +280,19 @@ public class MasterServant extends MasterPOA {
 		try {
 			bigTableInitializer = new BigTableInitializer(this);
 		} catch (Exception e) {
-//			TODO
-//			throw new BigTableInstantiationException();
+			//			TODO
+			//			throw new BigTableInstantiationException();
 		}
 		reporter.report(1,"MasterServant::start - BigTableInitializer instanciado");
 
 		/* conecta-se com os execution nodes dos workers*/
 		reporter.report(1,"MasterServant::start - Conectando aos outros execution nodes"); 
-		hashNodes = this.workersInitializer.connectToExecNodes();
+		hashNodes = this.initializer.connectToExecNodes();
 		if (hashNodes == null) {
 			throw new ConectionToExecNodesException ();
 		}
 		reporter.report(1,"MasterServant::start - Conectado ao execution node dos workers");
-		
+
 		/* conecta-se com os execution nodes dos sorters*/
 		reporter.report(1,"MasterServant::start - Conectando aos outros execution nodes"); 
 		hashSorterNodes = this.bigTableInitializer.connectToExecNodes();
@@ -318,34 +303,37 @@ public class MasterServant extends MasterPOA {
 
 		/* cria canal de evento entre master e workers*/
 		reporter.report(1,"MasterServant::start - Criando canal de evento entre master e workers");
-		channel = workersInitializer.buildChannel();
+		channel = initializer.buildChannel();
 		if (channel == null) {
 			throw new ChannelException ();
 		}
 
 		/*instancia workers*/
 		reporter.report(1,"MasterServant::start - Instanciando Workers");
-		workerQueue = workersInitializer.buildWorkerQueue();
+		workerQueue = initializer.buildWorkerQueue();
 		if (workerQueue == null) {
 			throw new WorkerInstantiationException ();
 		}
-		
+
+		/*Enche a lista de componentes de workers*/
+		workerComponentQueue = initializer.getWorkerComponentQueue();
+
 		/*instancia sorters*/
 		reporter.report(1,"MasterServant::start - Instanciando Sorters");
 		sorterQueue = bigTableInitializer.buildSorterQueue();
 		if (sorterQueue == null) {
-//			TODO: criar excecao da bigTable
-//			throw new BigTableInstantiationException ();
+			//			TODO: criar excecao da bigTable
+			//			throw new BigTableInstantiationException ();
 		}
 
 		/*instancia tarefas*/
 		reporter.report(1,"MasterServant::start - Instanciando Tarefas");
-		ioformat = workersInitializer.createIOFormatServant(ioformatClassName);
+		ioformat = initializer.createIOFormatServant(ioformatClassName);
 		if (ioformat == null) {
 			throw new TaskInstantiationException ();
 		}
 
-		taskQueue   = workersInitializer.buildTaskQueue();
+		taskQueue   = initializer.buildTaskQueue();
 		if ((taskQueue == null) || (taskQueue.toArray().length == 0)) {
 			throw new TaskInstantiationException ();
 		}	
@@ -354,23 +342,23 @@ public class MasterServant extends MasterPOA {
 		/* inicia escalonamento das tarefas map-reduce*/
 		reporter.report(1,"MasterServant::start - Iniciando escalonamento");
 		if (!schedule()) {
-			workersInitializer.finish();
+			//initializer.finish();
 			throw new StartFailureException();
 		} 
-		workersInitializer.finish();	     
+		//initializer.finish();	     
 	}
-	
+
 	private void connectSorters(){
-		
-		Iterator<IComponent> iteWorker = workerQueue.iterator();
+
+		Iterator<IComponent> iteWorker = workerComponentQueue.iterator();
 		Iterator<IComponent> iteBigTable = sorterQueue.iterator();
-		
+
 		IComponent workerComponent;
 		IComponent bigTableComponent;
-		
+
 		while(iteWorker.hasNext()){
 			workerComponent = iteWorker.next();
-		
+
 			IReceptacles workerReceptacles = IReceptaclesHelper.narrow(workerComponent.getFacetByName("infoReceptacle"));
 			while(iteBigTable.hasNext()){
 				bigTableComponent = iteBigTable.next();
@@ -390,11 +378,11 @@ public class MasterServant extends MasterPOA {
 					e.printStackTrace();
 				}
 			}
-			
+
 		}
-		
+
 	}
-	
+
 	public ORB getOrb(){
 		return orb;
 	}
@@ -411,12 +399,12 @@ public class MasterServant extends MasterPOA {
 		return num_mappers;
 	}
 
-	public int getNum_sorters() {
-		return num_sorters;
-	}
-
 	public int getNum_Reducers() {
 		return num_reducers;
+	}
+
+	public int getNum_sorters() {
+		return num_sorters;
 	}
 
 	public String getConfigFileName(){
@@ -427,9 +415,13 @@ public class MasterServant extends MasterPOA {
 		return workingOn;
 	}
 
-	public void addWorkerQueue(IComponent w){
+	public void addWorkerQueue(Worker w){
 		workerQueue.add(w);
 	}
+	/*public void addWorkerQueue(IComponent w){
+		workerQueue.add(w);
+	}*/
+
 
 	public void addTaskQueue(Task t){
 		taskQueue.add(t);
@@ -478,8 +470,15 @@ public class MasterServant extends MasterPOA {
 	public boolean getJoinFlag() {
 		return joinFlag;
 	}
+
 	public String getJoinFileName() {
 		return joinFileName;
-	}	
+	}
+
+	public IComponent getChannel(){
+		return channel;
+	}
+
+
 }
 

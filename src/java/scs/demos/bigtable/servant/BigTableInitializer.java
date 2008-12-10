@@ -181,7 +181,7 @@ public class BigTableInitializer {
 		return hashNodes;  
 	}
 	
-	/* Constroi a lista de sorters */
+	/* Constroi a lista de Componentes sorters */
 	public LinkedBlockingQueue<IComponent> buildSorterQueue() {
 		
 		IComponent bigTableComponent;

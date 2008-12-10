@@ -1,18 +1,18 @@
-"pci=routeirq".|1 'hlt'|1 (|5 (2016|1 (ACPI|1 (IRQs|4 (Ubuntu|2 (battery|1 (bus|1 (established|1 (lpj=7410500)
+"pci=routeirq".|1 'hlt'|1 (|5 (2016|1 (ACPI|1 (IRQs|4 (Ubuntu|2 (battery|1 (bus|1 (delta|1 (established|1 (on-line)
 [|1 (order|1 (supports|1 (usable)
 [|2 )
-[|1 *10|1 .text|1 /class/input/input0
+[|1 *10|1 -866282205|1 .text|1 /class/input/input0
 [|1 /class/input/input3
 [|1 /dev/sda5.|1 00)
 [|1 00000000
 [|2 00000000322f0000|2 0000000100000000|1 00000008|2 00000140|1 0000:00:04.0[A]|1 00:05:|1 0:|1 0:0:0:0:|11 0c00)
 [|1 0x000101f0|1 0x00010376|1 0x4008
 [|1 0x60,0x64|3 0xc0000000|1 0xc020,|1 0xc043e000|1 0xff800000|1 0xfff4d000|1 1|5 1.0,|2 1.2|1 1.44M
-[|1 1.83GHz|1 10|5 10.992761]|1 10.993424]|1 1024|2 11
-[|2 11)|2 11.158828]|1 11.159149]|1 11.159257]|1 11.159374]|1 11.177149]|1 11.266500]|1 11.267463]|1 11.267772]|1 11.274162]|1 11.294337]|1 11.738746]|1 11.891299]|1 11.899510]|1 11.939005]|1 11.939719]|1 11.956714]|1 11.967058]|1 11.987743]|1 11.992339]|1 11.992708]|1 11.993218]|1 11.995816]|1 11.996881]|1 11.999422]|1 11/06/108
-[|1 11k|1 12.002607]|1 12.080343]|1 12.083946]|1 12.084465]|1 12.537262]|1 12.763428]|1 12.768249]|1 12.778815]|1 12.778980]|1 12.779739]|1 13.248607]|1 13.264438]|1 13.266112]|1 13.266607]|1 13.267171]|1 13.272532]|1 13.272838]|1 14
-[|1 1573|1 16|1 16384|1 17
-[|1 17.281308]|1 17.308610]|1 17.309240]|1 17.344784]|1 17.545318]|1 17.546131]|1 17.582101]|1 17.643223]|1 18.152117]|1 18.152564]|1 18.281464]|1 18.291523]|1 18.292699]|1 18.703592]|1 18140k|1 1827.852|1 199|1 2
+[|1 1.83GHz|1 10|5 10.955594]|1 1024|2 11
+[|2 11)|2 11.117344]|1 11.117686]|1 11.233912]|1 11.251642]|1 11.253277]|1 11.325291]|1 11.770555]|1 11.939695]|1 11.948548]|1 11.956714]|1 11.957230]|1 11.996107]|1 11/10/108
+[|1 11k|1 12.000819]|1 12.031041]|1 12.050154]|1 12.052617]|1 12.054804]|1 12.095163]|1 12.145953]|1 12.863922]|1 12.880383]|1 12.882930]|1 12.883185]|1 12.884841]|1 13.339585]|1 13.344898]|1 13.374175]|1 13.374757]|1 13.375408]|1 13.381936]|1 13.384624]|1 14
+[|1 15.362758]|1 15.383782]|1 15.403450]|1 1573|1 16|1 161.533783]|1 161.537755]|1 16384|1 17
+[|1 17.498087]|1 17.731576]|1 18.201352]|1 18.281710]|1 18.297994]|1 18.301654]|1 18.301672]|1 18.301777]|1 18.305260]|1 18.360799]|1 18.360814]|1 18.361084]|1 18.361351]|1 18.434437]|1 18.435004]|1 18.965284]|1 18.965686]|1 18140k|1 199|1 2
 [|1 2.0.6|2 2.10|1 2.11
 [|2 2.8
 [|1 20
@@ -21,49 +21,50 @@
 [|1 2008|1 203947
 [|1 2048K
 [|1 205552|1 205552
-[|4 256|1 262144|1 30.411070]|1 30.551788]|1 32300000:cdcc0000)
+[|4 256|1 262144|1 30.123521]|1 32300000:cdcc0000)
 [|1 32K
-[|1 32K,|1 34.073596]|1 34.671341]|1 34.935363]|1 34.997427]|1 364|1 37.906056]|1 38.810264]|1 38.810294]|1 38.844791]|1 38.854688]|1 39.910531]|1 3a|2 4|1 4.1.3|1 4096|3 48.883229]|1 5
+[|1 32K,|1 34.349040]|1 34.663124]|1 364|1 37.746739]|1 37.905264]|1 37.905288]|1 39.757912]|1 3a|2 4|1 4.1.3|1 4096|3 47.501465]|1 4:357:171
+[|1 5
 [|3 5,|1 512
-[|1 59.041009]|1 65536|2 65536K|1 712|1 726k
+[|1 65536|2 65536K|1 712|1 726k
 [|1 7f|1 8
 [|1 8,|1 802|1 803468k/822208k|1 80x25
 [|1 8:5
-[|1 919|1 :|9 >
+[|1 919|1 :|9 =|1 >
 [|1 @|2 ACPI:|32 ATA|1 AUX|1 Adapter|1 Adding|1 Allocating|1 Attempting|1 BIOS|2 Belay
 [|1 Bridge|1 CD-ROM|4 CD-ROM,|1 CPU|2 CPUs
 [|1 CPUs=1,|1 Controller|1 Core(TM)2|1 Disabled|3 EC|1 EXT3|1 Entering|1 Extensions
 [|1 FDC|1 FPU|2 Failure|2 Flags|1 Floppy|1 Found|2 GMT|1 HIGHMEM|1 HWalign=64,|1 Hash|1 I|1 IPI|1 IPv6|1 If|2 ImExPS/2|1 Initializing|1 Interpreter|1 Kernel|1 LIFO|2 LOWMEM|1 MHz|1 Macintosh|1 Magic|1 Memory:|1 MinObjects=4,|1 Mon|1 Mount-cache|1 NET:|8 Nov|1 OK.
-[|1 PCI|14 PCI/PCI|1 PHY|1 PIC|1 Partition|1 Play|3 RSDP|2 Real|1 Registered|8 Revision:|1 SIMD|1 Setting|3 Sleep|2 Slot|1 Successfully|2 TCP:|1 Time:|2 UDMA/133
+[|1 PCI|14 PCI/PCI|1 PHY|1 PIC|1 Partition|1 Play|3 RSDP|2 Real|1 Registered|8 Revision:|1 SIMD|1 Setting|3 Sleep|2 Slot|1 Successfully|2 TCP:|1 Time:|3 UDMA/133
 [|2 Uniform|1 VBOX|8 VBOXBIOS|1 VGA+|1 Write|5 Zone|1 [|1 [AC]|1 [BAT0]|1 [LNKC]|3 [PNP0303:PS2K,PNP0f03:PS2M]|1 [PWRF]
 [|1 [SLPF]
 [|1 [sda]|9 a|3 active|1 all|2 allocate|1 and|5 apm:|2 assigned|1 ata2:|1 batch:31
-[|1 be|2 bit|1 blocksize
+[|1 bit|1 blocksize
 [|1 boot.
 [|1 but|1 cache:|7 caps:|2 cards.
-[|1 checking|1 clocksource|1 colour|1 connection|1 d3|1 data,|1 deadline|1 denied_mask="a"|1 detected.
-[|1 device|8 devices|2 directly.
-|1 directly.
-[11573.512164]|1 disabled.
+[|1 checking|1 clocksource|2 colour|1 connection|1 d3|1 data,|1 deadline|1 denied_mask="a"|1 detected.
+[|1 device|7 devices|2 disabled.
 [|2 disk|1 disk
 [|1 drive(s):|1 early_node_map[1]|1 eisa.0
 [|1 enabled
 [|2 entries|1 entries:|8 entry|1 eth0:|3 even|1 exception|1 family|8 fast|1 fd0|1 ffffd000|1 filesystem|1 fixmap|1 found.
 [|2 from|1 full-duplex
-[|1 has|1 highmem)
+[|1 has|2 highmem)
 [|1 honours|1 identify,|1 image.
 [|1 init|1 init
-[|1 initialized"|1 initialized:|1 initialized<5>audit(1228563242.672:2):|1 input:|5 instruction...|1 is|6 isa0060/serio0.|2 journal
+[|1 initialized"|1 initialized:|1 input:|5 installed.
+|1 instruction...|1 is|6 journal
 [|1 keyboard|1 last|1 layer|4 layout:
 [|1 libata|1 link|1 lo:|1 local|1 low)|2 lowmem|1 map:
-[|1 matches|1 memory:|2 mice:|1 mode|1 mode
-[|1 monitor/mwait|1 motherboard|1 mouse|2 mtrr:|1 not|2 number:|1 operation="inode_permission"|1 paravirtualized|1 parport_pc|1 pci|1 pid=1131
+[|1 memory:|2 mice:|1 mode|1 mode
+[|1 monitor/mwait|1 motherboard|1 mouse|2 mtrr:|1 not|2 ns)
+[|1 number:|1 operation="inode_permission"|1 paravirtualized|1 parport_pc|1 pci|1 pid=1131
 [|1 pnp|2 ports,|1 post|1 present
 [|1 present.
 [|2 processor|2 protecting|1 protocol|8 quotas|1 read|2 read-only|1 registering|2 reno|1 report
 [|1 restore...|1 route|1 routine..|1 scheduler|4 sda1|1 sda:|1 security|2 setting|3 sharing|1 signature|1 specific|1 sr|2 standard|1 starting|1 supervisor|1 support...|1 swsusp|1 table|8 totalpages:|1 tray
-[|1 trying|2 tsbogend@alpha.franken.de
-[|1 type=1505|1 unmasked|1 unused|1 up|3 used|3 used
+[|1 tsbogend@alpha.franken.de
+[|1 type=1505|1 unmasked|1 unstable|1 unused|1 up|3 used|3 used
 [|1 using|2 v1.12ac
 [|1 video|1 workarounds.
 [|1 your|1 zone:|6 

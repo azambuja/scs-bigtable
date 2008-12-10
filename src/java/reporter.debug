@@ -23,36 +23,23 @@ IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K5.txt
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K6.txt
 MasterServant::start - Iniciando escalonamento
-EventSinkMaster::handleEvent - Erro ao executar handleEvent.
-java.lang.ClassCastException: scs.demos.mapreduce._WorkerStub cannot be cast to scs.core.IComponent
-	at scs.demos.mapreduce.schedule.EventSinkMaster.handleEvent(EventSinkMaster.java:144)
-	at scs.event_service.servant.EventSinkConsumerServant.push(EventSinkConsumerServant.java:23)
-	at scs.event_service.EventSinkPOA._invoke(EventSinkPOA.java:38)
-	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatchToServant(CorbaServerRequestDispatcherImpl.java:653)
-	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatch(CorbaServerRequestDispatcherImpl.java:205)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequestRequest(CorbaMessageMediatorImpl.java:1698)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:1558)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleInput(CorbaMessageMediatorImpl.java:940)
-	at com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage_1_2.callback(RequestMessage_1_2.java:199)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:712)
-	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.dispatch(SocketOrChannelConnectionImpl.java:469)
-	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.doWork(SocketOrChannelConnectionImpl.java:1205)
-	at com.sun.corba.se.impl.orbutil.threadpool.ThreadPoolImpl$WorkerThread.run(ThreadPoolImpl.java:418)
-
-EventSinkMaster::handleEvent - Erro ao executar handleEvent.
-java.lang.ClassCastException: scs.demos.mapreduce._WorkerStub cannot be cast to scs.core.IComponent
-	at scs.demos.mapreduce.schedule.EventSinkMaster.handleEvent(EventSinkMaster.java:144)
-	at scs.event_service.servant.EventSinkConsumerServant.push(EventSinkConsumerServant.java:23)
-	at scs.event_service.EventSinkPOA._invoke(EventSinkPOA.java:38)
-	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatchToServant(CorbaServerRequestDispatcherImpl.java:653)
-	at com.sun.corba.se.impl.protocol.CorbaServerRequestDispatcherImpl.dispatch(CorbaServerRequestDispatcherImpl.java:205)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequestRequest(CorbaMessageMediatorImpl.java:1698)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:1558)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleInput(CorbaMessageMediatorImpl.java:940)
-	at com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage_1_2.callback(RequestMessage_1_2.java:199)
-	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.handleRequest(CorbaMessageMediatorImpl.java:712)
-	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.dispatch(SocketOrChannelConnectionImpl.java:469)
-	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.doWork(SocketOrChannelConnectionImpl.java:1205)
-	at com.sun.corba.se.impl.orbutil.threadpool.ThreadPoolImpl$WorkerThread.run(ThreadPoolImpl.java:418)
-
-WorkerInitializer::finish - Finalizando containers MAPREDUCE
+EventSinkMaster::handleEvent - TaskID = 2
+    Este foi o map no. 1 de 7
+EventSinkMaster::handleEvent - TaskID = 4
+    Este foi o map no. 2 de 7
+EventSinkMaster::handleEvent - TaskID = 5
+    Este foi o map no. 3 de 7
+EventSinkMaster::handleEvent - TaskID = 3
+    Este foi o map no. 4 de 7
+EventSinkMaster::handleEvent - TaskID = 6
+    Este foi o map no. 5 de 7
+EventSinkMaster::handleEvent - TaskID = 1
+    Este foi o map no. 6 de 7
+EventSinkMaster::handleEvent - TaskID = 0
+    Este foi o map no. 7 de 7
+EventSinkMaster::handleEvent - TaskID = 9
+    Este foi o reduce no. 1 de 3
+EventSinkMaster::handleEvent - TaskID = 7
+    Este foi o reduce no. 2 de 3
+EventSinkMaster::handleEvent - TaskID = 8
+    Este foi o reduce no. 3 de 3

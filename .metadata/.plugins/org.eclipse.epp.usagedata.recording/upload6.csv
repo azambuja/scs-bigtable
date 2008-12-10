@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.refresh,1228908104553
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1228908122818
+closed,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228908122819
+activated,view,org.eclipse.ui.ide,3.4.1.M20080903-2000,org.eclipse.ui.views.ProblemView,1228908125221
+opened,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228908125402
+activated,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228908125429
+activated,view,org.eclipse.ui.ide,3.4.1.M20080903-2000,org.eclipse.ui.views.ProblemView,1228908126940
+closed,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228908126941
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1228908128053
+opened,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228908128895
+activated,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228908128936
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228908129029
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228908130669
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1228908130676
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228908131778
+started,bundle,org.eclipse.mylyn.resources.ui,3.0.2.v20080918-1100-e3x,org.eclipse.mylyn.resources.ui,1228908133114
+started,bundle,org.eclipse.mylyn.java.ui,3.0.2.v20080918-1100-e3x,org.eclipse.mylyn.java.ui,1228908133152
+started,bundle,org.eclipse.mylyn.ide.ant,3.0.2.v20080918-1100-e3x,org.eclipse.mylyn.ide.ant,1228908133223
+closed,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228908133464
+stopped,bundle,org.eclipse.mylyn.ide.ant,3.0.2.v20080918-1100-e3x,org.eclipse.mylyn.ide.ant,1228908134648
+stopped,bundle,org.eclipse.ant.ui,3.3.0.v20080529,org.eclipse.ant.ui,1228908134658
+stopped,bundle,org.eclipse.mylyn.java.tasks,3.0.2.v20080918-1100-e3x,org.eclipse.mylyn.java.tasks,1228908134672
+stopped,bundle,org.eclipse.mylyn.java.ui,3.0.2.v20080918-1100-e3x,org.eclipse.mylyn.java.ui,1228908134724
+stopped,bundle,org.eclipse.jdt.junit,3.4.0.v20080603-2000,org.eclipse.jdt.junit,1228908134725
+stopped,bundle,org.eclipse.jdt.debug.ui,3.3.1.v20080730_r341,org.eclipse.jdt.debug.ui,1228908134768

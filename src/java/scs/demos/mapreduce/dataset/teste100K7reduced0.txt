@@ -1,6 +1,5 @@
-|2 #1|1 $|1 (2016k|1 (API|1 (Driver|1 (c)|1 (default)
+|1 #1|1 $|1 (2016k|1 (API|1 (Driver|1 (c)|1 (default)
 [|1 (disabled)
-[|1 (off-line)
 [|1 (r2|1 *11)
 [|1 -|13 .data|1 /class/input/input1
 [|1 /class/input/input4
@@ -11,23 +10,23 @@
 [|2 0x000103f6|1 0x0001c000|1 0x03|1 0xc0100000|1 0xc02f8186|2 0xc03dde84|1 0xf3000000|1 1
 [|3 1.8
 [|1 10
-[|3 100Mbps,|1 11)
-[|1 11.159490]|1 11.159550]|1 11.159676]|1 11.273107]|1 11.273512]|1 11.273620]|1 11.274031]|1 11.274250]|1 11.275060]|1 11.292544]|1 11.354389]|1 11.741276]|1 11.742341]|1 11.763128]|1 11.904557]|1 11.905007]|1 11.944445]|1 11.966987]|1 11.967023]|1 11.972423]|1 11.991908]|1 11.992997]|1 11.993117]|1 11.995829]|1 12.084481]|1 12.779693]|1 12.779705]|1 12.779714]|1 12.782207]|1 12.782285]|1 12.783287]|1 128:|1 13.224230]|1 13.224845]|1 13.240772]|1 13.247483]|2 13.266185]|1 13.266635]|1 13.275575]|1 13.276529]|1 15.253671]|1 16
-[|1 17.241862]|1 17.292622]|1 17.308255]|1 17.545298]|1 18.152167]|1 18.152278]|1 18.152383]|1 18.159049]|1 18.159346]|1 18.223556]|1 18.227498]|1 18.235460]|1 18.291488]|1 18.308720]|1 18.702825]|1 18.702840]|1 18.702849]|1 18.770949]|1 18.771048]|1 1:0:0:0:|3 2.21|1 2.6.22-16-generic|1 2.6.22-16.60-generic)
-[|1 24|1 27|1 27.Jun.2006|1 30.411039]|1 30.411057]|1 30.462435]|1 31
-[|1 31.816130]|1 322F0030,|1 322F0060,|1 322F01A0,|1 34.984354]|1 364k|2 37.259449]|1 37.689281]|1 3705.25|1 38.809797]|1 38.844774]|1 38.854401]|1 38.854701]|1 4
+[|3 10.954195]|1 100Mbps,|1 11)
+[|1 11.117121]|1 11.117169]|1 11.117286]|1 11.117460]|1 11.136483]|1 11.226285]|1 11.226390]|1 11.226531]|1 11.232873]|1 11.233830]|1 11.234487]|1 11.234763]|1 11.774600]|1 11.775719]|1 11.811764]|1 11.995508]|1 12.022942]|1 12.022978]|1 12.028759]|1 12.050005]|1 12.050044]|1 12.052630]|1 12.054817]|1 12.136549]|1 12.145411]|1 12.869882]|1 12.880373]|1 12.880406]|1 128:|1 13.345649]|1 13.352786]|1 13.353014]|1 13.354442]|1 13.370423]|1 13.373900]|1 16
+[|1 17.465485]|1 17.498143]|1 17.545604]|1 17.731556]|1 17.732585]|1 1755.856|1 18.045682]|1 18.301637]|1 18.301883]|1 18.305393]|1 18.361463]|1 18.361664]|1 18.401339]|1 18.965292]|1 19.015574]|1 19.015610]|1 1:0:0:0:|3 2.21|1 2.6.22-16-generic|1 2.6.22-16.60-generic)
+[|1 24|1 27|1 27.Jun.2006|1 30.072956]|1 30.072986]|1 30.270504]|1 31
+[|1 31.381378]|1 322F0030,|1 322F0060,|1 322F01A0,|1 33.863025]|1 34.599933]|1 34.612029]|1 34.650462]|1 3576.58|1 364k|2 37.097202]|1 37.617308]|1 38.748572]|1 38.772756]|1 38.782797]|1 4
 [|1 4.1.2-16ubuntu2))|1 40000000|1 4096
-[|1 48.882504]|1 4e|1 6|1 64
+[|1 47.502139]|1 4e|1 58.393526]|1 6|1 64
 [|2 7,|2 79C973|1 79C973
 [|1 802MB|1 8250/16550|1 9|4 919k|1 <|1 AC|1 ACPI|4 ANSI:|2 APIC|1 APIC!
 [|1 After|2 AppArmor:|1 Attached|4 BIOS-e820:|6 Battery|1 Bluetooth:|8 BogoMIPS|1 Booting|1 Brought|1 Button|4 CPU#0
-[|1 Checking|3 Clock|1 Compat|1 Core|2 DMA|5 DSDT|2 Dentry|1 Detected|2 Dquot-cache|1 EISA:|2 ELCR|1 Explorer|1 FACP|1 FACS|1 FS|1 FUA
+[|1 Checking|3 Clock|1 Clocksource|1 Compat|1 Core|2 DMA|5 DSDT|2 Dentry|1 Detected|2 Dquot-cache|1 EISA:|2 ELCR|1 Explorer|1 FACP|1 FACS|1 FS|1 FUA
 [|2 Framework|1 HARDDISK|1 III|2 IP|1 Inode-cache|1 Intel(R)|1 Interrupt|9 L2|1 LBA|1 Linux|2 Look|1 MB)
 [|4 No|2 No-Shortcut|1 Ok.
 [|1 On|1 Order=0-1,|1 PATA|2 PFN|2 PM-Timer|1 PNP
-[|1 PQ:|2 Plug|3 PnP|3 PnPBIOS:|1 Power|2 Privacy|1 Protect|2 Resume|2 Root|1 Routing|1 SCSI|2 SELinux:|1 SMP|4 Scanning|1 Security|1 Sense:|2 Serial:|1 Set|1 Spurious|2 Support|1 Switched|1 T5550|1 TCP|4 Time|1 Total|1 UDMA/33|2 UP|1 VBOXFACP|1 VFS:|1 [LNKA]|1 [LNKD]|3 [\_SB_.PCI0._PRT]
-[|1 alternatives:|2 at|11 ata1.00:|3 ata1:|1 ata_piix|1 ata_piix
-[|2 atkbd.c:|2 audit(1228563240.172:1):|1 available|1 available.
+[|1 PQ:|2 Plug|3 PnP|3 PnPBIOS:|1 Power|2 Privacy|1 Protect|2 Resume|2 Root|1 Routing|1 SCSI|2 SELinux:|1 SMP|4 Scanning|1 Security|1 Sense:|2 Serial:|1 Set|1 Support|1 Switched|1 T5550|1 TCP|4 Time|1 Total|1 UDMA/33|2 UP|1 VBOXFACP|1 VFS:|1 [LNKA]|1 [LNKD]|3 [\_SB_.PCI0._PRT]
+[|1 acpi_pm|1 alternatives:|2 at|11 ata1.00:|3 ata1:|1 ata_piix|1 ata_piix
+[|2 audit(1228900149.256:1):|1 audit(1228907376.819:3):|1 available|1 available.
 [|2 batch:0
 [|1 bmdma|2 bus|5 bus=0
 [|1 by|3 bytes)
@@ -38,15 +37,15 @@
 [|1 driver|4 emulation|1 enabled|3 error,|1 failed.
 [|1 feature|1 ffffe000.
 [|1 for|11 found|1 freed
-[|3 fuse|1 generic|3 hang|1 hardware|5 hardware
-[|1 hash|9 idle|1 if|2 info="AppArmor|1 init,|1 initialized
+[|3 fuse|1 generic|3 hang|1 hardware|3 hardware
+[|1 hash|8 idle|1 if|2 info="AppArmor|1 init,|1 initialized
 [|8 initramfs...|3 inits,|1 internal|1 io|4 is
 [|1 isapnp:|2 kB)
 [|5 latency|2 level-triggered
 [|2 loaded.
 [|1 manager|1 mapped|2 memmap
-[|3 might|2 module.
-[|2 mounted|1 multi|1 mwait|1 noop|1 of|4 or|2 ordered|1 overridden|1 pages|4 pages:|1 pcnet32.c:v1.33|1 pcnet32:|3 pkmap|1 port|3 ppdev:|1 processor.
+[|3 module.
+[|2 mounted|1 multi|1 mwait|1 noop|1 of|4 or|2 ordered|1 overridden|1 pages|4 pages:|1 pcnet32.c:v1.33|1 pcnet32:|3 pid=4223|1 pkmap|1 port|3 ppdev:|1 processor.
 [|1 quiet|1 reported|1 reserved
 [|1 reserved,|1 resolution|1 resource|1 resources|1 resume
 [|1 ro|1 routing
@@ -54,6 +53,6 @@
 [|1 sectors|2 sectors,|1 serio:|2 sg1|1 slot|1 socket|4 splash
 [|1 sr0
 [|1 swsusp:|1 the|2 threads.
-[|1 try|1 tsc|1 type|6 unregistered
+[|1 try|1 tsc|2 type|6 unregistered
 [|1 up,|1 v0.97|1 v1.0.0|1 vDSO|1 vboxvfs:|1 ver|3 virtual|1 with|3 work,|1 write-combining
 [|1 xa/form2|1 zonelists.|1 

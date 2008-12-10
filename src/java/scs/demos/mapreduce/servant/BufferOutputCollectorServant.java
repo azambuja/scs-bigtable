@@ -30,7 +30,7 @@ public class BufferOutputCollectorServant extends OutputCollectorPOA {
         private IOFormat ioformat = null;
         private FileSplit[] outputSplit = null;  
         private String exception = null;
-        private MapTaskServant task = null;           
+        private MapTask task = null;           
  	private PartitionerServant partitioner = null;
         private Reducer combiner = null;
         private RecordWriter[] out = null;
@@ -70,7 +70,7 @@ public class BufferOutputCollectorServant extends OutputCollectorPOA {
         private ArrayList<ObjToSort> [] segment = null;
 
 
-        public BufferOutputCollectorServant(MapTaskServant task) throws IOMapReduceException {
+        public BufferOutputCollectorServant(MapTask task) throws IOMapReduceException {
         	try {
                         
 			this.task =  task;
@@ -120,6 +120,9 @@ public class BufferOutputCollectorServant extends OutputCollectorPOA {
                 
 			for(int i=0; i < outputSplit.length; i++) {
                 		if (segment[i] == null ) {
+                                        out[i] = ioformat.getRecordWriter(TaskStatus.MAP);
+		        		out[i].open(configFileName,outputSplit[i],reporter);
+					out[i].close(); 
                                 	continue;
                     		}
                         

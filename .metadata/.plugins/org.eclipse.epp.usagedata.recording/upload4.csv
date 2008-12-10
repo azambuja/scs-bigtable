@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+no handler,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.refresh,1228907682991
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1228907686120
+closed,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907686121
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907687260
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907687560
+opened,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907687696
+activated,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907687727
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907690086
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907690525
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1228907690533
+activated,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907690975
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1228907691830
+closed,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907691830
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907703807
+opened,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907704050
+activated,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907704054
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907705510
+activated,view,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.PackageExplorer,1228907706582
+closed,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1228907706582
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907709555
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.newWizard,1228907726439
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907726523
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.refresh,1228907728971
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907734669
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1228907882158

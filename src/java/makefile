@@ -151,8 +151,7 @@ IDL_CMD := idlj -fallTIE -I $(IDL_DIR)
 SCS_JARS = \
   $(JAR_SCS_CORE) \
   $(JAR_SCS_EXECUTION_NODE) \
-  $(JAR_SCS_CONTAINER) \
-  $(JAR_SCS_PINGPONG)
+  $(JAR_SCS_CONTAINER)
 
 # Diretório com os jars dos pacotes SCS.
 SCS_JARS_DIR := ../../package
@@ -192,7 +191,6 @@ source-files:
 	@echo "Reasoning: $(SCS_REASONING_SRC_FILES)"
 	@echo " "
 	@echo "Aplicacoes Demo:"
-	@echo "PingPong: $(SCS_PINGPONG_SRC_FILES)"
 	@echo "Philosophers: $(SCS_PHILOSOPHER_SRC_FILES)"
 	@echo "Chat: $(SCS_CHAT_SRC_FILES)"
 	@echo "MapReduce: $(SCS_MAPREDUCE_SRC_FILES)"

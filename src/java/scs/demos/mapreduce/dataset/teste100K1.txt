@@ -6,28 +6,28 @@ Built 1 zonelists.  Total pages: 203947
 [    0.000000] Enabling unmasked SIMD FPU exception support... done.
 [    0.000000] Initializing CPU#0
 [    0.000000] PID hash table entries: 4096 (order: 12, 16384 bytes)
-[    0.000000] Detected 1827.852 MHz processor.
-[   10.992027] Console: colour VGA+ 80x25
-[   10.992761] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
-[   10.993424] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
-[   11.158828] Memory: 803468k/822208k available (2016k kernel code, 18140k reserved, 919k data, 364k init, 0k highmem)
-[   11.159149] virtual kernel memory layout:
-[   11.159198]     fixmap  : 0xfff4d000 - 0xfffff000   ( 712 kB)
-[   11.159257]     pkmap   : 0xff800000 - 0xffc00000   (4096 kB)
-[   11.159315]     vmalloc : 0xf3000000 - 0xff7fe000   ( 199 MB)
-[   11.159374]     lowmem  : 0xc0000000 - 0xf22f0000   ( 802 MB)
-[   11.159432]       .init : 0xc03e3000 - 0xc043e000   ( 364 kB)
-[   11.159490]       .data : 0xc02f8186 - 0xc03dde84   ( 919 kB)
-[   11.159550]       .text : 0xc0100000 - 0xc02f8186   (2016 kB)
-[   11.159676] Checking if this processor honours the WP bit even in supervisor mode... Ok.
-[   11.177149] SLUB: Genslabs=22, HWalign=64, Order=0-1, MinObjects=4, CPUs=1, Nodes=1
-[   11.266500] Calibrating delay using timer specific routine.. 3705.25 BogoMIPS (lpj=7410500)
-[   11.267354] Security Framework v1.0.0 initialized
-[   11.267463] SELinux:  Disabled at boot.
-[   11.267772] Mount-cache hash table entries: 512
-[   11.273107] CPU: After generic identify, caps: 078bf3bf 00000000 00000000 00000000 00000008 00000000 00000000
-[   11.273512] monitor/mwait feature present.
-[   11.273620] using mwait in idle threads.
-[   11.274031] CPU: L1 I cache: 32K, L1 D cache: 32K
-[   11.274162] CPU: L2 cache: 2048K
+[    0.000000] Detected 1755.856 MHz processor.
+[   10.954195] Console: colour VGA+ 80x25
+[   10.955070] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[   10.955594] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[   11.116802] Memory: 803468k/822208k available (2016k kernel code, 18140k reserved, 919k data, 364k init, 0k highmem)
+[   11.117121] virtual kernel memory layout:
+[   11.117169]     fixmap  : 0xfff4d000 - 0xfffff000   ( 712 kB)
+[   11.117228]     pkmap   : 0xff800000 - 0xffc00000   (4096 kB)
+[   11.117286]     vmalloc : 0xf3000000 - 0xff7fe000   ( 199 MB)
+[   11.117344]     lowmem  : 0xc0000000 - 0xf22f0000   ( 802 MB)
+[   11.117402]       .init : 0xc03e3000 - 0xc043e000   ( 364 kB)
+[   11.117460]       .data : 0xc02f8186 - 0xc03dde84   ( 919 kB)
+[   11.117519]       .text : 0xc0100000 - 0xc02f8186   (2016 kB)
+[   11.117686] Checking if this processor honours the WP bit even in supervisor mode... Ok.
+[   11.136483] SLUB: Genslabs=22, HWalign=64, Order=0-1, MinObjects=4, CPUs=1, Nodes=1
+[   11.225429] Calibrating delay using timer specific routine.. 3576.58 BogoMIPS (lpj=7153176)
+[   11.226285] Security Framework v1.0.0 initialized
+[   11.226390] SELinux:  Disabled at boot.
+[   11.226531] Mount-cache hash table entries: 512
+[   11.232873] CPU: After generic identify, caps: 078bf3bf 00000000 00000000 00000000 00000008 00000000 00000000
+[   11.233493] monitor/mwait feature present.
+[   11.233595] using mwait in idle threads.
+[   11.233697] CPU: L1 I cache: 32K, L1 D cache: 32K
+[   11.233830] CPU: L2 cache: 2048K
 [ 

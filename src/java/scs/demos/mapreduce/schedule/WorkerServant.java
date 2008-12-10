@@ -2,9 +2,10 @@ package scs.demos.mapreduce.schedule;
 
 import org.omg.CORBA.Any;
 import org.omg.CORBA.ORB;
+import org.omg.PortableServer.POA;
+import org.omg.PortableServer.POAHelper;
 
 import scs.demos.mapreduce.WorkerPOA;
-import scs.demos.mapreduce.Task;
 import scs.demos.mapreduce.FileSplit;
 import scs.demos.mapreduce.TaskStatus;
 import scs.core.IComponent;
@@ -12,6 +13,10 @@ import scs.core.ConnectionDescription;
 import scs.event_service.EventSink;
 import scs.event_service.EventSinkHelper;
 import scs.demos.mapreduce.Reporter;
+import scs.demos.mapreduce.Task;
+import scs.demos.mapreduce.servant.MapTask;
+import scs.demos.mapreduce.servant.ReduceTask;
+import scs.demos.mapreduce.servant.MapReduceTask;
 
 
 /**
@@ -21,50 +26,45 @@ import scs.demos.mapreduce.Reporter;
 
 public class WorkerServant extends WorkerPOA {
 
-	Thread myself;
-	String execNodeName;
+	private Thread myself = null;
+	private String nodeName = null;
+        private ORB orb = null;
+        private POA poa = null;
+        private String configFileName = null;
+        private IComponent channel;
+        private Reporter reporter;
+	private EventSink evSink;
+
+	private String exception = null;
+	private String[] operations = {"map","reduce", "join"};
 
 	private class WorkerThread extends Thread{
-		private IComponent channel;
 		private Task task;
-		private ORB orb;
-		private EventSink evSink;
-        	private String exception;
-        	private String[] operations = {"map","reduce", "join"};
-		Any eventAny;
+		private Any eventAny;
+                private int id;
+                private TaskStatus op;
 		
-	    	public WorkerThread(IComponent channel, Task task) {
-			this.channel = channel;
+	    	public WorkerThread(Task task) {
 			this.task = task;
-            		this.orb = ORB.init();
-			this.evSink = ((EventSink)this.channel.getFacet("scs::event_service::EventSink"));
-			this.eventAny = this.orb.create_any();			
+			this.eventAny = orb.create_any();
 	    	}
 	    
 	    	public void run() {
-     			TaskStatus op = task.getStatus();
-        		Reporter reporter = task.getReporter();
-                        FileSplit[] inputSplit = task.getInput();
-			FileSplit[] outputSplit = task.getOutput();
-                        int id = task.getId();
-        	       	String infileName  = "";
-			String outfileName = "";  
-     			try {      	
-				/* for(int i=0; i< inputSplit.length; i++) {
-                			infileName = infileName + inputSplit[i].getPath() + " ";
-            			}
+        		try {   
+                                id = task.getId(); 
+ 				op = task.getStatus();  	
+				eventAny.insert_long(id);
+                                MapReduceTask t = null;
 
-				for(int i=0; i< outputSplit.length; i++) {
-                			outfileName = outfileName + outputSplit[i].getPath() + " ";
-            			}
-
-            			reporter.report(2,"WokerServant::run - TaskID = " + id + "\n" +
-			        	    	"    Executando " + operations[op.value()] + ".\n" + 
-			            		"    Arquivos de entrada: " + infileName + "\n" +
-						"    Arquivos de saida: " + outfileName); */
- 
-            			eventAny.insert_long(id);                		
-            			task.run();
+                                if (op.value() == TaskStatus._MAP) {
+					t = new MapTask(configFileName,reporter,poa,task);
+                                }
+                                else {                 		
+            				t = new ReduceTask(configFileName,reporter,poa,task);
+				}			
+				
+				t.run();
+                                t = null;
 						
 			} catch (Exception e) {
                     		exception = LogError.getStackTrace(e);
@@ -73,12 +73,38 @@ public class WorkerServant extends WorkerPOA {
 			        exception);
                 	        task.setStatus(TaskStatus.ERROR);
 			}
-        		evSink.push(eventAny);             
+        		evSink.push(eventAny);
 	  	}	
-	}	
+	}
 
-	public void execute (IComponent channel, Task task){
-	     	Thread exec = new WorkerThread(channel, task);
+        public boolean start(String configFileName, String nodeName, IComponent channel, Reporter reporter) {
+                try {
+
+                       	this.configFileName = configFileName;
+                        this.nodeName = nodeName;
+                        this.channel = channel;
+                        this.reporter = reporter;
+
+			String[] args = new String[1];
+        		args[0] = "inicio";	
+
+			orb = ORB.init(args, null);
+                        poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
+			poa.the_POAManager().activate();
+
+                        this.evSink = ((EventSink)this.channel.getFacet("scs::event_service::EventSink"));
+                        return true;
+
+		} catch (Exception e) {
+			exception = LogError.getStackTrace(e);
+			reporter.report(0, "WorkerServant::start - Erro ao criar WorkerServant. \n" + exception);
+                        return false;
+	    	}
+       }
+	
+
+	public void execute (Task task){
+	     	Thread exec = new WorkerThread(task);
 	     	exec.start();
 	}	     
 
@@ -87,11 +113,8 @@ public class WorkerServant extends WorkerPOA {
 	}
 
     	public String getNode() {
-       		return execNodeName;
+       		return nodeName;
     	}
 
-    	public void setNode(String name) {
-       		execNodeName = name;
-    	}
 }
 

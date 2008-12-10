@@ -1,14 +1,15 @@
-(battery|1 /class/input/input3
-[|1 /dev/sda5.|1 1.2|1 17
+(battery|1 (delta|1 (on-line)
+[|1 -866282205|1 /class/input/input3
+[|1 /dev/sda5.|1 1.2|1 161.533783]|1 161.537755]|1 17
 [|1 2.0.6|1 2.11
 [|1 2.8
-[|1 34.073596]|1 34.671341]|1 34.935363]|1 34.997427]|1 37.906056]|1 38.810264]|1 38.810294]|1 38.844791]|1 38.854688]|1 39.910531]|1 48.883229]|1 59.041009]|1 ACPI:|1 ACPI:|1 ACPI:|1 ACPI:|1 Adapter|1 Adding|1 BIOS|1 Disabled|1 EXT3|1 Extensions
-[|1 Failure|1 Flags|1 IPv6|1 NET:|1 NET:|1 NET:|1 Registered|1 Registered|1 Registered|1 Sleep|1 Sleep|1 Slot|1 Successfully|1 [AC]|1 [BAT0]|1 [PWRF]
+[|1 34.349040]|1 34.663124]|1 37.746739]|1 37.905264]|1 37.905288]|1 39.757912]|1 47.501465]|1 =|1 ACPI:|1 ACPI:|1 ACPI:|1 ACPI:|1 Adapter|1 Adding|1 BIOS|1 Disabled|1 EXT3|1 Extensions
+[|1 Failure|1 Flags|1 IPv6|1 NET:|1 NET:|1 NET:|1 Registered|1 Registered|1 Registered|1 Sleep|1 Sleep|1 Slot|1 Successfully|1 Time:|1 [AC]|1 [BAT0]|1 [PWRF]
 [|1 [SLPF]
-[|1 and|1 apm:|1 apm:|1 be|1 be|1 but|1 connection|1 denied_mask="a"|1 device|1 devices|1 devices|1 directly.
-|1 directly.
-[11573.512164]|1 eth0:|1 eth0:|1 family|1 family|1 family|1 found.
+[|1 and|1 apm:|1 apm:|1 clocksource|1 connection|1 denied_mask="a"|1 device|1 devices|1 eth0:|1 eth0:|1 family|1 family|1 family|1 found.
 [|1 full-duplex
-[|1 input:|1 input:|1 isa0060/serio0.|1 isa0060/serio0.|1 journal
-[|1 layer|1 layer|1 layer|1 layer|1 link|1 lo:|1 mtrr:|1 operation="inode_permission"|1 present
-[|1 processor|1 protocol|1 protocol|1 protocol|1 registering|1 security|1 trying|1 trying|1 your|1 
+[|1 has|1 input:|1 input:|1 installed.
+|1 journal
+[|1 layer|1 layer|1 layer|1 layer|1 link|1 lo:|1 mtrr:|1 ns)
+[|1 operation="inode_permission"|1 present
+[|1 processor|1 protocol|1 protocol|1 protocol|1 registering|1 security|1 unstable|1 your|1 

@@ -267,7 +267,7 @@ public class MapReduceApp {
      
               		System.out.println("MapReduceApp::main - Finalizando container Master " + app.getContainerName());
                 	ExecutionNode execNode = app.getExecutionNode();
-                	execNode.stopContainer(app.getContainerName());
+                	//execNode.stopContainer(app.getContainerName());
                 	
 		} catch (PropertiesException ex) {
 			System.out.println("MapReduceApp::main - Erro ao ler arquivo de configuracao.");
@@ -293,10 +293,10 @@ public class MapReduceApp {
 			System.out.println("MapReduceApp::main - Erro ao executar operacoes map-reduce.");
                         System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
 			System.exit(1);
-		} catch (InvalidName e) {
+		/*} catch (InvalidName e) {
 			System.out.println("MapReduceApp::main - Erro ao parar container.");
-            System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
-			System.exit(1);
+            		System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
+			System.exit(1);*/
 		}
                 
 	}

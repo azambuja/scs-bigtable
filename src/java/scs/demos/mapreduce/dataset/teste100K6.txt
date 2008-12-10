@@ -1,33 +1,33 @@
-  31.395632] lp: driver loaded but no devices found
-[   31.523721] Adding 497972k swap on /dev/sda5.  Priority:-1 extents:1 across:497972k
-[   31.816130] EXT3 FS on sda1, internal journal
-[   34.073596] vboxvfs: Successfully loaded version 2.0.6 (interface 0x00010004)
-[   34.146621] ACPI: Battery Slot [BAT0] (battery present)
-[   34.671341] ACPI: AC Adapter [AC] (off-line)
-[   34.802645] No dock devices found.
-[   34.935363] input: Power Button (FF) as /class/input/input3
-[   34.946951] ACPI: Power Button (FF) [PWRF]
-[   34.984354] input: Sleep Button (FF) as /class/input/input4
-[   34.997427] ACPI: Sleep Button (FF) [SLPF]
-[   37.075883] Failure registering capabilities with primary security module.
-[   37.259449] eth0: link up, 100Mbps, full-duplex
-[   37.689281] ppdev: user-space parallel port driver
-[   37.837093] audit(1228570467.523:3):  type=1503 operation="inode_permission" requested_mask="a" denied_mask="a" name="/dev/tty" pid=4227 profile="/usr/sbin/cupsd"
-[   37.906030] apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
-[   37.906056] apm: overridden by ACPI.
-[   38.809797] Bluetooth: Core ver 2.11
-[   38.810251] NET: Registered protocol family 31
-[   38.810264] Bluetooth: HCI device and connection manager initialized
-[   38.810294] Bluetooth: HCI socket layer initialized
-[   38.844774] Bluetooth: L2CAP ver 2.8
-[   38.844791] Bluetooth: L2CAP socket layer initialized
-[   38.854401] Bluetooth: RFCOMM socket layer initialized
-[   38.854688] Bluetooth: RFCOMM TTY layer initialized
-[   38.854701] Bluetooth: RFCOMM ver 1.8
-[   39.910531] mtrr: your processor doesn't support write-combining
-[   43.872049] NET: Registered protocol family 17
-[   48.882504] NET: Registered protocol family 10
-[   48.883229] lo: Disabled Privacy Extensions
-[   59.041009] eth0: no IPv6 routers present
-[ 3478.269123] atkbd.c: Spurious NAK on isa0060/serio0. Some program might be trying access hardware directly.
-[11573.512164] atkbd.c: Spurious NAK on isa0060/serio0. Some program might be trying access hardware directly.
+found
+[   31.381378] Adding 497972k swap on /dev/sda5.  Priority:-1 extents:1 across:497972k
+[   31.780242] EXT3 FS on sda1, internal journal
+[   33.863025] vboxvfs: Successfully loaded version 2.0.6 (interface 0x00010004)
+[   33.930895] ACPI: Battery Slot [BAT0] (battery present)
+[   34.349040] ACPI: AC Adapter [AC] (on-line)
+[   34.479736] No dock devices found.
+[   34.599933] input: Power Button (FF) as /class/input/input3
+[   34.612029] ACPI: Power Button (FF) [PWRF]
+[   34.650462] input: Sleep Button (FF) as /class/input/input4
+[   34.663124] ACPI: Sleep Button (FF) [SLPF]
+[   36.947352] Failure registering capabilities with primary security module.
+[   37.097202] eth0: link up, 100Mbps, full-duplex
+[   37.617308] ppdev: user-space parallel port driver
+[   37.746739] audit(1228907376.819:3):  type=1503 operation="inode_permission" requested_mask="a" denied_mask="a" name="/dev/tty" pid=4223 profile="/usr/sbin/cupsd"
+[   37.905264] apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+[   37.905288] apm: overridden by ACPI.
+[   38.748241] Bluetooth: Core ver 2.11
+[   38.748559] NET: Registered protocol family 31
+[   38.748572] Bluetooth: HCI device and connection manager initialized
+[   38.748586] Bluetooth: HCI socket layer initialized
+[   38.772756] Bluetooth: L2CAP ver 2.8
+[   38.772772] Bluetooth: L2CAP socket layer initialized
+[   38.782474] Bluetooth: RFCOMM socket layer initialized
+[   38.782783] Bluetooth: RFCOMM TTY layer initialized
+[   38.782797] Bluetooth: RFCOMM ver 1.8
+[   39.757912] mtrr: your processor doesn't support write-combining
+[   43.327059] NET: Registered protocol family 17
+[   47.501465] NET: Registered protocol family 10
+[   47.502139] lo: Disabled Privacy Extensions
+[   58.393526] eth0: no IPv6 routers present
+[  161.533783] Clocksource tsc unstable (delta = -866282205 ns)
+[  161.537755] Time: acpi_pm clocksource has been installed.
