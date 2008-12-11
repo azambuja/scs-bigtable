@@ -1,0 +1,262 @@
+package scs.demos.bigtable.servant;
+
+import java.io.DataInputStream;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Hashtable;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import org.omg.CORBA.ORB;
+import org.omg.CORBA.Object;
+import org.omg.CORBA.SystemException;
+import org.omg.PortableServer.POA;
+import org.omg.PortableServer.POAHelper;
+
+import scs.container.ComponentAlreadyLoaded;
+import scs.container.ComponentHandle;
+import scs.container.ComponentLoader;
+import scs.container.ComponentLoaderHelper;
+import scs.container.ComponentNotFound;
+import scs.container.LoadFailure;
+import scs.core.ComponentId;
+import scs.core.IComponent;
+import scs.core.IComponentHelper;
+import scs.core.StartupFailed;
+import scs.demos.bigtable.Sorter;
+import scs.demos.bigtable.SorterHelper;
+import scs.demos.mapreduce.IOFormat;
+import scs.demos.mapreduce.Reporter;
+import scs.demos.mapreduce.schedule.LogError;
+import scs.demos.mapreduce.schedule.MasterServant;
+import scs.execution_node.ContainerAlreadyExists;
+import scs.execution_node.ExecutionNode;
+import scs.execution_node.ExecutionNodeHelper;
+import scs.execution_node.InvalidProperty;
+import scs.execution_node.Property;
+
+public class BigTableInitializer {
+
+	private String[] execNodeList;
+	private MasterServant master;
+	private ORB orb;
+
+	private static final String EXEC_NODE_NAME = "ExecutionNode";
+	private static final String EXEC_NODE_FACET = "scs::execution_node::ExecutionNode";
+	private static final String SUFIX = ".txt";
+
+	private static final String BIGTABLE_CONTAINER = "BigTableContainer";
+
+	private Hashtable hashNodes;
+	private DataInputStream in = null;
+	private POA poa = null;  
+	private Reporter reporter = null;
+	private String configFileName;
+	private IOFormat ioformat = null;  
+	private String exception;
+	private String nameServerHost = null;
+	private String nameServerPort = null;
+
+
+	
+	public BigTableInitializer(MasterServant master)throws Exception{
+		
+		try {
+			this.master = master;
+			this.orb = master.getOrb();
+			this.execNodeList = master.getExecNodeList();
+			this.reporter = master.getReporter();
+			this.configFileName = master.getConfigFileName();
+			this.nameServerHost = master.getMasterHost();
+			this.nameServerPort = master.getMasterPort(); 
+
+			hashNodes = new Hashtable ();
+
+			poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
+			poa.the_POAManager().activate();
+		} catch (Exception e) {
+			exception = LogError.getStackTrace(e);
+			reporter.report(0, "BigTableInitializer - Erro ao criar BigTableInializer. \n" + exception);
+			throw e;
+		}
+	}
+	/* Retorna um execution node dado o nome do host*/
+	private ExecutionNode getNode(String host) {
+		try {   
+			InetAddress localAddr = InetAddress.getByName(host);
+			String addrString = localAddr.toString();
+			String[] ipAddress = new String[2];
+			ipAddress = addrString.split("/");
+			String execName = EXEC_NODE_NAME + "-" + ipAddress[1];
+
+			String corbaname = "corbaname::" + nameServerHost + ":" + nameServerPort + "#"
+			+ execName;
+
+			ExecutionNode execNode = null;
+			reporter.report(1,"BigTableInitializer::getNode - Conectando ao execution node " + corbaname);
+
+			org.omg.CORBA.Object obj = orb.string_to_object(corbaname);
+			IComponent execNodeComp = IComponentHelper.narrow(obj);
+			execNodeComp.startup();
+			Object ob = execNodeComp.getFacet(EXEC_NODE_FACET);
+			execNode = ExecutionNodeHelper.narrow(ob);
+			return execNode;
+
+		} catch (SystemException ex) {
+			exception = LogError.getStackTrace(ex);
+			reporter.report(0,"BigTableInitializer::getNode - Erro ao conectar com o ExecutionNode " + host + 
+					".\n" + exception);
+			return null; 
+		} catch (StartupFailed e) {
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"BigTableInitializer::getNode - Startup do ExecutionNode " + host + " falhou. \n"
+					+ exception);
+			return null;
+		} catch (UnknownHostException e){
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"BigTableInitializer::getNode - Erro convertendo nome de host para IP " + host + "\n"
+					+ exception);
+			return null;
+		}
+	}
+
+	/* Cria um container no execution node especificado */
+	private boolean createContainer(String name, ExecutionNode execNode) {
+		try {
+			Property prop = new Property();
+			prop.name = "language";
+			prop.value = "java";
+			Property propSeq[] = { prop };
+			IComponent container = execNode.startContainer(name, propSeq);
+			if (container == null) {
+				return false;
+			}
+			return true;
+
+		} catch (ContainerAlreadyExists e) {
+			reporter.report(0,"BigTableInitializer::createContainer - Ja existe um container com este nome:" + name);
+			return false;
+		} catch (InvalidProperty e) {
+			reporter.report(0, "BigTableInitializer::createContainer - Erro ao setar propriedades do container");
+			return false;
+		}	    
+
+	}
+
+	/* Cria um component no container associado a loader*/
+	private ComponentHandle createHandle(ComponentLoader loader, ComponentId compId){
+		ComponentHandle handle = null;
+
+		try {
+			handle = loader.load(compId, new String[] { "" });
+			handle.cmp.startup();
+		} catch (ComponentNotFound e) {
+			reporter.report(0,"BigTableInitializer::createHandle - Componente " + compId.name + " nao encontrado.");
+		} catch (ComponentAlreadyLoaded e) {
+			reporter.report(0,"BigTableInitializer::createHandle - Componente " + compId.name + " j� foi criado.");
+		} catch (LoadFailure e) {
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"BigTableInitializer::createHandle - Erro ao carregar componente " + compId.name + ".\n"
+					+ exception);
+		} catch (StartupFailed e) {
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"BigTableInitializer::createHandle - Startup do componente " + compId.name + " falhou.\n" 
+					+ exception);
+		}
+
+		return handle;
+	}
+	
+	/* Conecta aos execution nodes onde os sorters serao criados */  	
+	public Hashtable connectToExecNodes(){
+		String port = master.getMasterPort();
+		for(int i = 0; i < master.getNum_sorters(); i++){
+			ExecutionNode execNode = getNode(execNodeList[i]);
+
+			if (execNode == null)
+				return null;
+			else	
+				hashNodes.put(execNodeList[i], execNode);
+		}
+
+		return hashNodes;  
+	}
+	
+	/* Constroi a lista de Componentes sorters */
+	public LinkedBlockingQueue<IComponent> buildSorterComponentQueue() {
+		
+		IComponent bigTableComponent;
+		
+		String containerName; 	
+		LinkedBlockingQueue<IComponent> sorterQueue = new LinkedBlockingQueue<IComponent>();
+
+		ComponentId bigTableCompId = new ComponentId();
+		bigTableCompId.name = "BigTable";
+		bigTableCompId.version = 1;	
+
+		ComponentHandle handle = null;
+		
+		
+		/* Criacao dos sorters */
+		for(int i = 0; i < master.getNum_sorters(); i++){
+			ExecutionNode execNode = (ExecutionNode) hashNodes.get(execNodeList[i]);
+
+			containerName = BIGTABLE_CONTAINER ;
+
+			if (!this.createContainer(containerName, execNode)) {
+				reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro criando o container " 
+						+ containerName);
+				return null;
+			}
+
+			IComponent container;
+			container = execNode.getContainer(containerName);
+
+			try {
+				container.startup();
+			} catch (StartupFailed e) {
+				exception = LogError.getStackTrace(e);
+				reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro no startup do container " 
+						+ containerName + ".\n" + exception);
+				return null; 
+			}
+
+			ComponentLoader loader = ComponentLoaderHelper.narrow(container
+					.getFacet("scs::container::ComponentLoader"));
+			if (loader == null) {
+				reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro retornando componentLoader" +
+				" de workers");
+				return null;
+			}
+
+			handle = createHandle(loader, bigTableCompId);
+			if (handle == null)
+				return null;
+
+			bigTableComponent = handle.cmp;
+			
+			sorterQueue.add(bigTableComponent);
+		
+		}
+		return sorterQueue;
+		
+	}
+	
+	/* destroi os containers sorters criados */
+	public void finish() {
+		try{
+			String containerName;
+			for(int i = 0; i < master.getNum_sorters(); i++){
+				ExecutionNode execNode = (ExecutionNode) hashNodes.get(execNodeList[i]);
+				reporter.report(1,"BigTableInitializer::finish - Finalizando containers BIGTABLE");
+	
+					containerName = BIGTABLE_CONTAINER;
+					execNode.stopContainer(containerName);
+			
+			}
+		} catch (Exception e){
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"BigTableInitializer::finish - Erro ao finalizar containers.\n" + exception);
+			return;
+		}
+	}
+}

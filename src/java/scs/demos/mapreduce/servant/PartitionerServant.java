@@ -16,16 +16,16 @@ import scs.demos.mapreduce.PartitionerPOA;
  */
 
 public class PartitionerServant extends PartitionerPOA {
-  
+
 	public int getPartition (Any key, Any value, int numPartitions) {
 		String s = key.extract_string();
 		return Math.abs(s.hashCode()) % numPartitions;
 	}
 
 	public Comparator getPartitionComparator() {
-          	return new Comparator() { 
-       		 	public int compare(Object obj1, Object obj2) {
-                      		Any key1 =(Any) obj1;
+		return new Comparator() { 
+			public int compare(Object obj1, Object obj2) {
+				Any key1 =(Any) obj1;
 				Any key2 =(Any) obj2;
 				return key1.extract_string().compareTo(key2.extract_string());
 			}

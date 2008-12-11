@@ -2,7 +2,7 @@
 # Dados de configuracao do Master
 #########################################################################################
 # host onde Master e Servico de Nomes  executam
-mapred.Master.corbaloc-host = localhost
+mapred.Master.corbaloc-host = hubert-ubuntu
 # port onde Servico de Nomes executa
 mapred.Master.corbaloc-port = 1050
 # nome do container master
@@ -31,7 +31,7 @@ mapred.Reporter.level = 1
 # Dados de configuracao dos Workers
 #########################################################################################
 # lista de nos onde Workers executarao
-mapred.Workers.exec-nodes = localhost,localhost,localhost
+mapred.Workers.exec-nodes = hubert-ubuntu
 #mapred.Workers.exec-nodes = 192.168.1.100
 
 #########################################################################################
@@ -39,6 +39,8 @@ mapred.Workers.exec-nodes = localhost,localhost,localhost
 #########################################################################################
 # numero de mappers
 mapred.Mappers.number = 10
+# numero de sorters
+mapred.Mappers.number = 1
 # numero de reducers
 mapred.Reducers.number = 3
 # nome da classe que implementa a interface IOFormat

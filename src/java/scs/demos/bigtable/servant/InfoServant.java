@@ -9,25 +9,25 @@ import scs.core.servant.Receptacle;
 
 public class InfoServant extends IReceptaclesServant {
 
-        @Override
-        protected ArrayList<Receptacle> createReceptacles() {
-                ArrayList<Receptacle> receptacles = new ArrayList<Receptacle>();
+	@Override
+	protected ArrayList<Receptacle> createReceptacles() {
+		ArrayList<Receptacle> receptacles = new ArrayList<Receptacle>();
 
-                Receptacle receptacle = new Receptacle("Reducer", "scs::demos::mapreduce::Reducer", true);
-                receptacles.add(receptacle);
-                
-                return receptacles;
-        }
+		Receptacle receptacle = new Receptacle("Reducer", "scs::demos::mapreduce::Reducer", true);
+		receptacles.add(receptacle);
 
-        @Override
-        protected int getConnectionLimit() {
-                return 10;
-        }
+		return receptacles;
+	}
 
-        @Override
-        protected boolean isValidConnection(Object obj) {
-                return true;
-        }
+	@Override
+	protected int getConnectionLimit() {
+		return 10;
+	}
+
+	@Override
+	protected boolean isValidConnection(Object obj) {
+		return true;
+	}
 
 }
 

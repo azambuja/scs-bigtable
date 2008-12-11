@@ -69,7 +69,7 @@ public class BigTableInitializer {
 			this.nameServerHost = master.getMasterHost();
 			this.nameServerPort = master.getMasterPort(); 
 
-			hashNodes = new Hashtable ();
+			hashNodes = new Hashtable();
 
 			poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
 			poa.the_POAManager().activate();
@@ -169,7 +169,7 @@ public class BigTableInitializer {
 	/* Conecta aos execution nodes onde os sorters serao criados */  	
 	public Hashtable connectToExecNodes(){
 		String port = master.getMasterPort();
-		for(int i = 0; i < master.getNum_sorters(); i++){
+		for(int i = 0; i < 1; i++){
 			ExecutionNode execNode = getNode(execNodeList[i]);
 
 			if (execNode == null)
@@ -181,64 +181,116 @@ public class BigTableInitializer {
 		return hashNodes;  
 	}
 	
+//	/* Constroi a lista de Componentes sorters */
+//	public LinkedBlockingQueue<IComponent> buildBigTableComponentQueue() {
+//		
+//		IComponent bigTableComponent;
+//		
+//		String containerName; 	
+//		LinkedBlockingQueue<IComponent> bigTableQueue = new LinkedBlockingQueue<IComponent>();
+//
+//		ComponentId bigTableCompId = new ComponentId();
+//		bigTableCompId.name = "BigTable";
+//		bigTableCompId.version = 1;	
+//
+//		ComponentHandle handle = null;
+//		
+//		
+//		/* Criacao dos sorters */
+//		for(int i = 0; i < master.getNum_sorters(); i++){
+//			ExecutionNode execNode = (ExecutionNode) hashNodes.get(execNodeList[i]);
+//
+//			containerName = BIGTABLE_CONTAINER ;
+//
+//			if (!this.createContainer(containerName, execNode)) {
+//				reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro criando o container " 
+//						+ containerName);
+//				return null;
+//			}
+//
+//			IComponent container;
+//			container = execNode.getContainer(containerName);
+//
+//			try {
+//				container.startup();
+//			} catch (StartupFailed e) {
+//				exception = LogError.getStackTrace(e);
+//				reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro no startup do container " 
+//						+ containerName + ".\n" + exception);
+//				return null; 
+//			}
+//
+//			ComponentLoader loader = ComponentLoaderHelper.narrow(container
+//					.getFacet("scs::container::ComponentLoader"));
+//			if (loader == null) {
+//				reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro retornando componentLoader" +
+//				" de workers");
+//				return null;
+//			}
+//
+//			handle = createHandle(loader, bigTableCompId);
+//			if (handle == null)
+//				return null;
+//
+//			bigTableComponent = handle.cmp;
+//			
+//			bigTableQueue.add(bigTableComponent);
+//		
+//		}
+//		return bigTableQueue;
+//		
+//	}
+	
 	/* Constroi a lista de Componentes sorters */
-	public LinkedBlockingQueue<IComponent> buildSorterQueue() {
+	public IComponent buildBigTableComponent() {
 		
 		IComponent bigTableComponent;
 		
-		String containerName; 	
-		LinkedBlockingQueue<IComponent> sorterQueue = new LinkedBlockingQueue<IComponent>();
+		String containerName;
 
 		ComponentId bigTableCompId = new ComponentId();
 		bigTableCompId.name = "BigTable";
-		bigTableCompId.version = 1;	
+		bigTableCompId.version = 1;
 
 		ComponentHandle handle = null;
 		
-		
-		/* Criacao dos sorters */
-		for(int i = 0; i < master.getNum_sorters(); i++){
-			ExecutionNode execNode = (ExecutionNode) hashNodes.get(execNodeList[i]);
+		ExecutionNode execNode = (ExecutionNode) hashNodes.get(execNodeList[0]);
 
-			containerName = BIGTABLE_CONTAINER ;
+		containerName = BIGTABLE_CONTAINER ;
 
-			if (!this.createContainer(containerName, execNode)) {
-				reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro criando o container " 
-						+ containerName);
-				return null;
-			}
-
-			IComponent container;
-			container = execNode.getContainer(containerName);
-
-			try {
-				container.startup();
-			} catch (StartupFailed e) {
-				exception = LogError.getStackTrace(e);
-				reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro no startup do container " 
-						+ containerName + ".\n" + exception);
-				return null; 
-			}
-
-			ComponentLoader loader = ComponentLoaderHelper.narrow(container
-					.getFacet("scs::container::ComponentLoader"));
-			if (loader == null) {
-				reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro retornando componentLoader" +
-				" de workers");
-				return null;
-			}
-
-			handle = createHandle(loader, bigTableCompId);
-			if (handle == null)
-				return null;
-
-			bigTableComponent = handle.cmp;
-			
-			sorterQueue.add(bigTableComponent);
-		
+		if (!this.createContainer(containerName, execNode)) {
+			reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro criando o container " 
+					+ containerName);
+			return null;
 		}
-		return sorterQueue;
-		
+
+		IComponent container;
+		container = execNode.getContainer(containerName);
+
+		try {
+			container.startup();
+		} catch (StartupFailed e) {
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"BigTableInitializer::buildWorkerQueue - Erro no startup do container " 
+					+ containerName + ".\n" + exception);
+			return null; 
+		}
+
+		ComponentLoader loader = ComponentLoaderHelper.narrow(container
+				.getFacet("scs::container::ComponentLoader"));
+		if (loader == null) {
+			reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro retornando componentLoader" +
+			" de workers");
+			return null;
+		}
+
+		handle = createHandle(loader, bigTableCompId);
+		if (handle == null)
+			return null;
+
+		bigTableComponent = handle.cmp;
+
+		return bigTableComponent;
 	}
 	
 	/* destroi os containers sorters criados */

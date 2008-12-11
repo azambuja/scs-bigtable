@@ -1,0 +1,43 @@
+package scs.demos.mapreduce.user;
+
+import org.omg.CORBA.Any;
+
+import scs.demos.mapreduce.IOMapReduceException;
+import scs.demos.mapreduce.OutputCollector;
+import scs.demos.mapreduce.Reducer2POA;
+import scs.demos.mapreduce.ReducerPOA;
+import scs.demos.mapreduce.Reporter;
+import scs.demos.mapreduce.schedule.LogError;
+
+
+/**
+ * Servant que implementa a interface scs::demos::mapreduce::Reducer
+ * @author Sand Luz Correa
+ */
+
+public class WordReducerServant extends Reducer2POA {
+
+	public void reduce(Any key, Any value) throws IOMapReduceException {
+		try {
+			int count = 0;
+			String currentValue;
+			
+//			for(int i = 0; i < values.length; i++){
+//				currentValue = values[i].extract_string();
+				count = count + Integer.parseInt(value.extract_string());
+//			}
+			
+//			Any value = values[0];
+//			value.insert_string(String.valueOf(count));	
+//			collector.collect(key,value);
+				
+			System.out.println("reduced: " + key.extract_string() + ", " + count);
+		} catch (Exception e) {
+			String exception = LogError.getStackTrace(e);
+//			reporter.report(0,"WordMapperServant::map - " + exception);
+			throw new IOMapReduceException(); 
+		}
+	}
+	
+}
+

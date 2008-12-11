@@ -71,96 +71,96 @@ import java.net.*;
  * Objeto para inicializar os execution nodes, criando os containers e os
  * componentes workers
  * @author Sand Luz Correa
-*/
+ */
 
 public class WorkerInitializer {
 
-        private String[] execNodeList;
-        private MasterServant master;
+	private String[] execNodeList;
+	private MasterServant master;
 	private ORB orb;
-	
-        private static final String EXEC_NODE_NAME = "ExecutionNode";
+
+	private static final String EXEC_NODE_NAME = "ExecutionNode";
 	private static final String EXEC_NODE_FACET = "scs::execution_node::ExecutionNode";
-        private static final String SUFIX = ".txt";
+	private static final String SUFIX = ".txt";
 
 	private static final String MAP_REDUCE_CONTAINER = "MapReduceContainer";
 
 	private  Hashtable hashNodes ;
 	private DataInputStream in = null;
 	private POA poa = null;  
-        private int[] mappers_p_nodes;
+	private int[] mappers_p_nodes;
 	private Reporter reporter = null;
-        private String configFileName;
-        private IOFormat ioformat = null;  
+	private String configFileName;
+	private IOFormat ioformat = null;  
 	private String exception;
 	private int mapped;
 	private String nameServerHost = null;
 	private String nameServerPort = null;
 	private LinkedBlockingQueue<IComponent> workerComponentQueue;
- 
+
 	public WorkerInitializer(MasterServant master) throws Exception {
 		try {
 			this.master = master;
-     			this.orb = master.getOrb();
-     			this.execNodeList = master.getExecNodeList();
-     			this.reporter = master.getReporter();
-            		this.configFileName = master.getConfigFileName();
-            		this.mapped = 0;
-                        this.nameServerHost = master.getMasterHost();
+			this.orb = master.getOrb();
+			this.execNodeList = master.getExecNodeList();
+			this.reporter = master.getReporter();
+			this.configFileName = master.getConfigFileName();
+			this.mapped = 0;
+			this.nameServerHost = master.getMasterHost();
 			this.nameServerPort = master.getMasterPort(); 
-           
-     			hashNodes = new Hashtable ();
-	     
+
+			hashNodes = new Hashtable();
+
 			poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
-					poa.the_POAManager().activate();
+			poa.the_POAManager().activate();
 		} catch (Exception e) {
 			exception = LogError.getStackTrace(e);
 			reporter.report(0, "WorkerInitializer::WorkerInitializer - Erro ao criar WorkerInializer. \n" + exception);
-                        throw e;
-	    	}
+			throw e;
+		}
 	}
 
-    	/* Retorna um execution node dado o nome do host*/
+	/* Retorna um execution node dado o nome do host*/
 	private ExecutionNode getNode(String host) {
 		try {   
 			InetAddress localAddr = InetAddress.getByName(host);
-                        String addrString = localAddr.toString();
-                        String[] ipAddress = new String[2];
-                        ipAddress = addrString.split("/");
-                        String execName = EXEC_NODE_NAME + "-" + ipAddress[1];
-  
+			String addrString = localAddr.toString();
+			String[] ipAddress = new String[2];
+			ipAddress = addrString.split("/");
+			String execName = EXEC_NODE_NAME + "-" + ipAddress[1];
+
 			String corbaname = "corbaname::" + nameServerHost + ":" + nameServerPort + "#"
-				            + execName;
+			+ execName;
 
-	     		ExecutionNode execNode = null;
-	     		reporter.report(1,"WorkerInitializer::getNode - Conectando ao execution node " + corbaname);
+			ExecutionNode execNode = null;
+			reporter.report(1,"WorkerInitializer::getNode - Conectando ao execution node " + corbaname);
 
-	              	org.omg.CORBA.Object obj = orb.string_to_object(corbaname);
+			org.omg.CORBA.Object obj = orb.string_to_object(corbaname);
 			IComponent execNodeComp = IComponentHelper.narrow(obj);
 			execNodeComp.startup();
 			Object ob = execNodeComp.getFacet(EXEC_NODE_FACET);
 			execNode = ExecutionNodeHelper.narrow(ob);
-                    	return execNode;
+			return execNode;
 
-	 	} catch (SystemException ex) {
-                        exception = LogError.getStackTrace(ex);
+		} catch (SystemException ex) {
+			exception = LogError.getStackTrace(ex);
 			reporter.report(0,"WorkerInitializer::getNode - Erro ao conectar com o ExecutionNode " + host + 
-					  ".\n" + exception);
-                        return null; 
-	      	} catch (StartupFailed e) {
-                        exception = LogError.getStackTrace(e);
-			reporter.report(0,"WorkerInitializer::getNode - Startup do ExecutionNode " + host + " falhou. \n"
-					   + exception);
-			return null;
-	      	} catch (UnknownHostException e){
+					".\n" + exception);
+			return null; 
+		} catch (StartupFailed e) {
 			exception = LogError.getStackTrace(e);
-                        reporter.report(0,"WorkerInitializer::getNode - Erro convertendo nome de host para IP " + host + "\n"
-                                           + exception);
-                        return null;
+			reporter.report(0,"WorkerInitializer::getNode - Startup do ExecutionNode " + host + " falhou. \n"
+					+ exception);
+			return null;
+		} catch (UnknownHostException e){
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"WorkerInitializer::getNode - Erro convertendo nome de host para IP " + host + "\n"
+					+ exception);
+			return null;
 		}
-   	}
+	}
 
-    	/* Cria um container no execution node especificado */
+	/* Cria um container no execution node especificado */
 	private boolean createContainer(String name, ExecutionNode execNode) {
 		try {
 			Property prop = new Property();
@@ -171,274 +171,274 @@ public class WorkerInitializer {
 			if (container == null) {
 				return false;
 			}
-                        return true;
-		
+			return true;
+
 		} catch (ContainerAlreadyExists e) {
 			reporter.report(0,"WorkerInitializer::createContainer - Ja existe um container com este nome:" + name);
 			return false;
-	   } catch (InvalidProperty e) {
-	   	    reporter.report(0, "WorkerInitializer::createContainer - Erro ao setar propriedades do container");
-	        return false;
-	   }	    
-	   
+		} catch (InvalidProperty e) {
+			reporter.report(0, "WorkerInitializer::createContainer - Erro ao setar propriedades do container");
+			return false;
+		}	    
+
 	}
 
 	/* Cria um component no container associado a loader*/
 	private ComponentHandle createHandle(ComponentLoader loader, ComponentId compId){
-                ComponentHandle handle = null;
+		ComponentHandle handle = null;
 
 		try {
-	      		handle = loader.load(compId, new String[] { "" });
-	      		handle.cmp.startup();
+			handle = loader.load(compId, new String[] { "" });
+			handle.cmp.startup();
 		} catch (ComponentNotFound e) {
-	      		reporter.report(0,"WorkerInitializer::createHandle - Componente " + compId.name + " nao encontrado.");
+			reporter.report(0,"WorkerInitializer::createHandle - Componente " + compId.name + " nao encontrado.");
 		} catch (ComponentAlreadyLoaded e) {
 			reporter.report(0,"WorkerInitializer::createHandle - Componente " + compId.name + " j� foi criado.");
 		} catch (LoadFailure e) {
-                        exception = LogError.getStackTrace(e);
+			exception = LogError.getStackTrace(e);
 			reporter.report(0,"WorkerInitializer::createHandle - Erro ao carregar componente " + compId.name + ".\n"
-					   + exception);
+					+ exception);
 		} catch (StartupFailed e) {
-                        exception = LogError.getStackTrace(e);
-                        reporter.report(0,"WorkerInitializer::createHandle - Startup do componente " + compId.name + " falhou.\n" 
-					   + exception);
-            	}
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"WorkerInitializer::createHandle - Startup do componente " + compId.name + " falhou.\n" 
+					+ exception);
+		}
 
 		return handle;
 	}
-	
+
 	/* Instancia um servant IOFormatServant dado o nome da classe */
 	public IOFormat createIOFormatServant(String servantName) {
 		IOFormat ioformat = null;
 
-	     	try{	
-	       		Servant obj = (Servant) Class.forName(servantName).newInstance();
-	       		ioformat = IOFormatHelper.narrow(this.poa.servant_to_reference(obj));
-	     	} catch (Exception e){
-	     		exception = LogError.getStackTrace(e);
-	     	    	reporter.report(0,"WorkerInitializer::createIOFormatServant - Erro ao criar servant ioformat " +  servantName +
-					   ".\n" + exception);
-           	} 
-	     	return ioformat;
+		try{	
+			Servant obj = (Servant) Class.forName(servantName).newInstance();
+			ioformat = IOFormatHelper.narrow(this.poa.servant_to_reference(obj));
+		} catch (Exception e){
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"WorkerInitializer::createIOFormatServant - Erro ao criar servant ioformat " +  servantName +
+					".\n" + exception);
+		} 
+		return ioformat;
 	}
-       
+
 	/* Conecta aos execution nodes onde os workers serao criados */  	
-    	public Hashtable connectToExecNodes(){
-                String port = master.getMasterPort();
+	public Hashtable connectToExecNodes(){
+		String port = master.getMasterPort();
 		for(int i = 0; i < execNodeList.length; i++){
-	       		ExecutionNode execNode = getNode(execNodeList[i]);
-	        
-	       		if (execNode == null)
+			ExecutionNode execNode = getNode(execNodeList[i]);
+
+			if (execNode == null)
 				return null;
-	       		else	
-	       			hashNodes.put(execNodeList[i], execNode);
-	    	}
-	    
+			else	
+				hashNodes.put(execNodeList[i], execNode);
+		}
+
 		return hashNodes;  
 	}
 
-    	/* Cria um canal de evento para comunicacao entre master e workers */
+	/* Cria um canal de evento para comunicacao entre master e workers */
 	public IComponent buildChannel(){
 		ExecutionNode execNode = getNode(master.getMasterHost());
-        	if (execNode == null)
-	        	return null;	    
-     	    
-	    	IComponent container = execNode.getContainer(master.getContainerName());
-            	if (container == null){
+		if (execNode == null)
+			return null;	    
+
+		IComponent container = execNode.getContainer(master.getContainerName());
+		if (container == null){
 			reporter.report (0,"WorkerInitializer::builChannel - Erro ao retornar container do componente Master");
-		       	return null;
-	    	} 
+			return null;
+		} 
 
-	    	ComponentLoader loader = ComponentLoaderHelper.narrow(container
-				     .getFacet("scs::container::ComponentLoader"));
-	    	if (loader == null) {
-	    		reporter.report(0,"WorkerInitializer::buildChannel - Erro ao retornar loader do container master");
-	    		return null;
-	    	}
-		
-	    	ComponentHandle handle = null;
-	    	ComponentId newComponent = new ComponentId();
-	    	newComponent.name = "EventManager";
-	    	newComponent.version = 1;
-
-	    	handle = createHandle(loader, newComponent);
-	   	if (handle == null) {
+		ComponentLoader loader = ComponentLoaderHelper.narrow(container
+				.getFacet("scs::container::ComponentLoader"));
+		if (loader == null) {
+			reporter.report(0,"WorkerInitializer::buildChannel - Erro ao retornar loader do container master");
 			return null;
 		}
-	    
-	    	IComponent eventMgr = handle.cmp;
-	
-	    	ChannelFactory chFactory = ChannelFactoryHelper.narrow(eventMgr.getFacet("scs::event_service::ChannelFactory"));
-	    	if( chFactory== null ) {
-	        	reporter.report(0,"WorkerInitializer::buildChannel - Erro ao retornar ChannelFactory !");
-	          	return null;
-	    	}
 
-	    	/* Cria o eventSink para se conectar ao canal de evento*/
-	    	ConnectionStatus connStatus = null; 
-            	EventSinkConsumerServant servant = null; 
-	    	org.omg.CORBA.Object servantObj = null;
-            	IComponent masterChannel = null;
+		ComponentHandle handle = null;
+		ComponentId newComponent = new ComponentId();
+		newComponent.name = "EventManager";
+		newComponent.version = 1;
 
-            	try {
-                        connStatus = new ConnectionStatus(false);
+		handle = createHandle(loader, newComponent);
+		if (handle == null) {
+			return null;
+		}
+
+		IComponent eventMgr = handle.cmp;
+
+		ChannelFactory chFactory = ChannelFactoryHelper.narrow(eventMgr.getFacet("scs::event_service::ChannelFactory"));
+		if( chFactory== null ) {
+			reporter.report(0,"WorkerInitializer::buildChannel - Erro ao retornar ChannelFactory !");
+			return null;
+		}
+
+		/* Cria o eventSink para se conectar ao canal de evento*/
+		ConnectionStatus connStatus = null; 
+		EventSinkConsumerServant servant = null; 
+		org.omg.CORBA.Object servantObj = null;
+		IComponent masterChannel = null;
+
+		try {
+			connStatus = new ConnectionStatus(false);
 			servant = new EventSinkMaster(connStatus,master); 
-	        	servantObj = this.poa.servant_to_reference(servant);
-	    
-	    		EventSink eventSink = EventSinkHelper.narrow(servantObj);
-            		if (eventSink == null){
+			servantObj = this.poa.servant_to_reference(servant);
+
+			EventSink eventSink = EventSinkHelper.narrow(servantObj);
+			if (eventSink == null){
 				reporter.report(0,"WorkerInitializer::buildChannel - Erro ao retornar eventSink");
-                		return null;
-	    		}
-	    
+				return null;
+			}
+
 			masterChannel = chFactory.create("MasterChannel");
 			masterChannel.startup();
 			IReceptacles evSource = IReceptaclesHelper.narrow(masterChannel.getFacet("scs::core::IReceptacles")); 
-		
+
 			/* Registra o eventsink no channel selecionado */
-		      	int connID=0;
-		      	connID = evSource.connect("EventSource", eventSink);
+			int connID=0;
+			connID = evSource.connect("EventSource", eventSink);
 			connStatus.setConnected(true);
 
-                        return masterChannel; 
-	     	} catch (Exception e) {
-                        exception = LogError.getStackTrace(e);
-		        reporter.report(0,"WorkerInitializer::buildChannel - Erro ao instanciar channel.\n" +  exception);
-                        return null;
-	        }	
+			return masterChannel; 
+		} catch (Exception e) {
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"WorkerInitializer::buildChannel - Erro ao instanciar channel.\n" +  exception);
+			return null;
+		}	
 	}
 
-    	/* Constroi a lista de Workers */
-    	public LinkedBlockingQueue buildWorkerQueue() {
-    		
-    		IComponent workerComponent;
-    		
+	/* Constroi a lista de Workers */
+	public LinkedBlockingQueue buildWorkerQueue() {
+
+		IComponent workerComponent;
+
 		String containerName; 	
-	     	
-	     	LinkedBlockingQueue<Worker> workerQueue = new LinkedBlockingQueue<Worker>();
+
+		LinkedBlockingQueue<Worker> workerQueue = new LinkedBlockingQueue<Worker>();
 		workerComponentQueue = new LinkedBlockingQueue<IComponent>();
-		
-	     	ComponentId workerCompId = new ComponentId();
-	     	workerCompId.name = "Worker";
-	     	workerCompId.version = 1;	
 
-	     	ComponentHandle handle = null;
-            	reporter.report(1, "WorkerInitializer::buildWorkerQueue - Comecando balanceamento de carga");
+		ComponentId workerCompId = new ComponentId();
+		workerCompId.name = "Worker";
+		workerCompId.version = 1;	
 
-            	/*
-	      	 * Balanceamento de carga entre os nos.
-	      	 * Calcula o numero de mapper por no
-	         */
-	     	int remainder = master.getNum_Mappers() % execNodeList.length;
-	     	mappers_p_nodes = new int[execNodeList.length];
-           	for (int i = 0; i < execNodeList.length; i++) {
+		ComponentHandle handle = null;
+		reporter.report(1, "WorkerInitializer::buildWorkerQueue - Comecando balanceamento de carga");
+
+		/*
+		 * Balanceamento de carga entre os nos.
+		 * Calcula o numero de mapper por no
+		 */
+		int remainder = master.getNum_Mappers() % execNodeList.length;
+		mappers_p_nodes = new int[execNodeList.length];
+		for (int i = 0; i < execNodeList.length; i++) {
 			if (i < remainder)  
-                		mappers_p_nodes[i] = master.getNum_Mappers() / execNodeList.length + 1;
-	            	else 
-                      		mappers_p_nodes[i] = master.getNum_Mappers() / execNodeList.length;
-	           
-		   	reporter.report(1,"WorkerInitializer::buildWorkerQueue - mappers_p_nodes[i]= " + mappers_p_nodes[i]);
-	     	}
+				mappers_p_nodes[i] = master.getNum_Mappers() / execNodeList.length + 1;
+			else 
+				mappers_p_nodes[i] = master.getNum_Mappers() / execNodeList.length;
 
-            	/* Criacao dos workers */
-            	for(int i = 0; i < execNodeList.length; i++){
+			reporter.report(1,"WorkerInitializer::buildWorkerQueue - mappers_p_nodes[i]= " + mappers_p_nodes[i]);
+		}
+
+		/* Criacao dos workers */
+		for(int i = 0; i < execNodeList.length; i++){
 			ExecutionNode execNode = (ExecutionNode) hashNodes.get(execNodeList[i]);
-                   
-                   	for (int j = 0; j < mappers_p_nodes[i] ; j++){
-                        	containerName = MAP_REDUCE_CONTAINER + j;
-                     
-	        		if (!this.createContainer(containerName, execNode)) {
+
+			for (int j = 0; j < mappers_p_nodes[i] ; j++){
+				containerName = MAP_REDUCE_CONTAINER + j;
+
+				if (!this.createContainer(containerName, execNode)) {
 					reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro criando o container " 
-                                                           + containerName);
-			          	return null;
-		           	}
-		
-		           	IComponent container;
-		           	container = execNode.getContainer(containerName);
-
-		           	try {
-		                	container.startup();
-		           	} catch (StartupFailed e) {
-                                        exception = LogError.getStackTrace(e);
-		                	reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro no startup do container " 
-                                                          + containerName + ".\n" + exception);
-		                   	return null; 
-		           	}
-
-		           	ComponentLoader loader = ComponentLoaderHelper.narrow(container
-                                                         .getFacet("scs::container::ComponentLoader"));
-		           	if (loader == null) {
-			        	reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro retornando componentLoader" +
-                                                          " de workers");
-			                return null;
-		           	}
-
-         		   	handle = createHandle(loader, workerCompId);
-			   	if (handle == null)
+							+ containerName);
 					return null;
-	
-				Worker w = WorkerHelper.narrow(handle.cmp.getFacetByName("Worker"));
-				if(!w.start(configFileName, execNodeList[i], master.getChannel(), reporter)) {
-                                	reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro chamando start de worker");
-			                return null;
 				}
-				
+
+				IComponent container;
+				container = execNode.getContainer(containerName);
+
+				try {
+					container.startup();
+				} catch (StartupFailed e) {
+					exception = LogError.getStackTrace(e);
+					reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro no startup do container " 
+							+ containerName + ".\n" + exception);
+					return null; 
+				}
+
+				ComponentLoader loader = ComponentLoaderHelper.narrow(container
+						.getFacet("scs::container::ComponentLoader"));
+				if (loader == null) {
+					reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro retornando componentLoader" +
+					" de workers");
+					return null;
+				}
+
+				handle = createHandle(loader, workerCompId);
+				if (handle == null)
+					return null;
+
 				workerComponent = handle.cmp;
+				Worker w = WorkerHelper.narrow(workerComponent.getFacetByName("Worker"));
+				if(!w.start(configFileName, execNodeList[i], master.getChannel(), reporter, workerComponent)) {
+					reporter.report(0,"WorkerInitializer::buildWorkerQueue - Erro chamando start de worker");
+					return null;
+				}
+
 				workerComponentQueue.add(workerComponent);
 
-			   	workerQueue.add(w);
-		   	}
-	     	} 
-	     	return workerQueue;
+				workerQueue.add(w);
+			}
+		} 
+		return workerQueue;
 	}
-	
-	public LinkedBlockingQueue getWorkerComponentQueue(){
+
+	public LinkedBlockingQueue<IComponent> buildWorkerComponentQueue(){
 		return this.workerComponentQueue;
 	}
 
-    	/* Constroi uma lista de tarefas map */
+	/* Constroi uma lista de tarefas map */
 	public LinkedBlockingQueue buildTaskQueue () {
 		try {
 			LinkedBlockingQueue<Task> taskQueue = new LinkedBlockingQueue<Task>();
-                	
-                	ioformat = master.getIOFormat();
-                	FileSplit[] splits = ioformat.getSplits(configFileName, reporter);
-                 
-                	for(int i=0; i<splits.length; i++) {
-                                FileSplit[] inputFileSplit = new FileSplit[1];
-                                inputFileSplit[0] = splits[i]; 
+
+			ioformat = master.getIOFormat();
+			FileSplit[] splits = ioformat.getSplits(configFileName, reporter);
+
+			for(int i=0; i<splits.length; i++) {
+				FileSplit[] inputFileSplit = new FileSplit[1];
+				inputFileSplit[0] = splits[i]; 
 				Task t = TaskHelper.narrow(this.poa.servant_to_reference(
-					 new TaskServant(TaskStatus.MAP, inputFileSplit, 0)));
-                         	taskQueue.add(t);
+						new TaskServant(TaskStatus.MAP, inputFileSplit, 0)));
+				taskQueue.add(t);
 			}
-               		return taskQueue;
+			return taskQueue;
 		} catch (Exception e) {
-                       	exception = LogError.getStackTrace(e);
+			exception = LogError.getStackTrace(e);
 			reporter.report(0,"WorkerInitializer::buildTask - Erro ao retornar particoes do arquivo.\n" + exception);
 			return null;
 		}
 	}
 
-    	/* destroi os containers mapreduce criados */
-    	public void finish() {
-                try{
-               		String containerName;
-        		for(int i = 0; i < execNodeList.length; i++){
+	/* destroi os containers mapreduce criados */
+	public void finish() {
+		try{
+			String containerName;
+			for(int i = 0; i < execNodeList.length; i++){
 				ExecutionNode execNode = (ExecutionNode) hashNodes.get(execNodeList[i]);
-                        	reporter.report(1,"WorkerInitializer::finish - Finalizando containers MAPREDUCE");
-              			for (int j = 0; j < mappers_p_nodes[i] ; j++){
-                             		containerName = MAP_REDUCE_CONTAINER + j;
-                          		execNode.stopContainer(containerName);
-                        	}
-               		}
+				reporter.report(1,"WorkerInitializer::finish - Finalizando containers MAPREDUCE");
+				for (int j = 0; j < mappers_p_nodes[i] ; j++){
+					containerName = MAP_REDUCE_CONTAINER + j;
+					execNode.stopContainer(containerName);
+				}
+			}
 		} catch (Exception e){
-                       exception = LogError.getStackTrace(e);
-                       reporter.report(0,"WorkerInitializer::finish - Erro ao finalizar containers.\n" + exception);
-                       return;
-                }
-    	}
+			exception = LogError.getStackTrace(e);
+			reporter.report(0,"WorkerInitializer::finish - Erro ao finalizar containers.\n" + exception);
+			return;
+		}
+	}
 }
-             
 
-	
+
+
 

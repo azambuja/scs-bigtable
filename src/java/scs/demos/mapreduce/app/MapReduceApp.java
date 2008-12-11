@@ -54,15 +54,15 @@ public class MapReduceApp {
 	private static final String EXEC_NODE_NAME = "ExecutionNode";
 	private static final String EXEC_NODE_FACET = "scs::execution_node::ExecutionNode";
 	private ExecutionNode execNode = null;
-        
+
 	static ORB orb;
 	private static Master master = null;
-        private static Reporter reporter = null;
+	private static Reporter reporter = null;
 	private String containerName = null;
-        private String logName = null;
-        private int logLevel;
-        private String execName = null;
-	         
+	private String logName = null;
+	private int logLevel;
+	private String execName = null;
+
 	private boolean readConfiguration( String filename ) {
 		Properties properties = new Properties();
 
@@ -76,17 +76,17 @@ public class MapReduceApp {
 		config = properties;
 		return true;
 	}
-        
-        private String getContainerName(){
-                return containerName;
-        }
 
-        private ExecutionNode getExecutionNode(){
-                return execNode;
-        }
+	private String getContainerName(){
+		return containerName;
+	}
+
+	private ExecutionNode getExecutionNode(){
+		return execNode;
+	}
 
 	private boolean initialize(String[] args) {
-                if (args.length < 1){
+		if (args.length < 1){
 			System.out.println("MapReduceApp::initialize - Informe o arquivo de configuracao da aplicacao.");
 			return false;
 		}
@@ -97,39 +97,39 @@ public class MapReduceApp {
 			return false;
 		}
 
-                containerName = config.getProperty("mapred.Master.container-name", "MasterContainer");
-                
+		containerName = config.getProperty("mapred.Master.container-name", "MasterContainer");
+
 		String host = config.getProperty("mapred.Master.corbaloc-host");
-                if (host == null) {
+		if (host == null) {
 			System.out.println("MapReduceApp::initialize - Host onde master executara nao foi informado");
-                        return false;
+			return false;
 		}
-		
-                String port = config.getProperty("mapred.Master.corbaloc-port");
-                if (port == null) {
+
+		String port = config.getProperty("mapred.Master.corbaloc-port");
+		if (port == null) {
 			System.out.println("MapReduceApp::Initialize - Port onde master executara nao foi informado");
-                        return false;
+			return false;
 		}
-	
-                logName = config.getProperty("mapred.Reporter.file-name", "report.debug");
-                logLevel = Integer.parseInt(config.getProperty("mapred.Reporter.level", "0"));
-                
-                try {
-                        InetAddress localAddr = InetAddress.getByName(host);
-                        String addrString = localAddr.toString();
-                        String[] ipAddress = new String[2];
-                        ipAddress = addrString.split("/");
-                        execName = EXEC_NODE_NAME + "-" + ipAddress[1];
-                } catch (Exception e) {
-                        System.out.println("MapReduceApp::initialize - Erro convertendo nome de ExecutionNode para IP");
-                        return false;
-                }
+
+		logName = config.getProperty("mapred.Reporter.file-name", "report.debug");
+		logLevel = Integer.parseInt(config.getProperty("mapred.Reporter.level", "0"));
+
+		try {
+			InetAddress localAddr = InetAddress.getByName(host);
+			String addrString = localAddr.toString();
+			String[] ipAddress = new String[2];
+			ipAddress = addrString.split("/");
+			execName = EXEC_NODE_NAME + "-" + ipAddress[1];
+		} catch (Exception e) {
+			System.out.println("MapReduceApp::initialize - Erro convertendo nome de ExecutionNode para IP");
+			return false;
+		}
 
 		String corbaname = "corbaname::" + host + ":" + port + "#"
 		+ execName;
-		
+
 		orb = ORB.init(args, null);
-		
+
 		System.out.println("MapReduceApp::initialize - Conectando ao execution node master: " + corbaname);
 
 		try {
@@ -145,10 +145,10 @@ public class MapReduceApp {
 			System.out.println("MapReduceApp::initialize - Startup do ExecutionNode master falhou.");
 			return false;
 		}
-		
+
 		System.out.println("MapReduceApp::initialize - Criando container master " + containerName);
 
-	        if (!this.createContainer()) {
+		if (!this.createContainer()) {
 			System.out.println("MapReduceApp::initialize - Erro criando o container master " + containerName);
 			return false;
 		}
@@ -171,21 +171,21 @@ public class MapReduceApp {
 		}
 
 		Object componentCollection = container
-				.getFacet("scs::container::ComponentCollection");
+		.getFacet("scs::container::ComponentCollection");
 		ComponentCollection components = ComponentCollectionHelper
-				.narrow(componentCollection);
+		.narrow(componentCollection);
 
 		ComponentId compId = new ComponentId();
 		compId.name = "Master";
 		compId.version = 1;
 
 		System.out.println("MapReduceApp::initialize - Criando master" );
-		
+
 		ComponentHandle handle = null;
 
 		try {
 			handle = loader.load(compId, new String[] { "" });
-                        handle.cmp.startup();
+			handle.cmp.startup();
 		} catch (ComponentNotFound e) {
 			System.out.println("MapReduceApp::initialize - Componente Master nao encontrado.");
 			e.printStackTrace();
@@ -198,20 +198,20 @@ public class MapReduceApp {
 			return false;
 		} catch (StartupFailed e) {
 			e.printStackTrace();
-		        return false;
-	        }
+			return false;
+		}
 
 		master = MasterHelper.narrow(handle.cmp
-					.getFacetByName("Master"));
-        
-                System.out.println("MapReduceApp::initialize - Criando logger da aplicacao");
+				.getFacetByName("Master"));
 
-        	try {
+		System.out.println("MapReduceApp::initialize - Criando logger da aplicacao");
+
+		try {
 			POA poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
 			poa.the_POAManager().activate();
 			reporter = ReporterHelper.narrow(poa.servant_to_reference(new ReporterServant(logName,logLevel)));
 		} catch (Exception e) {
-                        System.out.println("Erro ao criar logger da aplicacao");
+			System.out.println("Erro ao criar logger da aplicacao");
 			e.printStackTrace();
 			return false;
 		} 
@@ -236,68 +236,68 @@ public class MapReduceApp {
 
 		} catch (ContainerAlreadyExists e) {
 			System.out.println("MapReduceApp::createContainer - Ja existe um container com este nome " + containerName);
-            return false;
+			return false;
 		} catch (InvalidProperty e) {
 			System.out.println("MapReduceApp::createContainer - Erro ao setar propriedades de container " + containerName);
-		    return false;
+			return false;
 		}
 
 		return true;
 	}
 
-        public static void main(String[] args) {
+	public static void main(String[] args) {
 		MapReduceApp app = null;
-        	try {
+		try {
 			long startTime = System.currentTimeMillis();
 			app = new MapReduceApp();
-			
+
 			if (!app.initialize(args)){
-	        		System.exit(1);
+				System.exit(1);
 			}
-    
-            		reporter.open();
+
+			reporter.open();
 
 			System.out.println("MapReduceApp::main - Executando master");
 			master.start(args[0], reporter);
 
-            		long totalTime = (System.currentTimeMillis() - startTime)/1000;
+			long totalTime = (System.currentTimeMillis() - startTime)/1000;
 
-            		System.out.println("MapReduceApp::main - MapReduce foi executado com sucesso.");
-            		System.out.println("MapReduceApp::main - Tempo Total de Execucao em s: " + totalTime);
-     
-              		System.out.println("MapReduceApp::main - Finalizando container Master " + app.getContainerName());
-                	ExecutionNode execNode = app.getExecutionNode();
-                	//execNode.stopContainer(app.getContainerName());
-                	
+			System.out.println("MapReduceApp::main - MapReduce foi executado com sucesso.");
+			System.out.println("MapReduceApp::main - Tempo Total de Execucao em s: " + totalTime);
+
+			System.out.println("MapReduceApp::main - Finalizando container Master " + app.getContainerName());
+			ExecutionNode execNode = app.getExecutionNode();
+			//execNode.stopContainer(app.getContainerName());
+
 		} catch (PropertiesException ex) {
 			System.out.println("MapReduceApp::main - Erro ao ler arquivo de configuracao.");
-                        System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
-                        System.exit(1);			
+			System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
+			System.exit(1);			
 		} catch (ConectionToExecNodesException ex) {
 			System.out.println("MapReduceApp::main - Erro ao conectar com os execution nodes workers.");
-                        System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log"); 
+			System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log"); 
 			System.exit(1);
 		} catch (ChannelException ex) {
 			System.out.println("MapReduceApp::main - Erro ao criar canal de evento.");
-                        System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
+			System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
 			System.exit(1);
 		} catch (WorkerInstantiationException ex) {
 			System.out.println("MapReduceApp::main - Erro ao instanciar workers.");
-                        System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
+			System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
 			System.exit(1);
 		} catch (TaskInstantiationException ex) {
 			System.out.println("MapReduceApp::main - Erro ao instanciar tarefas.");
-                        System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
+			System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
 			System.exit(1);
 		} catch (StartFailureException ex) {
 			System.out.println("MapReduceApp::main - Erro ao executar operacoes map-reduce.");
-                        System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
+			System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
 			System.exit(1);
-		/*} catch (InvalidName e) {
+			/*} catch (InvalidName e) {
 			System.out.println("MapReduceApp::main - Erro ao parar container.");
             		System.out.println("MapReduceApp::main - Para maiores informacoes consulte arquivo de log");
 			System.exit(1);*/
 		}
-                
+
 	}
 }

@@ -22,7 +22,7 @@ import scs.demos.mapreduce.MasterHelper;
  * Servant do IComponent que oferece a faceta scs::demos::mapreduce::Master
  * 
  * @author Sand Luz Correa
-*/
+ */
 public class MasterComponent extends IComponentServant {
 
 	private MasterServant masterServant = null;
@@ -30,22 +30,22 @@ public class MasterComponent extends IComponentServant {
 
 	private MonitoringReceptacles monitoringReceptaclesServant = null;
 	private IReceptacles monitoringReceptacles = null;
-	
+
 	private final static String IFACE_MASTER = "scs::demos::mapreduce::Master";
 	private final static String FACET_MASTER = "Master";
 
-        private static final String IFACE_REC = "scs::core::IReceptacles";
+	private static final String IFACE_REC = "scs::core::IReceptacles";
 	private static final String FACET_REC = "Monitoring";
 
 
-	
-        
-        /* (non-Javadoc)
+
+
+	/* (non-Javadoc)
 	 * @see SCS.servant.IComponentServant#createFacets()
 	 */
 	@Override
 	protected ArrayList<FacetDescription> createFacets() {
-		
+
 		ArrayList<FacetDescription> facets = new ArrayList<FacetDescription>();
 		FacetDescription fd = new FacetDescription();
 		fd.interface_name = IFACE_MASTER;
@@ -58,11 +58,11 @@ public class MasterComponent extends IComponentServant {
 		fd.name= FACET_REC;
 		fd.facet_ref = getReceptacles();
 		facets.add(fd);
-		
+
 		return facets;
 	}
 
-	
+
 	private Master getMaster() {
 		if( this.masterServant == null ) {
 			try {
@@ -82,7 +82,7 @@ public class MasterComponent extends IComponentServant {
 			try {
 				this.monitoringReceptaclesServant = new MonitoringReceptacles();
 				this.monitoringReceptacles = IReceptaclesHelper.narrow(this._poa().servant_to_reference
-						             (this.monitoringReceptaclesServant));
+						(this.monitoringReceptaclesServant));
 			} catch (ServantNotActive e) {
 				e.printStackTrace();
 			} catch (WrongPolicy e) {

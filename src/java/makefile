@@ -225,10 +225,11 @@ idl-generation:
 #	@$(IDL_CMD) $(IDL_DIR)/pingPong.idl
 	@echo "    + Compilando philosopher.idl "
 	@$(IDL_CMD) $(IDL_DIR)/philosopher.idl
-	@echo "    + Compilando mapreduce.idl "
-	@$(IDL_CMD) $(IDL_DIR)/mapReduce.idl
 	@echo "    + Compilando bigTable.idl "
 	@$(IDL_CMD) $(IDL_DIR)/bigTable.idl
+	@echo "    + Compilando mapreduce.idl "
+	@$(IDL_CMD) $(IDL_DIR)/mapReduce.idl
+
 
 scs-pkg:
 	@echo " # Compilando fontes do SCS..."

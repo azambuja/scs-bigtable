@@ -1,54 +1,52 @@
-|1 $|1 (API|1 (c)|1 (default)
+#1|1 $|1 (2016k|1 (API|1 (default)
 [|1 (disabled)
-[|1 *11)
-[|1 /class/input/input1
-[|1 0|1 0|1 0|1 0|1 0|1 0.
-[|1 00|1 00|1 00|1 00|1 00|1 00000000|1 00000000|1 00000000|1 0000:00:01.1|1 0000:00:01.1:|1 0022:561b|1 078bf3bf|1 0d
-[|1 0x00010004)
-[|1 0x000103f6|1 0x0001c000|1 1
+[|1 (r2|1 -|1 -|1 -|1 -|1 -|1 -|1 -|1 -|1 -|1 -|1 -|1 -|1 -|1 .data|1 /class/input/input1
+[|1 0|1 0|1 0|1 0|1 0|1 0|1 0|1 0|1 0|1 0|1 0|1 00000000|1 00000000|1 00000000|1 00000000|1 0000000000000000|1 000000000009fc00|1 000000000009fc00|1 00000000000f0000|1 0000000032300000|1 00000000fffc0000|1 0000:00:01.1|1 0000:00:01.1:|1 0024|1 002C|1 0040
+[|1 078bf3bf|1 0x000103f6|1 0x0001c000|1 0xc0100000|1 0xc02f8186|1 0xc02f8186|1 0xc03dde84|1 0xf3000000|1 1
 [|1 1
-[|1 1
-[|1 10
-[|1 10
-[|1 11)
-[|1 11.234487]|1 11.234763]|1 11.774600]|1 11.775719]|1 11.811764]|1 11.995508]|1 12.022942]|1 12.022978]|1 12.028759]|1 12.050005]|1 12.050044]|1 12.052630]|1 12.054817]|1 12.136549]|1 12.145411]|1 12.869882]|1 12.880373]|1 12.880406]|1 128:|1 13.345649]|1 13.352786]|1 13.353014]|1 13.354442]|1 13.370423]|1 13.373900]|1 16
-[|1 17.465485]|1 17.498143]|1 17.545604]|1 17.731556]|1 17.732585]|1 18.045682]|1 18.301637]|1 18.301883]|1 18.305393]|1 18.361463]|1 18.361664]|1 18.401339]|1 18.965292]|1 19.015574]|1 19.015610]|1 1:0:0:0:|1 1:0:0:0:|1 1:0:0:0:|1 2.21|1 27|1 27.Jun.2006|1 30.072956]|1 30.072986]|1 30.270504]|1 364k|1 4
-[|1 4e|1 6|1 64
+[|1 10.954195]|1 11.117121]|1 11.117169]|1 11.117286]|1 11.117460]|1 11.136483]|1 11.226285]|1 11.226390]|1 11.226531]|1 11.232873]|1 11.233830]|1 12.054817]|1 12.136549]|1 12.145411]|1 12.869882]|1 12.880373]|1 12.880406]|1 128:|1 13.345649]|1 13.352786]|1 13.353014]|1 13.354442]|1 13.370423]|1 13.373900]|1 17.465485]|1 17.498143]|1 17.545604]|1 17.731556]|1 17.732585]|1 1755.856|1 18.045682]|1 18.301637]|1 1:0:0:0:|1 2.21|1 2.6.22-16-generic|1 2.6.22-16.60-generic)
+[|1 24|1 27.Jun.2006|1 322F0030,|1 322F0060,|1 322F01A0,|1 3576.58|1 364k|1 364k|1 4
+[|1 4.1.2-16ubuntu2))|1 40000000|1 4096
 [|1 64
-[|1 7,|1 79C973|1 79C973
-[|1 8250/16550|1 9|1 9|1 9|1 9|1 <|1 ACPI|1 ACPI|1 ACPI|1 ACPI|1 ANSI:|1 ANSI:|1 After|1 AppArmor:|1 Attached|1 Attached|1 Attached|1 Attached|1 Booting|1 Brought|1 Checking|1 Checking|1 Clock|1 Compat|1 Core|1 DMA|1 DSDT|1 Detected|1 Dquot-cache|1 EISA:|1 EISA:|1 ELCR|1 Explorer|1 FUA
-[|1 FUA
-[|1 HARDDISK|1 III|1 III|1 IP|1 Intel(R)|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 LBA|1 Linux|1 Look|1 MB)
+[|1 7,|1 7,|1 802MB|1 8250/16550|1 919k|1 ACPI|1 ANSI:|1 ANSI:|1 APIC|1 APIC!
+[|1 After|1 AppArmor:|1 BIOS-e820:|1 BIOS-e820:|1 BIOS-e820:|1 BIOS-e820:|1 BIOS-e820:|1 BIOS-e820:|1 BogoMIPS|1 CPU#0
+[|1 Checking|1 Clock|1 DMA|1 DMA|1 DMA|1 DMA|1 DMA|1 DSDT|1 Dentry|1 Detected|1 Detected|1 Dquot-cache|1 EISA:|1 EISA:|1 FACP|1 FACS|1 Framework|1 HARDDISK|1 IP|1 Inode-cache|1 Interrupt|1 Interrupt|1 L2|1 LBA|1 Linux|1 MB)
 [|1 MB)
-[|1 No|1 No-Shortcut|1 PATA|1 PATA|1 PNP
-[|1 PQ:|1 PQ:|1 Plug|1 Plug|1 Plug|1 PnP|1 PnP|1 PnP|1 PnPBIOS:|1 Protect|1 Protect|1 Resume|1 Resume|1 Root|1 Routing|1 SCSI|1 SCSI|1 SMP|1 SMP|1 SMP|1 Scanning|1 Sense:|1 Sense:|1 Serial:|1 Set|1 Support|1 Switched|1 T5550|1 TCP|1 TCP|1 TCP|1 TCP|1 Time|1 UDMA/33|1 UDMA/33|1 UP|1 VFS:|1 [LNKA]|1 [LNKD]|1 [LNKD]|1 [LNKD]|1 [\_SB_.PCI0._PRT]
-[|1 alternatives:|1 alternatives:|1 at|1 at|1 at|1 at|1 at|1 at|1 at|1 at|1 at|1 ata1.00:|1 ata1.00:|1 ata1.00:|1 ata1:|1 ata_piix|1 ata_piix
+[|1 No|1 No-Shortcut|1 Ok.
+[|1 On|1 Order=0-1,|1 PATA|1 PATA|1 PFN|1 PFN|1 PM-Timer|1 PQ:|1 PQ:|1 Plug|1 PnP|1 SCSI|1 SELinux:|1 SMP|1 Scanning|1 Security|1 Serial:|1 Set|1 Switched|1 TCP|1 TCP|1 TCP|1 TCP|1 Time|1 Total|1 UDMA/33|1 UDMA/33|1 VBOXFACP|1 VFS:|1 at|1 at|1 at|1 at|1 at|1 at|1 at|1 ata1.00:|1 ata1.00:|1 ata1.00:|1 ata1:|1 ata_piix|1 ata_piix
 [|1 ata_piix
-[|1 audit(1228900149.256:1):|1 bmdma|1 bmdma|1 bus|1 bus|1 bus|1 bus|1 bus|1 bus=0
-[|1 by|1 by|1 bytes)
+[|1 audit(1228900149.256:1):|1 available|1 available.
+[|1 available.
+[|1 batch:0
+[|1 bmdma|1 bmdma|1 bus|1 bytes)
+[|1 bytes)
+[|1 bytes)
+[|1 bytes)
 [|1 bytes)
 [|1 bytes)
 [|1 bytes)
 [|1 cards...
-[|1 cards_found.
-[|1 common|1 configuration|1 configured|1 configured|1 configured|1 data:|1 done
-[|1 driver|1 driver|1 driver|1 driver|1 emulation|1 enabled|1 enabled|1 error,|1 failed.
-[|1 ffffe000.
-[|1 for|1 for|1 for|1 for|1 for|1 for|1 for|1 for|1 found|1 freed
+[|1 checksum|1 command|1 common|1 configured|1 configured|1 configured|1 data)
+[|1 data:|1 driver|1 driver|1 emulation|1 enabled|1 enabled|1 feature|1 for|1 for|1 for|1 for|1 for|1 for|1 for|1 for|1 for|1 freed
 [|1 freed
-[|1 freed
-[|1 fuse|1 generic|1 generic|1 hang|1 hardware|1 hardware|1 hardware|1 hardware
-[|1 hash|1 hash|1 hash|1 hash|1 if|1 info="AppArmor|1 initialized
+[|1 fuse|1 generic|1 hang|1 hash|1 hash|1 hash|1 hash|1 hash|1 hash|1 hash|1 hash|1 idle|1 if|1 if|1 info="AppArmor|1 init,|1 initialized
 [|1 initialized
-[|1 initramfs...|1 initramfs...|1 initramfs...|1 inits,|1 io|1 io|1 io|1 io|1 is
-[|1 isapnp:|1 isapnp:|1 latency|1 latency|1 level-triggered
-[|1 level-triggered
+[|1 initialized
+[|1 initramfs...|1 io|1 io|1 io|1 io|1 is
+[|1 isapnp:|1 isapnp:|1 kB)
+[|1 kB)
+[|1 kB)
+[|1 kB)
+[|1 kB)
+[|1 latency|1 level-triggered
 [|1 loaded.
-[|1 mapped|1 module.
-[|1 mounted|1 multi|1 noop|1 of|1 of|1 of|1 or|1 or|1 ordered|1 pcnet32.c:v1.33|1 pcnet32:|1 pcnet32:|1 pcnet32:|1 port|1 port|1 reported|1 resolution|1 resource|1 resume
-[|1 routing
-[|1 routing
-[|1 scsi1|1 seconds
-[|1 sectors|1 sectors|1 sectors,|1 serio:|1 serio:|1 sg1|1 slot|1 socket|1 sr0
-[|1 swsusp:|1 the|1 try|1 tsc|1 type|1 type|1 type|1 type|1 type|1 type|1 unregistered
-[|1 v0.97|1 vDSO|1 with|1 with|1 work,|1 xa/form2|1 
+[|1 mapped|1 memmap
+[|1 memmap
+[|1 memmap
+[|1 module.
+[|1 multi|1 mwait|1 noop|1 of|1 of|1 of|1 pages|1 pages|1 pages|1 pages|1 pages:|1 pcnet32.c:v1.33|1 pkmap|1 port|1 port|1 processor.
+[|1 quiet|1 reserved
+[|1 reserved,|1 resolution|1 resource|1 resources|1 ro|1 routing
+[|1 scsi1|1 sectors,|1 serio:|1 serio:|1 slot|1 socket|1 splash
+[|1 the|1 the|1 threads.
+[|1 try|1 tsc|1 v1.0.0|1 virtual|1 with|1 work,|1 zonelists.|1 

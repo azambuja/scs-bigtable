@@ -5,13 +5,13 @@ module scs {
 
 			interface Sorter {
 				// nao e pra ser string, string. Isso e so pra testar.
-				void sort(in string key, in string values);
+				void sort(in any key, in any values);
 				void start();
 			};
 
 			interface Config {
 				void setName(in string name);
-				void addReducer(in any reducer);	
+				void addReducer(in any reducer);
 			};
 
 			module test {

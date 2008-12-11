@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="27" version="2.0">
 <workbenchAdvisor/>
 <window height="657" maximized="true" width="1024" x="0" y="25">
 <fastViewData fastViewLocation="1024"/>
@@ -27,22 +27,16 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapReduceApp.java" partName="MapReduceApp.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/mapreduce/app/MapReduceApp.java" title="MapReduceApp.java" tooltip="scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (2 items)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="93" org.eclipse.ui.ide.pathField="123" org.eclipse.ui.ide.resourceField="163" org.eclipse.ui.ide.severityAndDescriptionField="573"/>
@@ -80,17 +74,6 @@
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
-</view>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
-<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
-<org.eclipse.mylyn.tasklist.ui.views.tasklist.sortIndex>
-<sorter sortDirection="1" sortIndex="0"/>
-<sorter2 sortDirection="1" sortIndex="2"/>
-</org.eclipse.mylyn.tasklist.ui.views.tasklist.sortIndex>
-</viewState>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
@@ -153,8 +136,6 @@
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -179,8 +160,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.21749409" ratioLeft="276" ratioRight="993" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.54339623" ratioLeft="288" ratioRight="242" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.23089047" ratioLeft="293" ratioRight="976" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.6603774" ratioLeft="350" ratioRight="180" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -197,21 +178,17 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@258c74" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">
-<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.49874055" ratioLeft="198" ratioRight="199" relationship="4" relative="org.eclipse.ui.internal.ViewStack@258c74">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -219,22 +196,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/container/servant/ComponentCollectionServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/container/servant/ComponentLoaderServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/instrumentation/app/Monitor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/schedule/EventSinkMaster.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java"/>
-</editors>
-<item historyLabel="ComponentCollectionServant.java" index="0"/>
-<item historyLabel="ComponentLoaderServant.java" index="1"/>
-<item historyLabel="Monitor.java" index="2"/>
-<item historyLabel="EventSinkMaster.java" index="3"/>
-<item historyLabel="MasterServant.java" index="4"/>
-<item active="true" historyLabel="MapReduceApp.java" index="5"/>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -251,14 +213,23 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapReduceApp.java" tooltip="scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BigTableComponent.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/BigTableComponent.java">
+<persistable path="/scs-java-turma082/scs/demos/bigtable/servant/BigTableComponent.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorkerInitializer.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/WorkerInitializer.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/WorkerInitializer.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MasterServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java">
 <persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorkerServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EventSinkMaster.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/EventSinkMaster.java">
 <persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/EventSinkMaster.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapReduceApp.java" tooltip="scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Monitor.java" tooltip="scs-java-turma082/scs/instrumentation/app/Monitor.java">
 <persistable path="/scs-java-turma082/scs/instrumentation/app/Monitor.java"/>

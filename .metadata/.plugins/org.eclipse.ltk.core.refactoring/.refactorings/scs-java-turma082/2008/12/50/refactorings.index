@@ -1,0 +1,16 @@
+1228947751824	Rename method 'getWorkerComponentQueue'
+1228947765423	Rename method 'buildSorterQueue'
+1228947772534	Rename field 'sorterQueue'
+1228947796543	Rename method 'connectSorters'
+1228947815685	Rename field 'sorterComponentQueue'
+1228947821566	Rename method 'buildSorterComponentQueue'
+1228947855440	Rename method 'connectWorkersToBigTables'
+1228950378283	Rename field 'bigTableComponent'
+1228951218823	Rename local variable 'sorterQueue'
+1228951418475	Rename method 'connectWorkersToSorters'
+1228951429868	Rename method 'connectSortersToWorkers'
+1228951491522	Rename method 'connectWorkersToBigTable'
+1228952360733	Rename field 'initializer'
+1228952364432	Rename field 'workerrInitializer'
+1228957435936	Delete elements
+1228957442132	Delete element

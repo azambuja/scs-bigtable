@@ -1,4 +1,5 @@
 #include "scs.idl"
+#include "bigTable.idl"
 
 module scs{
 	module demos{
@@ -68,14 +69,14 @@ module scs{
                                 
                 // Define a operacao map 
                 interface Mapper {
-                   	void map(in any key, in any value, in OutputCollector collector, in Reporter reporter) 
+                   	void map(in any key, in any value, in OutputCollector collector, in Reporter reporter, in bigtable::Sorter sorter) 
                              raises (IOMapReduceException);
                 };
                 
                 // Define a operacao reduce
                 interface Reducer {
 		    	void reduce (in any key, in Iterator values, in OutputCollector collector, in Reporter reporter) 
-                             raises (IOMapReduceException); 
+                        	raises (IOMapReduceException);
 		};
 		
 		//Define a operacao para distribuir chaves para os reducers 
@@ -101,7 +102,7 @@ module scs{
                 };
 
  		interface Worker{
-                        boolean start(in string configFileName, in string nodeName, in core::IComponent channel, in Reporter reporter); 
+                        boolean start(in string configFileName, in string nodeName, in core::IComponent channel, in Reporter reporter, in core::IComponent workerComponent); 
                 	void execute (in Task task);
  			string getNode();
 			boolean ping();

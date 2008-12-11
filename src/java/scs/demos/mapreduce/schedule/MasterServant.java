@@ -23,6 +23,7 @@ import scs.demos.mapreduce.ConectionToExecNodesException;
 import scs.demos.mapreduce.IOFormat;
 import scs.demos.mapreduce.MasterPOA;
 import scs.demos.mapreduce.PropertiesException;
+import scs.demos.mapreduce.ReducerHelper;
 import scs.demos.mapreduce.Reporter;
 import scs.demos.mapreduce.StartFailureException;
 import scs.demos.mapreduce.Task;
@@ -84,7 +85,7 @@ public class MasterServant extends MasterPOA {
 	/* Lista de objetos Execution Node dos Sorters*/
 	private Hashtable hashSorterNodes = null;
 	/* Objeto que instancia workers */
-	private WorkerInitializer initializer = null;
+	private WorkerInitializer workerInitializer = null;
 	/* Objeto que instancia bigtables */
 	private BigTableInitializer bigTableInitializer = null;
 
@@ -97,7 +98,7 @@ public class MasterServant extends MasterPOA {
 	private LinkedBlockingQueue workerQueue;
 	private LinkedBlockingQueue<IComponent> workerComponentQueue;
 	private LinkedBlockingQueue taskQueue;
-	private LinkedBlockingQueue<IComponent> sorterQueue;
+	private IComponent bigTableComponent;
 	private IComponent channel;
 	private Hashtable workingOn;
 	private int num_partitions;
@@ -270,7 +271,7 @@ public class MasterServant extends MasterPOA {
 
 		/* cria objeto que inicializa workers e fila de tarefas */
 		try {
-			initializer = new WorkerInitializer(this);
+			workerInitializer = new WorkerInitializer(this);
 		} catch (Exception e) {
 			throw new WorkerInstantiationException();
 		}
@@ -287,7 +288,7 @@ public class MasterServant extends MasterPOA {
 
 		/* conecta-se com os execution nodes dos workers*/
 		reporter.report(1,"MasterServant::start - Conectando aos outros execution nodes"); 
-		hashNodes = this.initializer.connectToExecNodes();
+		hashNodes = this.workerInitializer.connectToExecNodes();
 		if (hashNodes == null) {
 			throw new ConectionToExecNodesException ();
 		}
@@ -303,37 +304,44 @@ public class MasterServant extends MasterPOA {
 
 		/* cria canal de evento entre master e workers*/
 		reporter.report(1,"MasterServant::start - Criando canal de evento entre master e workers");
-		channel = initializer.buildChannel();
+		channel = workerInitializer.buildChannel();
 		if (channel == null) {
 			throw new ChannelException ();
 		}
 
 		/*instancia workers*/
 		reporter.report(1,"MasterServant::start - Instanciando Workers");
-		workerQueue = initializer.buildWorkerQueue();
+		workerQueue = workerInitializer.buildWorkerQueue();
 		if (workerQueue == null) {
 			throw new WorkerInstantiationException ();
 		}
 
 		/*Enche a lista de componentes de workers*/
-		workerComponentQueue = initializer.getWorkerComponentQueue();
+		workerComponentQueue = workerInitializer.buildWorkerComponentQueue();
 
 		/*instancia sorters*/
 		reporter.report(1,"MasterServant::start - Instanciando Sorters");
-		sorterQueue = bigTableInitializer.buildSorterQueue();
-		if (sorterQueue == null) {
+		
+		bigTableComponent = bigTableInitializer.buildBigTableComponent();
+		if (bigTableComponent == null) {
 			//			TODO: criar excecao da bigTable
 			//			throw new BigTableInstantiationException ();
 		}
 
+		// Connect big table components to workers
+		reporter.report(1, "MasterServant::start - Conectando big tables...");
+		connectWorkersToSorter();
+		connectSorterToWorkers();
+//		connectBigTableToWorkers();
+		
 		/*instancia tarefas*/
 		reporter.report(1,"MasterServant::start - Instanciando Tarefas");
-		ioformat = initializer.createIOFormatServant(ioformatClassName);
+		ioformat = workerInitializer.createIOFormatServant(ioformatClassName);
 		if (ioformat == null) {
 			throw new TaskInstantiationException ();
 		}
 
-		taskQueue   = initializer.buildTaskQueue();
+		taskQueue = workerInitializer.buildTaskQueue();
 		if ((taskQueue == null) || (taskQueue.toArray().length == 0)) {
 			throw new TaskInstantiationException ();
 		}	
@@ -348,40 +356,95 @@ public class MasterServant extends MasterPOA {
 		//initializer.finish();	     
 	}
 
-	private void connectSorters(){
+	private void connectWorkersToSorter(){
 
 		Iterator<IComponent> iteWorker = workerComponentQueue.iterator();
-		Iterator<IComponent> iteBigTable = sorterQueue.iterator();
 
 		IComponent workerComponent;
-		IComponent bigTableComponent;
 
 		while(iteWorker.hasNext()){
 			workerComponent = iteWorker.next();
-
 			IReceptacles workerReceptacles = IReceptaclesHelper.narrow(workerComponent.getFacetByName("infoReceptacle"));
-			while(iteBigTable.hasNext()){
-				bigTableComponent = iteBigTable.next();
-				try {
-					workerReceptacles.connect("Sorter", SorterHelper.narrow(bigTableComponent.getFacetByName("Sorter")));
-				} catch (InvalidName e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (InvalidConnection e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (AlreadyConnected e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (ExceededConnectionLimit e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+
+			try {
+				workerReceptacles.connect("Sorter", SorterHelper.narrow(bigTableComponent.getFacetByName("Sorter")));
+			} catch (InvalidName e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvalidConnection e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (AlreadyConnected e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ExceededConnectionLimit e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-
 		}
-
 	}
+	
+	private void connectSorterToWorkers(){
+
+		Iterator<IComponent> iteWorker = workerComponentQueue.iterator();
+
+		IComponent workerComponent;
+
+		while(iteWorker.hasNext()){
+			workerComponent = iteWorker.next();
+			IReceptacles bigTableReceptacles = IReceptaclesHelper.narrow(bigTableComponent.getFacetByName("infoReceptacle"));
+
+			try {
+				bigTableReceptacles.connect("Reducer", ReducerHelper.narrow(workerComponent.getFacetByName("Reducer")));
+			} catch (InvalidName e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvalidConnection e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (AlreadyConnected e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ExceededConnectionLimit e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+//	private void connectBigTableToWorkers(){
+//
+//		Iterator<IComponent> iteWorker = workerComponentQueue.iterator();
+//		Iterator<IComponent> iteBigTable = bigTableComponentQueue.iterator();
+//
+//		IComponent workerComponent;
+//		IComponent bigTableComponent;
+//
+//		while(iteBigTable.hasNext()){
+//			bigTableComponent = iteBigTable.next();
+//
+//			IReceptacles bigTableReceptacles = IReceptaclesHelper.narrow(bigTableComponent.getFacetByName("infoReceptacle"));
+//			while(iteWorker.hasNext()){
+//				workerComponent = iteWorker.next();
+//				try {
+//					bigTableReceptacles.connect("Reducer", WorkerHelper.narrow(workerComponent.getFacetByName("Reducer")));
+//				} catch (InvalidName e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				} catch (InvalidConnection e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				} catch (AlreadyConnected e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				} catch (ExceededConnectionLimit e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//
+//		}
+//	}
 
 	public ORB getOrb(){
 		return orb;

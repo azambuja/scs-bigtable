@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="scs.demos.bigtable.servant.BigTableInitializer"/>
+<fullyQualifiedTypeName name="scs.core.IReceptaclesHelper"/>
+<fullyQualifiedTypeName name="scs.core.IReceptacles"/>
+<fullyQualifiedTypeName name="scs.demos.bigtable.SorterHelper"/>
+<fullyQualifiedTypeName name="scs.core.InvalidName"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+</qualifiedTypeNameHistroy>

@@ -2,12 +2,15 @@ package scs.demos.bigtable.servant;
 
 import java.util.HashMap;
 
+import org.omg.CORBA.Any;
+
 import scs.core.ConnectionDescription;
 import scs.core.IReceptacles;
 import scs.core.IReceptaclesHelper;
 import scs.core.InvalidName;
 import scs.demos.bigtable.SorterPOA;
-import scs.demos.bigtable.test.Reducer;
+import scs.demos.mapreduce.IOMapReduceException;
+import scs.demos.mapreduce.Reducer;
 
 /**
  * 
@@ -30,24 +33,32 @@ public class SorterServant extends SorterPOA {
 	}
 
 	@Override
-	public void sort(String key, String values) {
+	public void sort(Any key, Any value) {
+		try {
+			if (!started)
+				start();
+			
+			// Passo direto cada chave par,valor para o reducer
+			// deveria bufferizar?
 
-		if (!started)
-			start();
-		
-		// Passo direto cada chave par,valor para o reducer
-		// deveria bufferizar?
-
-		char ch = key.charAt(0);
-		int i = groups.get(new Integer(ch)).intValue();
-		
-		System.out.println("enviando chave " + key + " para reducer " + i);
-		
-		if (conns[i].objref != null) {
-			Reducer reducer = (Reducer)conns[i].objref;
-			reducer.reduce(key, values);
+			char ch = key.extract_string().charAt(0);
+			int i = groups.get(new Integer(ch)).intValue();
+			
+			System.out.println("enviando chave " + key + " para reducer " + i);
+			
+			if (conns[i].objref != null) {
+				Reducer reducer = (Reducer)conns[i].objref;
+//				try {
+////					reducer.reduce(key, value);
+//				} catch (IOMapReduceException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+			}
 		}
-
+		catch (Exception e) {
+			
+		}
 	}
 
 	@Override
@@ -56,7 +67,7 @@ public class SorterServant extends SorterPOA {
 		
 		try {
 			IReceptacles bigTableReceptacles = IReceptaclesHelper.narrow(component.getFacetByName("infoReceptacle"));
-			conns = bigTableReceptacles.getConnections("Reducer");
+			conns = bigTableReceptacles.getConnections("Reducer2");
 		} catch (InvalidName e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
