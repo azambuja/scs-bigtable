@@ -2,7 +2,7 @@ module scs {
 	module demos {
 		module bigtable {
 			typedef sequence<any> Iterator;
-			typedef sequence<String> Keys;
+			typedef sequence<string> Keys;
 
 			interface Sorter {
 				void put(in any key, in any value);

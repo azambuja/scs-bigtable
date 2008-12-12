@@ -2,7 +2,7 @@
 [|1 00000000|1 00000000|1 00000000|1 078bf3bf|1 0d
 [|1 1
 [|1 11)
-[|1 11.234487]|1 11.234763]|1 11.774600]|1 11.775719]|1 11.811764]|1 11.995508]|1 12.022942]|1 12.022978]|1 12.028759]|1 12.050005]|1 12.050044]|1 12.052630]|1 16
+[|1 11.362468]|1 11.362729]|1 11.830817]|1 11.833388]|1 11.856902]|1 11.992496]|1 12.035593]|1 12.044389]|1 12.085966]|1 12.107377]|1 12.107734]|1 14:54:09|1 16
 [|1 6|1 9|1 9|1 9|1 9|1 ACPI|1 ACPI|1 ACPI|1 After|1 Booting|1 Brought|1 Checking|1 Compat|1 Core|1 DSDT|1 ELCR|1 Intel(R)|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 Interrupt|1 Linux|1 Look|1 PNP
 [|1 Plug|1 PnP|1 PnP|1 PnPBIOS:|1 Root|1 Routing|1 SMP|1 SMP|1 SMP|1 Support|1 T5550|1 UP|1 [LNKA]|1 [LNKD]|1 [\_SB_.PCI0._PRT]
 [|1 alternatives:|1 alternatives:|1 at|1 bus|1 bus|1 bus|1 bus|1 bus=0

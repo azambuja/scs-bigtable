@@ -1,17 +1,15 @@
 0:0:0:0:|1 0x000101f0|1 0x00010376|1 1.0,|1 1.0,|1 1.44M
 [|1 11
-[|1 11
-[|1 13.374175]|1 13.374757]|1 13.375408]|1 13.381936]|1 13.384624]|1 14
-[|1 15.362758]|1 15.383782]|1 15.403450]|1 17.498087]|1 17.731576]|1 18.201352]|1 18.281710]|1 18.297994]|1 18.301654]|1 18.301672]|1 18.301777]|1 2.11
-[|1 4:357:171
+[|1 13.398973]|1 13.402524]|1 13.403193]|1 13.409733]|1 13.416360]|1 14
+[|1 17.560501]|1 17.571385]|1 17.836629]|1 17.836650]|1 17.837481]|1 18.409978]|1 18.413698]|1 18.413716]|1 2.11
 [|1 5
 [|1 5
 [|1 726k
 [|1 :|1 :|1 ACPI:|1 ACPI:|1 ATA|1 CD-ROM|1 CD-ROM|1 CD-ROM,|1 FDC|1 Failure|1 Floppy|1 IPI|1 Magic|1 NET:|1 PCI|1 PCI|1 Registered|1 Setting|1 UDMA/133
 [|1 UDMA/133
 [|1 VBOX|1 VBOX|1 VBOX|1 VBOX|1 Write|1 [LNKC]|1 [LNKC]|1 a|1 all|1 allocate|1 ata2:|1 cards.
-[|1 device|1 drive(s):|1 eisa.0
-[|1 family|1 fd0|1 init|1 initialized"|1 input:|1 is|1 is|1 keyboard|1 libata|1 low)|1 memory:|1 mode
+[|1 device|1 device|1 drive(s):|1 eisa.0
+[|1 family|1 fd0|1 init|1 initialized"|1 initialized<5>audit(1229093650.696:2):|1 input:|1 is|1 is|1 keyboard|1 libata|1 matches|1 memory:|1 mode
 [|1 number:|1 pid=1131
 [|1 protecting|1 protocol|1 read-only|1 registering|1 security|1 setting|1 tsbogend@alpha.franken.de
 [|1 type=1505|1 unused|1 

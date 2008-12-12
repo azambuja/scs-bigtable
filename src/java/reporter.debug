@@ -25,43 +25,23 @@ IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K5.txt
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K6.txt
 MasterServant::start - Iniciando escalonamento
-ready to sort
-ready to sort
-calling sorter 0
-ready to sort
-calling sorter 0
-calling sorter 0
-ready to sort
-calling sorter 0
-EventSinkMaster::handleEvent - TaskID = 3
-    Este foi o map no. 1 de 7
-ready to sort
-calling sorter 0
 EventSinkMaster::handleEvent - TaskID = 2
+    Este foi o map no. 1 de 7
+EventSinkMaster::handleEvent - TaskID = 3
     Este foi o map no. 2 de 7
-ready to sort
-calling sorter 0
-EventSinkMaster::handleEvent - TaskID = 0
+EventSinkMaster::handleEvent - TaskID = 1
     Este foi o map no. 3 de 7
-ready to sort
-calling sorter 0
-EventSinkMaster::handleEvent - TaskID = 4
+EventSinkMaster::handleEvent - TaskID = 0
     Este foi o map no. 4 de 7
 EventSinkMaster::handleEvent - TaskID = 5
     Este foi o map no. 5 de 7
-EventSinkMaster::handleEvent - TaskID = 1
+EventSinkMaster::handleEvent - TaskID = 4
     Este foi o map no. 6 de 7
 EventSinkMaster::handleEvent - TaskID = 6
     Este foi o map no. 7 de 7
-ready to sort
-calling sorter 0
-ready to sort
-calling sorter 0
-ready to sort
-calling sorter 0
 EventSinkMaster::handleEvent - TaskID = 7
     Este foi o reduce no. 1 de 3
-EventSinkMaster::handleEvent - TaskID = 9
-    Este foi o reduce no. 2 de 3
 EventSinkMaster::handleEvent - TaskID = 8
+    Este foi o reduce no. 2 de 3
+EventSinkMaster::handleEvent - TaskID = 9
     Este foi o reduce no. 3 de 3

@@ -5,14 +5,22 @@
 <fullyQualifiedTypeName name="scs.core.IReceptacles"/>
 <fullyQualifiedTypeName name="scs.demos.bigtable.SorterHelper"/>
 <fullyQualifiedTypeName name="scs.core.InvalidName"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="scs.demos.mapreduce.WorkerHelper"/>
 <fullyQualifiedTypeName name="scs.demos.bigtable.test.ReducerPOA"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.Any"/>
-<fullyQualifiedTypeName name="scs.demos.bigtable.Sorter"/>
 <fullyQualifiedTypeName name="scs.demos.mapreduce.Reducer"/>
 <fullyQualifiedTypeName name="scs.demos.mapreduce.Reducer2"/>
 <fullyQualifiedTypeName name="scs.demos.mapreduce.Reducer2POA"/>
 <fullyQualifiedTypeName name="scs.demos.mapreduce.Reducer2Helper"/>
 <fullyQualifiedTypeName name="scs.demos.bigtable.test.ReducerHelper"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="scs.demos.bigtable.IteratorHolder"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="scs.demos.bigtable.KeysHolder"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="scs.demos.mapreduce.ReducerPOA"/>
+<fullyQualifiedTypeName name="scs.demos.bigtable.Sorter"/>
 </qualifiedTypeNameHistroy>

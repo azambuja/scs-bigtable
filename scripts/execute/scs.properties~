@@ -37,6 +37,7 @@ component-Monitor-1=scs.reasoning.servant.MonitorComponent
 
 component-Master-1=scs.demos.mapreduce.schedule.MasterComponent
 component-Worker-1=scs.demos.mapreduce.schedule.WorkerComponent
+component-BigTable-1=scs.demos.bigtable.servant.BigTableComponent
 
 # Flag para habilitar a coleta de statísticas feita dentro do container
 # 0 - desliga coleta

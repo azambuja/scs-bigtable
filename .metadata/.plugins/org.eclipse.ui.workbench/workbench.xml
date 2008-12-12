@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="9" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
 <window height="657" maximized="true" width="1024" x="0" y="25">
 <fastViewData fastViewLocation="1024"/>
@@ -29,25 +29,54 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SorterServant.java" partName="SorterServant.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/bigtable/servant/SorterServant.java" title="SorterServant.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WordReducerServant.java" partName="WordReducerServant.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/mapreduce/user/WordReducerServant.java" title="WordReducerServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/user/WordReducerServant.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scs-java-turma082/scs/demos/mapreduce/user/WordReducerServant.java"/>
+<editorState selectionLength="0" selectionOffset="1315"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SorterServant.java" partName="SorterServant.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/bigtable/servant/SorterServant.java" title="SorterServant.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java"/>
-<editorState selectionLength="0" selectionOffset="0"/>
+<editorState selectionLength="0" selectionOffset="1985"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReduceTask.java" partName="ReduceTask.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/mapreduce/servant/ReduceTask.java" title="ReduceTask.java" tooltip="scs-java-turma082/scs/demos/mapreduce/servant/ReduceTask.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scs-java-turma082/scs/demos/mapreduce/servant/ReduceTask.java"/>
+<editorState selectionLength="0" selectionOffset="9927"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WordMapperServant.java" partName="WordMapperServant.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/mapreduce/user/WordMapperServant.java" title="WordMapperServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/user/WordMapperServant.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scs-java-turma082/scs/demos/mapreduce/user/WordMapperServant.java"/>
+<editorState selectionLength="0" selectionOffset="763"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MasterServant.java" partName="MasterServant.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/mapreduce/schedule/MasterServant.java" title="MasterServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java"/>
+<editorState selectionLength="0" selectionOffset="12895"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorkerServant.java" partName="WorkerServant.java" path="/home/hubert/scs-bigtable/src/java/scs/demos/mapreduce/schedule/WorkerServant.java" title="WorkerServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java"/>
+<editorState selectionLength="0" selectionOffset="2037"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (100 of 482 items)"/>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="93" org.eclipse.ui.ide.pathField="123" org.eclipse.ui.ide.resourceField="163" org.eclipse.ui.ide.severityAndDescriptionField="573"/>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -86,7 +115,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -144,6 +173,7 @@
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -169,12 +199,12 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.23089047" ratioLeft="293" ratioRight="976" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7924528" ratioLeft="420" ratioRight="110" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<info folder="true" part="bottom" ratio="0.77924526" ratioLeft="413" ratioRight="117" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -182,6 +212,7 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -206,170 +237,170 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/servant/MapTask.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/user/WordMapperServant.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/user/WordReducerServant.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/servant/ReduceTask.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/servant/BufferOutputCollectorServant.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/servant/PartitionerServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/bigtable/servant/BigTableInitializer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/servant/TaskServant.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/bigtable/servant/InfoServant.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/bigtable/servant/ConfigServant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/bigtable/test/servant/ReducerServant.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/bigtable/servant/BigTableInitializer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/_ReporterStub.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/_ReducerStub.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/ReducerOperations.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scs-java-turma082/scs/demos/mapreduce/servant/BufferOutputCollectorServant.java"/>
 </editors>
-<item historyLabel="SorterServant.java" index="2">
+<item historyLabel="ReduceTask.java" index="2">
 <position/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="463" y="0"/>
+</item>
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="TaskServant.java" index="5">
 <position/>
 </item>
-<item historyLabel="ReduceTask.java" index="6">
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="463" y="0"/>
+</item>
+<item historyLabel="MapReduceApp.java" index="4">
 <position/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="463" y="0"/>
+</item>
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="InfoServant.java" index="6">
 <position/>
 </item>
-<item historyLabel="ReduceTask.java" index="6">
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="ConfigServant.java" index="7">
 <position/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="BigTableInitializer.java" index="8">
 <position/>
 </item>
-<item historyLabel="WordMapperServant.java" index="4">
-<position info="not_deleted" x="784" y="0"/>
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="3026" y="0"/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="MasterServant.java" index="3">
+<position info="not_deleted" x="12895" y="0"/>
+</item>
+<item historyLabel="BigTableInitializer.java" index="8">
 <position/>
 </item>
-<item historyLabel="BufferOutputCollectorServant.java" index="7">
+<item historyLabel="MasterServant.java" index="3">
+<position info="not_deleted" x="12895" y="0"/>
+</item>
+<item historyLabel="SorterServant.java" index="1">
 <position/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="WordReducerServant.java" index="0">
 <position/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="ReduceTask.java" index="2">
+<position info="not_deleted" x="9258" y="0"/>
+</item>
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="975" y="0"/>
+</item>
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="2191" y="0"/>
+</item>
+<item historyLabel="ReduceTask.java" index="2">
 <position/>
 </item>
-<item historyLabel="SorterServant.java" index="2">
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="1148" y="0"/>
+</item>
+<item historyLabel="ReduceTask.java" index="2">
 <position/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="1320" y="0"/>
+</item>
+<item historyLabel="WorkerServant.java" index="9">
 <position/>
 </item>
-<item historyLabel="MapTask.java" index="3">
-<position info="not_deleted" x="8290" y="0"/>
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="1320" y="0"/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="ReduceTask.java" index="2">
+<position info="not_deleted" x="9860" y="0"/>
+</item>
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="1110" y="0"/>
+</item>
+<item historyLabel="_ReporterStub.java" index="10">
 <position/>
 </item>
-<item historyLabel="WorkerServant.java" index="1">
-<position info="not_deleted" x="2093" y="0"/>
-</item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="_ReducerStub.java" index="11">
 <position/>
 </item>
-<item historyLabel="MasterServant.java" index="0">
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="569" y="0"/>
+</item>
+<item historyLabel="ReducerOperations.java" index="12">
 <position/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="569" y="0"/>
+</item>
+<item historyLabel="ReduceTask.java" index="2">
+<position info="not_deleted" x="10093" y="0"/>
+</item>
+<item historyLabel="BufferOutputCollectorServant.java" index="13">
 <position/>
 </item>
-<item historyLabel="MapReduceApp.java" index="8">
-<position/>
+<item historyLabel="ReduceTask.java" index="2">
+<position info="not_deleted" x="10093" y="0"/>
 </item>
-<item historyLabel="MasterServant.java" index="0">
-<position/>
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="1320" y="0"/>
 </item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
+<item historyLabel="ReduceTask.java" index="2">
+<position info="not_deleted" x="10093" y="0"/>
 </item>
-<item historyLabel="WordMapperServant.java" index="4">
-<position info="not_deleted" x="784" y="0"/>
+<item historyLabel="MasterServant.java" index="3">
+<position info="not_deleted" x="12895" y="0"/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
-<position/>
+<item historyLabel="WorkerServant.java" index="9">
+<position info="not_deleted" x="2037" y="0"/>
 </item>
-<item historyLabel="WordMapperServant.java" index="4">
-<position info="not_deleted" x="784" y="0"/>
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="2191" y="0"/>
 </item>
-<item historyLabel="MasterServant.java" index="0">
-<position/>
+<item historyLabel="ReduceTask.java" index="2">
+<position info="not_deleted" x="10093" y="0"/>
 </item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
+<item historyLabel="ReduceTask.java" index="2">
+<position info="not_deleted" x="9927" y="0"/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
-<position/>
+<item historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="1084" y="0"/>
 </item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="2191" y="0"/>
 </item>
-<item historyLabel="WordReducerServant.java" index="5">
-<position/>
+<item historyLabel="SorterServant.java" index="1">
+<position info="not_deleted" x="1985" y="0"/>
 </item>
-<item historyLabel="MasterServant.java" index="0">
-<position/>
-</item>
-<item historyLabel="WordReducerServant.java" index="5">
-<position/>
-</item>
-<item historyLabel="WordMapperServant.java" index="4">
-<position info="not_deleted" x="784" y="0"/>
-</item>
-<item historyLabel="MapReduceApp.java" index="8">
-<position/>
-</item>
-<item historyLabel="PartitionerServant.java" index="9">
-<position/>
-</item>
-<item historyLabel="BigTableInitializer.java" index="10">
-<position info="not_deleted" x="8329" y="0"/>
-</item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
-</item>
-<item historyLabel="InfoServant.java" index="11">
-<position/>
-</item>
-<item historyLabel="ConfigServant.java" index="12">
-<position/>
-</item>
-<item historyLabel="InfoServant.java" index="11">
-<position/>
-</item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
-</item>
-<item historyLabel="WordReducerServant.java" index="5">
-<position/>
-</item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
-</item>
-<item historyLabel="MapReduceApp.java" index="8">
-<position/>
-</item>
-<item historyLabel="MasterServant.java" index="0">
-<position/>
-</item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
-</item>
-<item historyLabel="BigTableInitializer.java" index="10">
-<position info="not_deleted" x="8329" y="0"/>
-</item>
-<item historyLabel="ReducerServant.java" index="13">
-<position/>
-</item>
-<item historyLabel="SorterServant.java" index="2">
-<position/>
-</item>
-<item active="true" historyLabel="SorterServant.java" index="2">
-<position/>
+<item active="true" historyLabel="WordReducerServant.java" index="0">
+<position info="not_deleted" x="1084" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -388,17 +419,23 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SorterServant.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java">
-<persistable path="/scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BufferOutputCollectorServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/servant/BufferOutputCollectorServant.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/servant/BufferOutputCollectorServant.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MasterServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReducerOperations.java" tooltip="scs-java-turma082/scs/demos/mapreduce/ReducerOperations.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/ReducerOperations.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapReduceApp.java" tooltip="scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="_ReducerStub.java" tooltip="scs-java-turma082/scs/demos/mapreduce/_ReducerStub.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/_ReducerStub.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WordReducerServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/user/WordReducerServant.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/user/WordReducerServant.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="_ReporterStub.java" tooltip="scs-java-turma082/scs/demos/mapreduce/_ReporterStub.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/_ReporterStub.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorkerServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/WorkerServant.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BigTableInitializer.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/BigTableInitializer.java">
+<persistable path="/scs-java-turma082/scs/demos/bigtable/servant/BigTableInitializer.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConfigServant.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/ConfigServant.java">
 <persistable path="/scs-java-turma082/scs/demos/bigtable/servant/ConfigServant.java"/>
@@ -406,32 +443,26 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InfoServant.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/InfoServant.java">
 <persistable path="/scs-java-turma082/scs/demos/bigtable/servant/InfoServant.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BufferOutputCollectorServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/servant/BufferOutputCollectorServant.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/servant/BufferOutputCollectorServant.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReduceTask.java" tooltip="scs-java-turma082/scs/demos/mapreduce/servant/ReduceTask.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/servant/ReduceTask.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BigTableTester.java" tooltip="scs-java-turma082/scs/demos/bigtable/app/BigTableTester.java">
-<persistable path="/scs-java-turma082/scs/demos/bigtable/app/BigTableTester.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SorterOperations.java" tooltip="scs-java-turma082/scs/demos/bigtable/SorterOperations.java">
-<persistable path="/scs-java-turma082/scs/demos/bigtable/SorterOperations.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapperOperations.java" tooltip="scs-java-turma082/scs/demos/mapreduce/MapperOperations.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/MapperOperations.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WordMapperServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/user/WordMapperServant.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/user/WordMapperServant.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PartitionerServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/servant/PartitionerServant.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/servant/PartitionerServant.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapReduceApp.java" tooltip="scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/app/MapReduceApp.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/servant/TaskServant.java">
 <persistable path="/scs-java-turma082/scs/demos/mapreduce/servant/TaskServant.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mapper.java" tooltip="scs-java-turma082/scs/demos/mapreduce/Mapper.java">
-<persistable path="/scs-java-turma082/scs/demos/mapreduce/Mapper.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MasterServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/MasterServant.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorkerInitializer.java" tooltip="scs-java-turma082/scs/demos/mapreduce/schedule/WorkerInitializer.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/schedule/WorkerInitializer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WordMapperServant.java" tooltip="scs-java-turma082/scs/demos/mapreduce/user/WordMapperServant.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/user/WordMapperServant.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReduceTask.java" tooltip="scs-java-turma082/scs/demos/mapreduce/servant/ReduceTask.java">
+<persistable path="/scs-java-turma082/scs/demos/mapreduce/servant/ReduceTask.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SorterServant.java" tooltip="scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java">
+<persistable path="/scs-java-turma082/scs/demos/bigtable/servant/SorterServant.java"/>
 </file>
 </mruList>
 </workbench>

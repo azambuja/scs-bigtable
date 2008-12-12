@@ -16,6 +16,7 @@ import scs.core.IReceptacles;
 import scs.core.IReceptaclesHelper;
 import scs.core.InvalidConnection;
 import scs.core.InvalidName;
+import scs.demos.bigtable.Sorter;
 import scs.demos.bigtable.SorterHelper;
 import scs.demos.bigtable.servant.BigTableInitializer;
 import scs.demos.mapreduce.ChannelException;
@@ -357,15 +358,16 @@ public class MasterServant extends MasterPOA {
 	private void connectWorkersToSorter(){
 
 		Iterator<IComponent> iteWorker = workerComponentQueue.iterator();
-
+		Sorter sorter = SorterHelper.narrow(bigTableComponent.getFacetByName("Sorter"));
+		sorter.setNumberOfReducers(num_reducers);
+		
 		IComponent workerComponent;
 
 		while(iteWorker.hasNext()){
 			workerComponent = iteWorker.next();
 			IReceptacles workerReceptacles = IReceptaclesHelper.narrow(workerComponent.getFacetByName("infoReceptacle"));
-
-			try {
-				workerReceptacles.connect("Sorter", SorterHelper.narrow(bigTableComponent.getFacetByName("Sorter")));
+			try {				
+				workerReceptacles.connect("Sorter", sorter);
 			} catch (InvalidName e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -1,36 +1,36 @@
 for all mice
-[   13.370423] input: AT Translated Set 2 keyboard as /class/input/input1
-[   13.373900] EISA: Probing bus 0 at eisa.0
-[   13.373955] Cannot allocate resource for EISA slot 4
-[   13.374175] EISA: Detected 0 cards.
-[   13.374757] TCP cubic registered
-[   13.374786] NET: Registered protocol family 1
-[   13.375408] Using IPI No-Shortcut mode
-[   13.381936]   Magic number: 4:357:171
-[   13.384624] Freeing unused kernel memory: 364k freed
-[   13.385502] Write protecting the kernel read-only data: 726k
-[   15.362758] AppArmor: AppArmor initialized<5>audit(1228900151.756:2):  type=1505 info="AppArmor initialized" pid=1131
-[   15.383782] fuse init (API version 7.8)
-[   15.403450] Failure registering capabilities with primary security module.
-[   17.465485] SCSI subsystem initialized
-[   17.472222] libata version 2.21 loaded.
-[   17.476728] ata_piix 0000:00:01.1: version 2.11
-[   17.482122] PCI: Setting latency timer of device 0000:00:01.1 to 64
-[   17.497737] scsi0 : ata_piix
-[   17.498087] scsi1 : ata_piix
-[   17.498143] ata1: PATA max UDMA/33 cmd 0x000101f0 ctl 0x000103f6 bmdma 0x0001c000 irq 14
-[   17.498160] ata2: PATA max UDMA/33 cmd 0x00010170 ctl 0x00010376 bmdma 0x0001c008 irq 15
-[   17.545604] pcnet32.c:v1.33 27.Jun.2006 tsbogend@alpha.franken.de
-[   17.731556] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
-[   17.731576] ata1.00: 21229568 sectors, multi 128: LBA 
-[   17.732585] ata1.00: configured for UDMA/33
-[   17.796259] Floppy drive(s): fd0 is 1.44M
-[   17.834683] FDC 0 is a S82078B
-[   18.045682] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
-[   18.201352] ata2.00: configured for UDMA/33
-[   18.281710] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
-[   18.297994] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
-[   18.301637] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
-[   18.301654] PCI: setting IRQ 11 as level-triggered
-[   18.301672] ACPI: PCI Interrupt 0000:00:03.0[A] -> Link [LNKC] -> GSI 11 (level, low) -> IRQ 11
-[   18.301777] 
+[   13.398973] input: AT Translated Set 2 keyboard as /class/input/input1
+[   13.402524] EISA: Probing bus 0 at eisa.0
+[   13.402570] Cannot allocate resource for EISA slot 4
+[   13.402595] EISA: Detected 0 cards.
+[   13.403193] TCP cubic registered
+[   13.403224] NET: Registered protocol family 1
+[   13.403638] Using IPI No-Shortcut mode
+[   13.409733]   Magic number: 4:314:940
+[   13.410049]   hash matches device ptyyb
+[   13.413472] Freeing unused kernel memory: 364k freed
+[   13.416360] Write protecting the kernel read-only data: 726k
+[   15.403862] AppArmor: AppArmor initialized<5>audit(1229093650.696:2):  type=1505 info="AppArmor initialized" pid=1131
+[   15.425559] fuse init (API version 7.8)
+[   15.444560] Failure registering capabilities with primary security module.
+[   17.560501] SCSI subsystem initialized
+[   17.566755] libata version 2.21 loaded.
+[   17.571385] ata_piix 0000:00:01.1: version 2.11
+[   17.582496] PCI: Setting latency timer of device 0000:00:01.1 to 64
+[   17.597079] scsi0 : ata_piix
+[   17.597690] scsi1 : ata_piix
+[   17.597835] ata1: PATA max UDMA/33 cmd 0x000101f0 ctl 0x000103f6 bmdma 0x0001c000 irq 14
+[   17.597885] ata2: PATA max UDMA/33 cmd 0x00010170 ctl 0x00010376 bmdma 0x0001c008 irq 15
+[   17.640218] pcnet32.c:v1.33 27.Jun.2006 tsbogend@alpha.franken.de
+[   17.836629] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[   17.836650] ata1.00: 21229568 sectors, multi 128: LBA 
+[   17.837481] ata1.00: configured for UDMA/33
+[   17.980117] Floppy drive(s): fd0 is 1.44M
+[   18.014016] FDC 0 is a S82078B
+[   18.150297] ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[   18.308978] ata2.00: configured for UDMA/33
+[   18.396455] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[   18.409978] scsi 1:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[   18.413679] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
+[   18.413698] PCI: setting IRQ 11 as level-triggered
+[   18.413716] ACPI: PCI Interrupt 0000:00:03.0[A] -> Link [LNKC] 

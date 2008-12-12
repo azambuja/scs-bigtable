@@ -65,18 +65,18 @@ public class WorkerServant extends WorkerPOA {
 				IReceptacles workerReceptacles = IReceptaclesHelper.narrow(workerComponent.getFacetByName("infoReceptacle"));
 				conns = workerReceptacles.getConnections("Sorter");
 				Sorter sorter = null;
-				reporter.report(0, "ready to sort");
+				
 				for (int i = 0; i < conns.length; i++) {
-					reporter.report(0, "calling sorter " + i);
 					sorter = (Sorter)conns[i].objref;
 				}
 				assert sorter != null;
 				
+				// Trabalhando com somente um componente big table, por simplicidade
 				if (op.value() == TaskStatus._MAP) {
 					t = new MapTask(configFileName, reporter, poa, task, sorter);
 				}
 				else {                 		
-					t = new ReduceTask(configFileName,reporter,poa,task, sorter);
+					t = new ReduceTask(configFileName, reporter, poa, task, sorter);
 				}			
 
 				t.run();

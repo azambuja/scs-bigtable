@@ -1,17 +1,17 @@
 0.
-[|1 00|1 00|1 00|1 00|1 00|1 0022:561b|1 0x00010004)
+[|1 00|1 00|1 00|1 00|1 00|1 0022:561b|1 10
 [|1 10
-[|1 10
-[|1 18.301883]|1 18.305393]|1 18.361463]|1 18.361664]|1 18.401339]|1 18.965292]|1 19.015574]|1 19.015610]|1 1:0:0:0:|1 1:0:0:0:|1 27|1 30.072956]|1 30.072986]|1 30.270504]|1 4e|1 64
+[|1 18.413912]|1 18.414071]|1 18.489125]|1 18.493250]|1 18.493340]|1 18.493496]|1 18.589874]|1 18.591617]|1 19.082096]|1 19.082672]|1 1:0:0:0:|1 1:0:0:0:|1 21.021225]|1 27|1 4e|1 64
 [|1 79C973|1 79C973
-[|1 <|1 Attached|1 Attached|1 Attached|1 Attached|1 Checking|1 Explorer|1 FUA
+[|1 <|1 Attached|1 Attached|1 Attached|1 Attached|1 Checking|1 FUA
 [|1 FUA
 [|1 III|1 III|1 Interrupt|1 Interrupt|1 MB)
 [|1 MB)
-[|1 Plug|1 Protect|1 Protect|1 Resume|1 Resume|1 SCSI|1 Sense:|1 Sense:|1 [LNKD]|1 [LNKD]|1 at|1 at|1 at|1 by|1 cards_found.
-[|1 driver|1 driver|1 enabled|1 failed.
+[|1 Protect|1 Protect|1 Resume|1 Resume|1 SCSI|1 Sense:|1 Sense:|1 [LNKD]|1 [LNKD]|1 at|1 at|1 at|1 cards_found.
+[|1 driver|1 during|1 enabled|1 enabled|1 failed.
 [|1 generic|1 generic|1 hardware|1 hardware|1 latency|1 level-triggered
-[|1 mounted|1 of|1 or|1 or|1 ordered|1 pcnet32:|1 pcnet32:|1 pcnet32:|1 reported|1 resume
+[|1 mounted|1 of|1 or|1 or|1 ordered|1 pcnet32:|1 pcnet32:|1 pcnet32:|1 recovery.
+[|1 resume
 [|1 seconds
 [|1 sectors|1 sectors|1 sg1|1 sr0
-[|1 swsusp:|1 type|1 type|1 with|1 xa/form2|1 
+[|1 swsusp:|1 type|1 type|1 with|1 write|1 xa/form2|1 

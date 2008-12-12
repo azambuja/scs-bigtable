@@ -1,38 +1,38 @@
-  11.233912] CPU: After all inits, caps: 078bf3bf 00000000 00000000 00000140 00000008 00000000 00000000
-[   11.234487] Compat vDSO mapped to ffffe000.
-[   11.234763] Checking 'hlt' instruction... OK.
-[   11.251642] SMP alternatives: switching to UP code
-[   11.253277] Freeing SMP alternatives: 11k freed
-[   11.325291] Early unpacking initramfs... done
-[   11.770555] ACPI: Core revision 20070126
-[   11.774600] ACPI: Looking for DSDT in initramfs... error, file /DSDT.aml not found.
-[   11.775719] ACPI: setting ELCR to 0200 (from 0c00)
-[   11.806347] CPU0: Intel(R) Core(TM)2 Duo CPU     T5550  @ 1.83GHz stepping 0d
-[   11.811764] SMP motherboard not detected.
-[   11.939695] Brought up 1 CPUs
-[   11.948548] Booting paravirtualized kernel on bare hardware
-[   11.956714] Time:  9:09:09  Date: 11/10/108
-[   11.957230] NET: Registered protocol family 16
-[   11.995508] EISA bus registered
-[   11.996107] ACPI: bus type pci registered
-[   12.000776] PCI: PCI BIOS revision 2.10 entry at 0xfadf0, last bus=0
-[   12.000800] PCI: Using configuration type 1
-[   12.000819] Setting up standard PCI resources
-[   12.012497] ACPI: EC: Look up EC in DSDT
-[   12.022907] ACPI: Interpreter enabled
-[   12.022942] ACPI: (supports S0 S5)
-[   12.022978] ACPI: Using PIC for interrupt routing
-[   12.028759] ACPI: PCI Root Bridge [PCI0] (0000:00)
-[   12.031041] PCI: Probing PCI hardware (bus 00)
-[   12.044336] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
-[   12.048707] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 11) *0, disabled.
-[   12.049199] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 11) *0, disabled.
-[   12.049472] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 10 *11)
-[   12.049661] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 *10 11)
-[   12.050005] Linux Plug and Play Support v0.97 (c) Adam Belay
-[   12.050044] pnp: PnP ACPI init
-[   12.050154] ACPI: bus type pnp registered
-[   12.052617] pnp: PnP ACPI: found 6 devices
-[   12.052630] ACPI: ACPI bus type pnp unregistered
-[   12.054437] PnPBIOS: Disabled by ACPI PNP
-[   12.054804] PCI: Using 
+  11.361899] CPU: After all inits, caps: 078bf3bf 00000000 00000000 00000140 00000008 00000000 00000000
+[   11.362468] Compat vDSO mapped to ffffe000.
+[   11.362729] Checking 'hlt' instruction... OK.
+[   11.380355] SMP alternatives: switching to UP code
+[   11.382087] Freeing SMP alternatives: 11k freed
+[   11.450268] Early unpacking initramfs... done
+[   11.830817] ACPI: Core revision 20070126
+[   11.833388] ACPI: Looking for DSDT in initramfs... error, file /DSDT.aml not found.
+[   11.834236] ACPI: setting ELCR to 0200 (from 0c00)
+[   11.856902] CPU0: Intel(R) Core(TM)2 Duo CPU     T5550  @ 1.83GHz stepping 0d
+[   11.859790] SMP motherboard not detected.
+[   11.983671] Brought up 1 CPUs
+[   11.992496] Booting paravirtualized kernel on bare hardware
+[   11.999799] Time: 14:54:09  Date: 11/12/108
+[   12.000428] NET: Registered protocol family 16
+[   12.035055] EISA bus registered
+[   12.035593] ACPI: bus type pci registered
+[   12.044389] PCI: PCI BIOS revision 2.10 entry at 0xfadf0, last bus=0
+[   12.044415] PCI: Using configuration type 1
+[   12.044439] Setting up standard PCI resources
+[   12.065426] ACPI: EC: Look up EC in DSDT
+[   12.079592] ACPI: Interpreter enabled
+[   12.079634] ACPI: (supports S0 S5)
+[   12.079683] ACPI: Using PIC for interrupt routing
+[   12.085966] ACPI: PCI Root Bridge [PCI0] (0000:00)
+[   12.087126] PCI: Probing PCI hardware (bus 00)
+[   12.101691] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+[   12.106368] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 11) *0, disabled.
+[   12.106886] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 11) *0, disabled.
+[   12.107126] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 10 *11)
+[   12.107377] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 *10 11)
+[   12.107734] Linux Plug and Play Support v0.97 (c) Adam Belay
+[   12.107780] pnp: PnP ACPI init
+[   12.107903] ACPI: bus type pnp registered
+[   12.112532] pnp: PnP ACPI: found 6 devices
+[   12.112551] ACPI: ACPI bus type pnp unregistered
+[   12.114459] PnPBIOS: Disabled by ACPI PNP
+[   12.114800] PCI: Using 

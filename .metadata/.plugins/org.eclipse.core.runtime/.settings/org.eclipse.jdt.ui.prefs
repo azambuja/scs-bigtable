@@ -1,4 +1,4 @@
-#Wed Dec 10 21:26:28 BRST 2008
+#Fri Dec 12 17:11:52 BRST 2008
 sourceHoverBackgroundColor=255,255,191
 content_assist_proposals_foreground=0,0,0
 spelling_locale_initialized=true
@@ -18,5 +18,5 @@ org.eclipse.jdt.ui.formatterprofiles.version=11
 content_assist_number_of_computers=14
 useQuickDiffPrefPage=true
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.util.AbstractMap"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.util.HashMap"><rhs name\="java.util.HashMap"/></lhs><lhs name\="org.omg.CORBA.portable.Streamable"><rhs name\="scs.demos.bigtable.IteratorHolder"/></lhs></history>
 org.eclipse.jdt.ui.text.code_templates_migrated=true

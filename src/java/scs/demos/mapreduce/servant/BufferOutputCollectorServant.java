@@ -156,7 +156,7 @@ public class BufferOutputCollectorServant extends OutputCollectorPOA {
 						else {
 							Any[] values = new Any[anyList.size()];
 							anyList.toArray(values);
-							combiner.reduce(last.key, values, combineCollector, reporter, null);
+							combiner.reduce(combineCollector, reporter, null);
 							values = null;
 							anyList.clear();
 							anyList.add(current.value);
@@ -166,7 +166,7 @@ public class BufferOutputCollectorServant extends OutputCollectorPOA {
 					if (anyList.size() > 0) { 
 						Any[] values = new Any[anyList.size()];
 						anyList.toArray(values);
-						combiner.reduce(last.key, values, combineCollector, reporter, null);
+						combiner.reduce(combineCollector, reporter, null);
 						values = null;
 						anyList.clear();
 					}

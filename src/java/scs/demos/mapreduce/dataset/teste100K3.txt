@@ -1,35 +1,35 @@
 ACPI for IRQ routing
-[   12.054817] PCI: If a device doesn't work, try "pci=routeirq".  If it helps, post a report
-[   12.057263] NET: Registered protocol family 8
-[   12.057275] NET: Registered protocol family 20
-[   12.059690] Time: tsc clocksource has been installed.
-[   12.095163] NET: Registered protocol family 2
-[   12.136549] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
-[   12.143606] TCP established hash table entries: 131072 (order: 8, 1572864 bytes)
-[   12.145411] TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
-[   12.145937] TCP: Hash tables configured (established 131072 bind 65536)
-[   12.145953] TCP reno registered
-[   12.155171] checking if image is initramfs... it is
-[   12.597012] Switched to high resolution mode on CPU 0
-[   12.859684] Freeing initrd memory: 7035k freed
-[   12.863922] audit: initializing netlink socket (disabled)
-[   12.869882] audit(1228900149.256:1): initialized
-[   12.879565] VFS: Disk quotas dquot_6.5.1
-[   12.879724] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
-[   12.880363] io scheduler noop registered
-[   12.880373] io scheduler anticipatory registered
-[   12.880383] io scheduler deadline registered
-[   12.880406] io scheduler cfq registered (default)
-[   12.882930] Limiting direct PCI/PCI transfers.
-[   12.883185] Activating ISA DMA hang workarounds.
-[   12.883228] Boot video device is 0000:00:02.0
-[   12.884841] isapnp: Scanning for PnP cards...
-[   13.253682] isapnp: No Plug & Play device found
-[   13.329504] Real Time Clock Driver v1.12ac
-[   13.330071] Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
-[   13.339585] RAMDISK driver initialized: 16 RAM disks of 65536K size 1024 blocksize
-[   13.344898] input: Macintosh mouse button emulation as /class/input/input0
-[   13.345649] PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
-[   13.352786] serio: i8042 KBD port at 0x60,0x64 irq 1
-[   13.353014] serio: i8042 AUX port at 0x60,0x64 irq 12
-[   13.354442] mice: PS/2 mouse device common 
+[   12.114816] PCI: If a device doesn't work, try "pci=routeirq".  If it helps, post a report
+[   12.117640] NET: Registered protocol family 8
+[   12.117654] NET: Registered protocol family 20
+[   12.120006] Time: tsc clocksource has been installed.
+[   12.154934] NET: Registered protocol family 2
+[   12.200101] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+[   12.200910] TCP established hash table entries: 131072 (order: 8, 1572864 bytes)
+[   12.214309] TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
+[   12.214309] TCP: Hash tables configured (established 131072 bind 65536)
+[   12.214309] TCP reno registered
+[   12.223288] checking if image is initramfs... it is
+[   12.660164] Switched to high resolution mode on CPU 0
+[   12.891763] Freeing initrd memory: 7035k freed
+[   12.896383] audit: initializing netlink socket (disabled)
+[   12.901625] audit(1229093648.196:1): initialized
+[   12.915635] VFS: Disk quotas dquot_6.5.1
+[   12.915813] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[   12.916539] io scheduler noop registered
+[   12.916551] io scheduler anticipatory registered
+[   12.916560] io scheduler deadline registered
+[   12.916590] io scheduler cfq registered (default)
+[   12.919087] Limiting direct PCI/PCI transfers.
+[   12.919176] Activating ISA DMA hang workarounds.
+[   12.919216] Boot video device is 0000:00:02.0
+[   12.920143] isapnp: Scanning for PnP cards...
+[   13.284144] isapnp: No Plug & Play device found
+[   13.362477] Real Time Clock Driver v1.12ac
+[   13.363049] Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+[   13.372328] RAMDISK driver initialized: 16 RAM disks of 65536K size 1024 blocksize
+[   13.376304] input: Macintosh mouse button emulation as /class/input/input0
+[   13.377111] PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[   13.384117] serio: i8042 KBD port at 0x60,0x64 irq 1
+[   13.384327] serio: i8042 AUX port at 0x60,0x64 irq 12
+[   13.385642] mice: PS/2 mouse device common 
