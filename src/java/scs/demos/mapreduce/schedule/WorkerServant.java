@@ -62,20 +62,21 @@ public class WorkerServant extends WorkerPOA {
 				eventAny.insert_long(id);
 				MapReduceTask t = null;
 
+				IReceptacles workerReceptacles = IReceptaclesHelper.narrow(workerComponent.getFacetByName("infoReceptacle"));
+				conns = workerReceptacles.getConnections("Sorter");
+				Sorter sorter = null;
+				reporter.report(0, "ready to sort");
+				for (int i = 0; i < conns.length; i++) {
+					reporter.report(0, "calling sorter " + i);
+					sorter = (Sorter)conns[i].objref;
+				}
+				assert sorter != null;
+				
 				if (op.value() == TaskStatus._MAP) {
-					IReceptacles workerReceptacles = IReceptaclesHelper.narrow(workerComponent.getFacetByName("infoReceptacle"));
-					conns = workerReceptacles.getConnections("Sorter");
-					Sorter sorter = null;
-					reporter.report(0, "ready to sort");
-					for (int i = 0; i < conns.length; i++) {
-						reporter.report(0, "calling sorter " + i);
-						sorter = (Sorter)conns[i].objref;
-					}
-					assert sorter != null;
 					t = new MapTask(configFileName, reporter, poa, task, sorter);
 				}
 				else {                 		
-					t = new ReduceTask(configFileName,reporter,poa,task);
+					t = new ReduceTask(configFileName,reporter,poa,task, sorter);
 				}			
 
 				t.run();

@@ -15,24 +15,24 @@ import scs.demos.mapreduce.TaskStatus;
  * 
  */
 public class TokenIOFormat extends IOFormatServant {
-        
-        public TokenIOFormat() throws Exception{
+
+	public TokenIOFormat() throws Exception{
 		super();
-		
+
 	}
 	protected RecordReader doGetRecordReader(TaskStatus status) throws Exception {
-               	try {
+		try {
 			return RecordReaderHelper.narrow(poa.servant_to_reference(new TokenRecordReader()));
-               	} catch (Exception e) {
-                        throw e;
+		} catch (Exception e) {
+			throw e;
 		}
 	}
 
 	protected RecordWriter doGetRecordWriter(TaskStatus status) throws Exception {
-                try {
+		try {
 			return RecordWriterHelper.narrow(poa.servant_to_reference(new TokenRecordWriter()));
- 		} catch (Exception e) {
- 			throw e;
+		} catch (Exception e) {
+			throw e;
 		}
 	}
 }

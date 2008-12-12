@@ -23,7 +23,7 @@ public class WordMapperServant extends MapperPOA {
 			key.insert_string(s1);
 			value.insert_string("1");
 			collector.collect(key, value);
-			sorter.sort(key, value);
+			sorter.put(key, value);
 		} catch (IOMapReduceException e) {
 			throw e;
 		} catch (Exception e) {

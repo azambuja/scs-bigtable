@@ -75,7 +75,7 @@ module scs{
                 
                 // Define a operacao reduce
                 interface Reducer {
-		    	void reduce (in any key, in Iterator values, in OutputCollector collector, in Reporter reporter) 
+		    	void reduce (in any key, in Iterator values, in OutputCollector collector, in Reporter reporter, in bigtable::Sorter sorter) 
                         	raises (IOMapReduceException);
 		};
 		

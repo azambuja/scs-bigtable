@@ -1,35 +1,39 @@
 
-[|1 $Revision:|1 &|1 (4096|1 (buildd@rothera)|1 (fee00000)
-[|1 (gap:|1 (gcc|1 (level,|1 (lpj=7153176)
-[|1 (order:|1 (order:|1 (order:|1 (order:|1 (order:|1 (order:|1 (prerelease)|1 (r1|1 (r1|1 (r4|1 (reserved)
+[|1 $Revision:|1 &|1 (0000:00)
+[|1 (buildd@rothera)|1 (from|1 (gap:|1 (gcc|1 (level,|1 (order:|1 (order:|1 (order:|1 (prerelease)|1 (r1|1 (r1|1 (r4|1 (reserved)
 [|1 (reserved)
 [|1 (reserved)
-[|1 ->|1 ->|1 ->|1 ->|1 ->|1 ->|1 ->|1 .init|1 0
+[|1 *0,|1 *0,|1 ->|1 ->|1 ->|1 ->|1 ->|1 ->|1 ->|1 /DSDT.aml|1 0
 [|1 0
-[|1 0,|1 0,|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 00000000000a0000|1 0000000000100000|1 0000000000100000|1 0000:00:02.0
-[|1 0000:00:03.0[A]|1 000E0000,|1 00F4|1 0MB|1 0k|1 0x00010170|1 0x0001c008|1 0xC00E0000|1 0xc03e3000|1 0xf22f0000|1 0xff7fe000|1 0xffc00000|1 0xfffff000|1 1,12
-[|1 1.0|1 1.0|1 1.90|1 10.955070]|1 1064|1 11|1 11|1 11.116802]|1 11.117228]|1 11.117402]|1 11.117519]|1 11.225429]|1 11.233493]|1 11.233595]|1 11.233697]|1 12
-[|1 12,|1 12.057263]|1 12.057275]|1 12.059690]|1 12.143606]|1 12.145937]|1 12.155171]|1 12.597012]|1 12.859684]|1 12.879565]|1 12.879724]|1 12.880363]|1 12.883228]|1 13.253682]|1 13.329504]|1 13.330071]|1 13.373955]|1 13.374786]|1 13.385502]|1 131072|1 131072|1 131072|1 131072|1 15
-[|1 1572864|1 17.472222]|1 17.476728]|1 17.482122]|1 17.497737]|1 17.498160]|1 17.796259]|1 17.834683]|1 18:28:27|1 199883|1 2|1 2|1 2.5|1 20070929|1 205552)|1 21229568|1 32|1 322F0160,|1 32768|1 4064|1 524288|1 524288|1 6,|1 61)
+[|1 0,|1 0,|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 00000000000a0000|1 0000000000100000|1 0000000000100000|1 0000:00:02.0
+[|1 0000:00:03.0[A]|1 000E0000,|1 00F4|1 0200|1 0MB|1 0x00010170|1 0x0001c008|1 0xC00E0000|1 0xfadf0,|1 1,12
+[|1 1.0|1 1.0|1 1.90|1 1064|1 11|1 11|1 11.806347]|1 12
+[|1 12.000776]|1 12.000800]|1 12.012497]|1 12.022907]|1 12.044336]|1 12.048707]|1 12.049199]|1 12.049472]|1 12.049661]|1 12.054437]|1 12.057263]|1 12.057275]|1 12.059690]|1 12.143606]|1 12.145937]|1 12.155171]|1 12.597012]|1 12.859684]|1 12.879565]|1 12.879724]|1 12.880363]|1 12.883228]|1 13.253682]|1 13.329504]|1 13.330071]|1 13.373955]|1 13.374786]|1 13.385502]|1 131072|1 131072|1 131072|1 15
+[|1 1572864|1 17.472222]|1 17.476728]|1 17.482122]|1 17.497737]|1 17.498160]|1 17.796259]|1 17.834683]|1 18:28:27|1 199883|1 2|1 2|1 2.5|1 20070929|1 205552)|1 21229568|1 32|1 322F0160,|1 32768|1 4064|1 5|1 5|1 5|1 5|1 524288|1 61)
 [|1 61)
 [|1 65536)
 [|1 7.8)
-[|1 7035k|1 ASL|1 ASL|1 AT|1 ATA-6:|1 ATAPI:|1 Activating|1 AppArmor|1 BIOS-provided|1 Boot|1 Built|1 CPU:|1 CPU:|1 CPU:|1 Calibrating|1 Cannot|1 Console:|1 D|1 DMI|1 Direct-Access|1 Disk|1 Driver|1 EISA|1 Enabling|1 Enabling|1 Freeing|1 Freeing|1 GSI|1 Genslabs=22,|1 HARDDISK,|1 HighMem|1 HighMem|1 INTL|1 IO|1 IRQ|1 IRQ|1 IRQ|1 IRQ|1 IRQ|1 ISA|1 KBD|1 L1|1 L1|1 Limiting|1 Link|1 Link|1 Nodes=1
-[|1 Normal|1 Normal|1 Normal|1 PCI:|1 PCI:|1 PCI:|1 PID|1 PNP:|1 PS/2|1 PS/2|1 Port:|1 Probing|1 RAM|1 RAM|1 RAMDISK|1 S82078B
-[|1 SLUB:|1 Translated|1 UDMA/33
+[|1 7035k|1 9:09:09|1 ASL|1 ASL|1 AT|1 ATA-6:|1 ATAPI:|1 Activating|1 Adam|1 AppArmor|1 BIOS-provided|1 Boot|1 CPU0:|1 CPU:|1 Cannot|1 DMI|1 DSDT
+[|1 Date:|1 Direct-Access|1 Disk|1 Driver|1 Duo|1 EC:|1 EISA|1 EISA|1 Early|1 Freeing|1 Freeing|1 Freeing|1 GSI|1 HARDDISK,|1 HighMem|1 HighMem|1 INTL|1 IO|1 IRQ|1 IRQ|1 IRQ|1 IRQ|1 IRQ|1 ISA|1 KBD|1 Limiting|1 Link|1 Link|1 Link|1 Link|1 Link|1 Link|1 Looking|1 Normal|1 Normal|1 Normal|1 PCI:|1 PCI:|1 PCI:|1 PCI:|1 PCI:|1 PCI:|1 PCI:|1 PNP:|1 PS/2|1 PS/2|1 Port:|1 Probing|1 Probing|1 RAM|1 RAM|1 RAMDISK|1 S0|1 S5)
+[|1 S82078B
+[|1 Table|1 Translated|1 UDMA/33
 [|1 UDMA/33
-[|1 Using|1 VBOXXSDT|1 WP|1 XSDT|1 add_active_range(0,|1 anticipatory|1 as|1 as|1 as|1 ata2.00:|1 ata2.00:|1 audit:|1 been|1 bind|1 bind|1 button|1 cache|1 cache|1 capabilities|1 cfq|1 cmd|1 cmd|1 code,|1 ctl|1 ctl|1 cubic|1 delay|1 direct|1 disks|1 doesn't|1 done.
-[|1 done.
-[|1 dquot_6.5.1
-[|1 established|1 found
+[|1 Using|1 Using|1 Using|1 Using|1 VBOXXSDT|1 XSDT|1 [LNKB]|1 [PCI0]|1 add_active_range(0,|1 anticipatory|1 as|1 as|1 as|1 ata2.00:|1 ata2.00:|1 audit:|1 bare|1 been|1 bind|1 bind|1 button|1 cache|1 capabilities|1 cfq|1 cmd|1 cmd|1 code
+[|1 ctl|1 ctl|1 cubic|1 devices
+[|1 direct|1 disks|1 doesn't|1 dquot_6.5.1
+[|1 established|1 file|1 found
 [|1 helps,|1 high|1 i8042|1 i8042|1 image|1 in|1 in|1 initialized<5>audit(1228900151.756:2):|1 initializing|1 initrd|1 installed.
-[|1 irq|1 irq|1 irq|1 irq|1 irq|1 it|1 it|1 kernel|1 kernel|1 kernel|1 kernel|1 line:|1 max|1 max|1 max|1 max|1 memory|1 mice
-[|1 mode...|1 netlink|1 node|1 on|1 pages,|1 pages,|1 physical|1 primary|1 ranges
+[|1 interrupt|1 irq|1 irq|1 irq|1 irq|1 irq|1 it|1 it|1 kernel|1 kernel|1 kernel|1 max|1 max|1 max|1 max|1 mice
+[|1 netlink|1 node|1 on|1 on|1 pages,|1 pages,|1 physical|1 pnp:|1 pnp:|1 primary|1 ranges
 [|1 ranges:
 [|1 registered|1 registered
 [|1 registered
 [|1 registered
 [|1 registered
 [|1 registered
-[|1 root=UUID=40ed9130-47d5-4953-b816-b72acf18a5c1|1 save|1 scsi|1 scsi|1 scsi0|1 size|1 subsystem|1 tables|1 this|1 timer|1 timer|1 to|1 to|1 to|1 transfers.
-[|1 version|1 version|1 version|1 version|1 version|1 vmalloc|1 
+[|1 registered
+[|1 registered
+[|1 registered
+[|1 resources
+[|1 revision|1 revision|1 scsi|1 scsi|1 scsi0|1 size|1 stepping|1 subsystem|1 switching|1 tables|1 timer|1 to|1 to|1 to|1 to|1 to|1 transfers.
+[|1 unpacking|1 version|1 version|1 version|1 version|1 version|1 

@@ -1,0 +1,40 @@
+Running container ....
+Exception in thread "Thread-3" org.omg.CORBA.COMM_FAILURE: ----------BEGIN server-side stack trace----------
+org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 208 completed: Maybe
+	at com.sun.corba.se.impl.logging.ORBUtilSystemException.connectionAbort(ORBUtilSystemException.java:2372)
+	at com.sun.corba.se.impl.logging.ORBUtilSystemException.connectionAbort(ORBUtilSystemException.java:2390)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.readBits(SocketOrChannelConnectionImpl.java:372)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.handleEvent(SocketOrChannelConnectionImpl.java:1116)
+	at com.sun.corba.se.impl.transport.SelectorImpl.run(SelectorImpl.java:300)
+Caused by: org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 211  completed: No
+	at com.sun.corba.se.impl.logging.ORBUtilSystemException.ioexceptionWhenReadingConnection(ORBUtilSystemException.java:2456)
+	at com.sun.corba.se.impl.logging.ORBUtilSystemException.ioexceptionWhenReadingConnection(ORBUtilSystemException.java:2474)
+	at com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase.readGIOPHeader(MessageBase.java:134)
+	at com.sun.corba.se.impl.transport.CorbaContactInfoBase.createMessageMediator(CorbaContactInfoBase.java:168)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.readBits(SocketOrChannelConnectionImpl.java:332)
+	... 2 more
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:251)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:218)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:254)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.readFully(SocketOrChannelConnectionImpl.java:617)
+	at com.sun.corba.se.impl.transport.SocketOrChannelConnectionImpl.read(SocketOrChannelConnectionImpl.java:539)
+	at com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase.readGIOPHeader(MessageBase.java:130)
+	... 4 more
+
+----------END server-side stack trace----------  vmcid: SUN  minor code: 208 completed: Maybe
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:539)
+	at com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase.getSystemException(MessageBase.java:920)
+	at com.sun.corba.se.impl.protocol.giopmsgheaders.ReplyMessage_1_2.getSystemException(ReplyMessage_1_2.java:117)
+	at com.sun.corba.se.impl.protocol.CorbaMessageMediatorImpl.getSystemExceptionReply(CorbaMessageMediatorImpl.java:590)
+	at com.sun.corba.se.impl.protocol.CorbaClientRequestDispatcherImpl.processResponse(CorbaClientRequestDispatcherImpl.java:446)
+	at com.sun.corba.se.impl.protocol.CorbaClientRequestDispatcherImpl.marshalingComplete(CorbaClientRequestDispatcherImpl.java:342)
+	at com.sun.corba.se.impl.protocol.CorbaClientDelegateImpl.invoke(CorbaClientDelegateImpl.java:147)
+	at org.omg.CORBA.portable.ObjectImpl._invoke(ObjectImpl.java:475)
+	at scs.event_service._EventSinkStub.push(_EventSinkStub.java:20)
+	at scs.event_service.servant.EventSinkChannelServant$EventDispatcher.run(EventSinkChannelServant.java:85)

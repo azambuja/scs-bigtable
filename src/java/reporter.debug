@@ -6,13 +6,15 @@ MasterServant::start - Conectando aos outros execution nodes
 WorkerInitializer::getNode - Conectando ao execution node corbaname::hubert-ubuntu:1050#ExecutionNode-127.0.1.1
 MasterServant::start - Conectado ao execution node dos workers
 MasterServant::start - Conectando aos outros execution nodes
+BigTableInitializer::getNode - Conectando ao execution node corbaname::hubert-ubuntu:1050#ExecutionNode-127.0.1.1
 MasterServant::start - Conectado ao execution node dos sorters
 MasterServant::start - Criando canal de evento entre master e workers
 WorkerInitializer::getNode - Conectando ao execution node corbaname::hubert-ubuntu:1050#ExecutionNode-127.0.1.1
 MasterServant::start - Instanciando Workers
 WorkerInitializer::buildWorkerQueue - Comecando balanceamento de carga
-WorkerInitializer::buildWorkerQueue - mappers_p_nodes[i]= 10
+WorkerInitializer::buildWorkerQueue - mappers_p_nodes[i]= 4
 MasterServant::start - Instanciando Sorters
+MasterServant::start - Connecting to big table...
 MasterServant::start - Instanciando Tarefas
 IOFormatServant::getSplits - Iniciando o particionamento do arquivo
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K0.txt
@@ -23,23 +25,43 @@ IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K5.txt
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K6.txt
 MasterServant::start - Iniciando escalonamento
-EventSinkMaster::handleEvent - TaskID = 2
-    Este foi o map no. 1 de 7
-EventSinkMaster::handleEvent - TaskID = 4
-    Este foi o map no. 2 de 7
-EventSinkMaster::handleEvent - TaskID = 5
-    Este foi o map no. 3 de 7
+ready to sort
+ready to sort
+calling sorter 0
+ready to sort
+calling sorter 0
+calling sorter 0
+ready to sort
+calling sorter 0
 EventSinkMaster::handleEvent - TaskID = 3
+    Este foi o map no. 1 de 7
+ready to sort
+calling sorter 0
+EventSinkMaster::handleEvent - TaskID = 2
+    Este foi o map no. 2 de 7
+ready to sort
+calling sorter 0
+EventSinkMaster::handleEvent - TaskID = 0
+    Este foi o map no. 3 de 7
+ready to sort
+calling sorter 0
+EventSinkMaster::handleEvent - TaskID = 4
     Este foi o map no. 4 de 7
-EventSinkMaster::handleEvent - TaskID = 6
+EventSinkMaster::handleEvent - TaskID = 5
     Este foi o map no. 5 de 7
 EventSinkMaster::handleEvent - TaskID = 1
     Este foi o map no. 6 de 7
-EventSinkMaster::handleEvent - TaskID = 0
+EventSinkMaster::handleEvent - TaskID = 6
     Este foi o map no. 7 de 7
-EventSinkMaster::handleEvent - TaskID = 9
-    Este foi o reduce no. 1 de 3
+ready to sort
+calling sorter 0
+ready to sort
+calling sorter 0
+ready to sort
+calling sorter 0
 EventSinkMaster::handleEvent - TaskID = 7
+    Este foi o reduce no. 1 de 3
+EventSinkMaster::handleEvent - TaskID = 9
     Este foi o reduce no. 2 de 3
 EventSinkMaster::handleEvent - TaskID = 8
     Este foi o reduce no. 3 de 3

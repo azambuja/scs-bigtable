@@ -23,7 +23,6 @@ import scs.demos.mapreduce.ConectionToExecNodesException;
 import scs.demos.mapreduce.IOFormat;
 import scs.demos.mapreduce.MasterPOA;
 import scs.demos.mapreduce.PropertiesException;
-import scs.demos.mapreduce.ReducerHelper;
 import scs.demos.mapreduce.Reporter;
 import scs.demos.mapreduce.StartFailureException;
 import scs.demos.mapreduce.Task;
@@ -329,11 +328,10 @@ public class MasterServant extends MasterPOA {
 		}
 
 		// Connect big table components to workers
-		reporter.report(1, "MasterServant::start - Conectando big tables...");
+		// Implementation with only one big table component
+		reporter.report(1, "MasterServant::start - Connecting to big table...");
 		connectWorkersToSorter();
-		connectSorterToWorkers();
-//		connectBigTableToWorkers();
-		
+
 		/*instancia tarefas*/
 		reporter.report(1,"MasterServant::start - Instanciando Tarefas");
 		ioformat = workerInitializer.createIOFormatServant(ioformatClassName);
@@ -368,34 +366,6 @@ public class MasterServant extends MasterPOA {
 
 			try {
 				workerReceptacles.connect("Sorter", SorterHelper.narrow(bigTableComponent.getFacetByName("Sorter")));
-			} catch (InvalidName e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (InvalidConnection e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (AlreadyConnected e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (ExceededConnectionLimit e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	
-	private void connectSorterToWorkers(){
-
-		Iterator<IComponent> iteWorker = workerComponentQueue.iterator();
-
-		IComponent workerComponent;
-
-		while(iteWorker.hasNext()){
-			workerComponent = iteWorker.next();
-			IReceptacles bigTableReceptacles = IReceptaclesHelper.narrow(bigTableComponent.getFacetByName("infoReceptacle"));
-
-			try {
-				bigTableReceptacles.connect("Reducer", ReducerHelper.narrow(workerComponent.getFacetByName("Reducer")));
 			} catch (InvalidName e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

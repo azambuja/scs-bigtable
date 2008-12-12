@@ -78,12 +78,6 @@ module scs{
 		    	void reduce (in any key, in Iterator values, in OutputCollector collector, in Reporter reporter) 
                         	raises (IOMapReduceException);
 		};
-
-		// Define a operacao reduce 2
-                interface Reducer2 {
-		    	void reduce (in any key, in any value)
-                             raises (IOMapReduceException);
-		};
 		
 		//Define a operacao para distribuir chaves para os reducers 
                 interface Partitioner {

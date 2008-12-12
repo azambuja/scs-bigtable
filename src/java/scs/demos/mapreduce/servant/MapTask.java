@@ -152,7 +152,7 @@ public class MapTask extends MapReduceTask {
 		/*Obtem numero de reducers*/
 		numReducers = Integer.parseInt(conf.getProperty("mapred.Reducers.number","0"));
 		
-//		Numero de sorters
+		// Numero de sorters
 		numSorters = Integer.parseInt(conf.getProperty("mapred.Sorters.number","0"));
 
 		/* Obtem mapper*/

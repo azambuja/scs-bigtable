@@ -2,11 +2,13 @@ module scs {
 	module demos {
 		module bigtable {
 			typedef sequence<any> Iterator;
+			typedef sequence<string> Keys;
 
 			interface Sorter {
-				// nao e pra ser string, string. Isso e so pra testar.
-				void sort(in any key, in any values);
-				void start();
+				void put(in any key, in any value);
+				void get(in any key, out Iterator values);
+				void getKeysOnRange(in long reducerId, in long numReducers, out Keys keys);
+				//void start();
 			};
 
 			interface Config {

@@ -10,6 +10,7 @@ import org.omg.CORBA.AnyHolder;
 import org.omg.PortableServer.POA;
 import org.omg.PortableServer.Servant;
 
+import scs.demos.bigtable.Sorter;
 import scs.demos.mapreduce.FileSplit;
 import scs.demos.mapreduce.FileSplitHelper;
 import scs.demos.mapreduce.IOFormat;
@@ -42,6 +43,8 @@ public class ReduceTask extends MapReduceTask {
 	private Reducer reducer = null;
 	private PartitionerServant partitioner = null;
 	private int index;
+	
+	private Sorter sorter;
 
 	private class Item {
 		public Any key;
@@ -154,10 +157,12 @@ public class ReduceTask extends MapReduceTask {
 		} 
 	}
 
-	public ReduceTask(String configFileName, Reporter reporter, POA poa, Task task) throws IOException {
+	public ReduceTask(String configFileName, Reporter reporter, POA poa, Task task, Sorter sorter) throws IOException {
 		super(configFileName, poa, task, reporter);
 		this.index = task.getReduceIndex();
 		this.inputSplit = task.getInput();
+		
+		this.sorter = sorter;
 
 		/* Obtem o nome do arquivo de entrada*/
 		String inputFile = conf.getProperty("mapred.Input.name");                
@@ -276,7 +281,7 @@ public class ReduceTask extends MapReduceTask {
 				else {
 					Any[] values = new Any[anyList.size()];
 					anyList.toArray(values);
-					reducer.reduce(last, values, collector, reporter);
+					reducer.reduce(last, values, collector, reporter, this.sorter);
 					values = null;
 					anyList.clear();
 					anyList.add(value.value);
@@ -286,7 +291,7 @@ public class ReduceTask extends MapReduceTask {
 			if (anyList != null && anyList.size() > 0) { 
 				Any[] values = new Any[anyList.size()];
 				anyList.toArray(values);
-				reducer.reduce(last, values, collector, reporter);
+				reducer.reduce(last, values, collector, reporter, this.sorter);
 				values = null;
 				anyList = null;
 			}
