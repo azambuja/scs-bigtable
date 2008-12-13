@@ -24,24 +24,150 @@ IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K4.txt
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K5.txt
 IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K6.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K7.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K8.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K9.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K10.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K11.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K12.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K13.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K14.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K15.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K16.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K17.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K18.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K19.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K20.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K21.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K22.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K23.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K24.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K25.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K26.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K27.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K28.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K29.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K30.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K31.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K32.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K33.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K34.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K35.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K36.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K37.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K38.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K39.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K40.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K41.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K42.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K43.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K44.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K45.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K46.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K47.txt
+IOFormatServant::getSplit - Criando split: scs/demos/mapreduce/dataset/teste100K48.txt
 MasterServant::start - Iniciando escalonamento
-EventSinkMaster::handleEvent - TaskID = 2
-    Este foi o map no. 1 de 7
-EventSinkMaster::handleEvent - TaskID = 3
-    Este foi o map no. 2 de 7
 EventSinkMaster::handleEvent - TaskID = 1
-    Este foi o map no. 3 de 7
+    Este foi o map no. 1 de 49
 EventSinkMaster::handleEvent - TaskID = 0
-    Este foi o map no. 4 de 7
+    Este foi o map no. 2 de 49
 EventSinkMaster::handleEvent - TaskID = 5
-    Este foi o map no. 5 de 7
-EventSinkMaster::handleEvent - TaskID = 4
-    Este foi o map no. 6 de 7
+    Este foi o map no. 3 de 49
+EventSinkMaster::handleEvent - TaskID = 3
+    Este foi o map no. 4 de 49
 EventSinkMaster::handleEvent - TaskID = 6
-    Este foi o map no. 7 de 7
-EventSinkMaster::handleEvent - TaskID = 7
-    Este foi o reduce no. 1 de 3
-EventSinkMaster::handleEvent - TaskID = 8
-    Este foi o reduce no. 2 de 3
+    Este foi o map no. 5 de 49
+EventSinkMaster::handleEvent - TaskID = 4
+    Este foi o map no. 6 de 49
 EventSinkMaster::handleEvent - TaskID = 9
+    Este foi o map no. 7 de 49
+EventSinkMaster::handleEvent - TaskID = 7
+    Este foi o map no. 8 de 49
+EventSinkMaster::handleEvent - TaskID = 8
+    Este foi o map no. 9 de 49
+EventSinkMaster::handleEvent - TaskID = 2
+    Este foi o map no. 10 de 49
+EventSinkMaster::handleEvent - TaskID = 13
+    Este foi o map no. 11 de 49
+EventSinkMaster::handleEvent - TaskID = 10
+    Este foi o map no. 12 de 49
+EventSinkMaster::handleEvent - TaskID = 14
+    Este foi o map no. 13 de 49
+EventSinkMaster::handleEvent - TaskID = 11
+    Este foi o map no. 14 de 49
+EventSinkMaster::handleEvent - TaskID = 16
+    Este foi o map no. 15 de 49
+EventSinkMaster::handleEvent - TaskID = 15
+    Este foi o map no. 16 de 49
+EventSinkMaster::handleEvent - TaskID = 12
+    Este foi o map no. 17 de 49
+EventSinkMaster::handleEvent - TaskID = 18
+    Este foi o map no. 18 de 49
+EventSinkMaster::handleEvent - TaskID = 17
+    Este foi o map no. 19 de 49
+EventSinkMaster::handleEvent - TaskID = 19
+    Este foi o map no. 20 de 49
+EventSinkMaster::handleEvent - TaskID = 20
+    Este foi o map no. 21 de 49
+EventSinkMaster::handleEvent - TaskID = 22
+    Este foi o map no. 22 de 49
+EventSinkMaster::handleEvent - TaskID = 23
+    Este foi o map no. 23 de 49
+EventSinkMaster::handleEvent - TaskID = 21
+    Este foi o map no. 24 de 49
+EventSinkMaster::handleEvent - TaskID = 24
+    Este foi o map no. 25 de 49
+EventSinkMaster::handleEvent - TaskID = 25
+    Este foi o map no. 26 de 49
+EventSinkMaster::handleEvent - TaskID = 26
+    Este foi o map no. 27 de 49
+EventSinkMaster::handleEvent - TaskID = 27
+    Este foi o map no. 28 de 49
+EventSinkMaster::handleEvent - TaskID = 28
+    Este foi o map no. 29 de 49
+EventSinkMaster::handleEvent - TaskID = 31
+    Este foi o map no. 30 de 49
+EventSinkMaster::handleEvent - TaskID = 30
+    Este foi o map no. 31 de 49
+EventSinkMaster::handleEvent - TaskID = 32
+    Este foi o map no. 32 de 49
+EventSinkMaster::handleEvent - TaskID = 35
+    Este foi o map no. 33 de 49
+EventSinkMaster::handleEvent - TaskID = 36
+    Este foi o map no. 34 de 49
+EventSinkMaster::handleEvent - TaskID = 37
+    Este foi o map no. 35 de 49
+EventSinkMaster::handleEvent - TaskID = 29
+    Este foi o map no. 36 de 49
+EventSinkMaster::handleEvent - TaskID = 38
+    Este foi o map no. 37 de 49
+EventSinkMaster::handleEvent - TaskID = 34
+    Este foi o map no. 38 de 49
+EventSinkMaster::handleEvent - TaskID = 40
+    Este foi o map no. 39 de 49
+EventSinkMaster::handleEvent - TaskID = 33
+    Este foi o map no. 40 de 49
+EventSinkMaster::handleEvent - TaskID = 42
+    Este foi o map no. 41 de 49
+EventSinkMaster::handleEvent - TaskID = 44
+    Este foi o map no. 42 de 49
+EventSinkMaster::handleEvent - TaskID = 43
+    Este foi o map no. 43 de 49
+EventSinkMaster::handleEvent - TaskID = 39
+    Este foi o map no. 44 de 49
+EventSinkMaster::handleEvent - TaskID = 45
+    Este foi o map no. 45 de 49
+EventSinkMaster::handleEvent - TaskID = 46
+    Este foi o map no. 46 de 49
+EventSinkMaster::handleEvent - TaskID = 47
+    Este foi o map no. 47 de 49
+EventSinkMaster::handleEvent - TaskID = 48
+    Este foi o map no. 48 de 49
+EventSinkMaster::handleEvent - TaskID = 41
+    Este foi o map no. 49 de 49
+EventSinkMaster::handleEvent - TaskID = 51
+    Este foi o reduce no. 1 de 3
+EventSinkMaster::handleEvent - TaskID = 49
+    Este foi o reduce no. 2 de 3
+EventSinkMaster::handleEvent - TaskID = 50
     Este foi o reduce no. 3 de 3

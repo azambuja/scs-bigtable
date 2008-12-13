@@ -1,5 +1,0 @@
-(4096|1 (fee00000)
-[|1 (order:|1 (order:|1 (order:|1 .init|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0.000000]|1 0k|1 0xc03e3000|1 0xf22f0000|1 0xff7fe000|1 0xffc00000|1 0xfffff000|1 11.109074]|1 11.109920]|1 11.247122]|1 11.247344]|1 11.247578]|1 11.361074]|1 11.361503]|1 11.361590]|1 12,|1 131072|1 524288|1 6,|1 Built|1 CPU:|1 CPU:|1 CPU:|1 Calibrating|1 Console:|1 D|1 Enabling|1 Enabling|1 Genslabs=22,|1 L1|1 L1|1 Nodes=1
-[|1 PID|1 SLUB:|1 WP|1 cache|1 code,|1 delay|1 done.
-[|1 done.
-[|1 in|1 in|1 kernel|1 kernel|1 line:|1 memory|1 mode...|1 root=UUID=40ed9130-47d5-4953-b816-b72acf18a5c1|1 save|1 this|1 timer|1 to|1 vmalloc|1 

@@ -1,0 +1,52 @@
+package scs.demos.mapreduce.user;
+
+import org.omg.CORBA.Any;
+
+import scs.demos.bigtable.AllEntriesHolder;
+import scs.demos.bigtable.Entries;
+import scs.demos.bigtable.Sorter;
+import scs.demos.mapreduce.IOMapReduceException;
+import scs.demos.mapreduce.OutputCollector;
+import scs.demos.mapreduce.ReducerPOA;
+import scs.demos.mapreduce.Reporter;
+import scs.demos.mapreduce.schedule.LogError;
+
+
+/**
+ * reducer utilizando o big table
+ * @author hubert
+ */
+
+public class WordReducerServant extends ReducerPOA {
+	
+	public void reduce(OutputCollector collector, Reporter reporter, Sorter sorter) throws IOMapReduceException {
+		try {			
+			if (sorter != null) {
+				System.out.println("reducer called!");
+				AllEntriesHolder allEntries = new AllEntriesHolder();
+				sorter.getEntriesOnRange(allEntries);
+				
+				Entries[] allEntriesArray = allEntries.value;
+				String currentValue;
+				int count = 0;
+				for (int i = 0; i < allEntriesArray.length; i++) {
+					System.out.println("chave " + i + ": " + allEntriesArray[i].key);
+					for(int j = 0; j < allEntriesArray[i].values.length; j++){
+						currentValue = allEntriesArray[i].values[j].extract_string();
+						count = count + Integer.parseInt(currentValue);
+					}
+					Any value = allEntriesArray[i].values[0];
+					value.insert_string(String.valueOf(count));	
+					collector.collect(allEntriesArray[i].key, value);
+					System.out.println("contagem: " + value);
+				}
+			}
+		} catch (Exception e) {
+			String exception = LogError.getStackTrace(e);
+			reporter.report(0,"WordMapperServant::map - " + exception);
+			throw new IOMapReduceException(); 
+		}
+	}
+	
+}
+

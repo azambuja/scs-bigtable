@@ -1,7 +1,6 @@
 package scs.demos.mapreduce.servant;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -24,7 +23,6 @@ import scs.demos.mapreduce.Reducer;
 import scs.demos.mapreduce.ReducerHelper;
 import scs.demos.mapreduce.Reporter;
 import scs.demos.mapreduce.Task;
-import scs.demos.mapreduce.TaskStatus;
 import scs.demos.mapreduce.schedule.LogError;
 
 /**

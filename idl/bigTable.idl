@@ -3,11 +3,17 @@ module scs {
 		module bigtable {
 			typedef sequence<any> Iterator;
 			typedef sequence<string> Keys;
+			struct Entries { 
+			    any key; 
+			    sequence<any> values;
+			};
+			typedef sequence<Entries> AllEntries;
 
 			interface Sorter {
 				void put(in any key, in any value);
 				void get(in any key, out Iterator values);
-				void getKeysOnRange(in long reducerId, out Keys keys);
+				//void getKeysOnRange(in long reducerId, out Keys keys);
+				void getEntriesOnRange(out AllEntries allEntries);
 				void setNumberOfReducers(in long numReducers);
 				//void start();
 			};

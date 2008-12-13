@@ -1,9 +1,0 @@
-0000:00:04.0[A]|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0:0:0:0:|1 0xc020,|1 1|1 10|1 10|1 11
-[|1 18.413833]|1 18.420508]|1 18.485029]|1 18.493477]|1 18.589536]|1 18.591600]|1 19.082110]|1 19.132723]|1 19.132738]|1 21.020734]|1 32.256921]|1 32.265636]|1 3a|1 3a|1 5
-[|1 7f|1 8:5
-[|1 >
-[|1 ACPI:|1 ACPI:|1 Attempting|1 CD-ROM|1 CD-ROM|1 Found|1 INFO:|1 PCI|1 PCI|1 PHY|1 Partition|1 Revision:|1 Setting|1 Successfully|1 Uniform|1 Write|1 Write|1 Write|1 Write|1 [sda]|1 [sda]|1 [sda]|1 [sda]|1 [sda]|1 [sda]|1 [sda]|1 [sda]|1 [sda]|1 assigned|1 be|1 cache:|1 cache:|1 cache:|1 cache:|1 complete.
-[|1 d3|1 device|1 disk|1 disk
-[|1 eth0:|1 filesystem|1 from|1 image.
-[|1 is|1 is|1 low)|1 low)|1 read|1 read|1 readonly|1 required|1 sda1|1 sda:|1 setting|1 sr|1 sr|1 swsusp|1 tray
-[|1 

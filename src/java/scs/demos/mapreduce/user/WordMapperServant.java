@@ -11,8 +11,8 @@ import scs.demos.mapreduce.schedule.LogError;
 
 
 /**
- * Servant que implementa a interface scs::demos::mapreduce::Mapper
- * @author Sand Luz Correa
+ * mapper utilizando o big table
+ * @author hubert
  */
 
 public class WordMapperServant extends MapperPOA {
@@ -22,10 +22,7 @@ public class WordMapperServant extends MapperPOA {
 			String s1 = value.extract_string();
 			key.insert_string(s1);
 			value.insert_string("1");
-			collector.collect(key, value);
 			sorter.put(key, value);
-		} catch (IOMapReduceException e) {
-			throw e;
 		} catch (Exception e) {
 			String exception = LogError.getStackTrace(e);
 			reporter.report(0,"WordMapperServant::map - " + exception);

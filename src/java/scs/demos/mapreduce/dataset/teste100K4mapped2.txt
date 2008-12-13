@@ -1,9 +1,0 @@
-
-[|1 ->|1 0000:00:03.0[A]|1 0x00010170|1 0x0001c008|1 1.0|1 1.0|1 11|1 13.402570]|1 13.403224]|1 13.403638]|1 13.410049]|1 13.413472]|1 15
-[|1 15.403862]|1 15.444560]|1 17.566755]|1 17.582496]|1 17.597079]|1 17.597835]|1 17.980117]|1 18.014016]|1 18.150297]|1 18.413679]|1 2|1 21229568|1 7.8)
-[|1 AT|1 ATA-6:|1 ATAPI:|1 AppArmor|1 Cannot|1 Direct-Access|1 EISA|1 Freeing|1 HARDDISK,|1 IRQ|1 IRQ|1 Link|1 Link|1 PCI:|1 PCI:|1 Probing|1 S82078B
-[|1 Translated|1 UDMA/33
-[|1 UDMA/33
-[|1 Using|1 as|1 as|1 ata2.00:|1 ata2.00:|1 capabilities|1 cmd|1 cmd|1 ctl|1 ctl|1 cubic|1 irq|1 irq|1 kernel|1 kernel|1 max|1 max|1 max|1 max|1 mice
-[|1 primary|1 registered
-[|1 scsi|1 scsi|1 scsi0|1 subsystem|1 timer|1 to|1 version|1 version|1 version|1 
